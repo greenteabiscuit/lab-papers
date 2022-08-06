@@ -17,6 +17,49 @@
 
 \section{tangent delta}
 
+媒質に損失がある場合の電磁波に対する基本式は以下のようになる
+
+\begin{equation}
+  \mathrm{rot}(\frac{1}{\mu(\boldsymbol{r})}\mathrm{rot}\boldsymbol{E}) = -\mu_0 \mathrm{rot}(\frac{\partial H}{\partial t})
+\end{equation}
+\begin{equation}
+  \mathrm{rot}(\frac{\partial H}{\partial t}) = \epsilon(\boldsymbol{r})\epsilon_0 \frac{\partial^2 E}{\partial t^2} + \frac{\partial J}{\partial t}
+\end{equation}
+
+
+媒質に損失がある場合の特性値を考える。
+ここで時間変動因子$exp(j\omega t)$ が入射することを考えると、そのときのマクスウェルの方程式は
+
+\begin{equation} \label{eq:loss_electric_flux_density}
+  \mathrm{rot} H = \epsilon \epsilon_0 \frac{\partial E}{\partial t} + \sigma \boldsymbol{E} = (j\omega\epsilon\epsilon_0 + \sigma)\boldsymbol{E}
+\end{equation}
+
+と書くことができる。このとき、
+式\ref{eq:loss_electric_flux_density}の右辺が電束密度$\boldsymbol{D}$から生じているとみなし、
+
+\begin{equation} \label{eq:electric_flux_density}
+  \boldsymbol{D} = C\epsilon \epsilon_0 \boldsymbol{E}(\boldsymbol{r})exp(j\omega t)
+\end{equation}
+
+として代入しなおすと、$C=1 - j\sigma / \omega\epsilon\epsilon_0$を得る。
+これで電束密度は
+
+\begin{equation} \label{eq:electric_flux_density_tangent_delta}
+  \boldsymbol{D} = \dot{\epsilon} \epsilon_0 \boldsymbol{E} = \epsilon \epsilon_0 (1 - j\tan\delta)\boldsymbol{E}
+\end{equation}
+
+\begin{equation} \label{eq:epsilon_dot}
+  \dot{\epsilon} = \epsilon (1 - j\tan\delta)
+\end{equation}
+
+\begin{equation} \label{eq:tangent_delta}
+  \tan \delta = \frac{\sigma}{\omega\epsilon\epsilon_0}
+\end{equation}
+
+とあらわすことができる。
+\ref{eq:tangent_delta}はタンデルタと呼ばれ、伝導電流と変位電流の比を表す。
+$\delta$を損失角という。高周波では、$\dot{\epsilon}$の実部の寄与が大きくなり、低周波では虚部の寄与が大きくなる。
+
 \section{evanescent}
 
 \begin{equation}
@@ -28,7 +71,7 @@ $z_g$ は第二媒質への電界の侵入深さを表し、電磁波は境界�
 この成分をevanescent波と呼ぶ。
 電磁界の浸みこみと合わせて、反射点もずれる。
 このずれのことをグースヘンヒェンシフトと呼ぶ。
-誘電体導波路、光ファイバーを利用する際に重要となる。
+誘電体導波路、光ファイバーを利用する際に重要となる。　
 
 
 \end{document}
