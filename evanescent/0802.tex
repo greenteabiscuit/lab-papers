@@ -17,7 +17,7 @@
 
 \section{tangent delta}
 
-媒質に損失がある場合の電磁波に対する基本式は以下のようになる
+媒質に損失がある場合の電磁波に対する基本式は以下のようになる。
 
 \begin{equation}
   \mathrm{rot}(\frac{1}{\mu(\boldsymbol{r})}\mathrm{rot}\boldsymbol{E}) = -\mu_0 \mathrm{rot}(\frac{\partial H}{\partial t})
@@ -57,8 +57,40 @@
 \end{equation}
 
 とあらわすことができる。
-\ref{eq:tangent_delta}はタンデルタと呼ばれ、伝導電流と変位電流の比を表す。
+式\ref{eq:tangent_delta}はタンデルタと呼ばれ、伝導電流と変位電流の比を表す。
 $\delta$を損失角という。高周波では、$\dot{\epsilon}$の実部の寄与が大きくなり、低周波では虚部の寄与が大きくなる。
+言い換えると、誘電体に交流電場が加わったときにそのエネルギーの一部が熱となってしまう比率ともいえる。
+
+\section{表皮効果}
+
+本研究における実験では銅板でミリ波を遮断することが多くある。
+導体である銅板の導電率$\sigma$は非常に大きくなり、
+振幅減衰定数$\alpha$と位相定数$\beta$は
+
+\begin{equation}
+  \alpha \approx \beta \approx \sqrt[]{\frac{\omega\mu\mu_0\sigma}{2}}
+\end{equation}
+
+のように同じ値に近似できる。
+つまり、導電率$\sigma$の増加とともに電磁波の減衰が大きなることを示し、
+電磁波は指数関数的に減衰する。
+入社電磁波の振幅が表面での値に対して$1/e$になるときの深さ$\delta$を
+表皮深さと呼び、次の式で表すことができる。
+
+\begin{equation}
+  \delta = \frac{1}{\alpha} = \sqrt[]{\frac{2}{\omega\mu\mu_0\sigma}}
+\end{equation}
+
+このことから、電磁波の周波数が上昇し、導電率が大きくなるほど表皮深さが浅くなることを示す。
+このとき、銅板の表面近傍にのみ電流が流れ、表皮効果（skin effect）と呼ぶ。
+電流が流れるということは抵抗が存在することを意味し、表皮抵抗は
+
+\begin{equation}
+  Re\{Z_W\} = \sqrt[]{\frac{\omega\mu\mu_0}{2}} = \frac{1}{\delta\sigma}
+\end{equation}
+
+とあらわされる。
+ミリ波を遮断するために銅板を使うのは相性がいいといえる。
 
 \section{evanescent}
 
