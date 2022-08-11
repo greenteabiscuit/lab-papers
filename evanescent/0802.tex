@@ -92,6 +92,28 @@ $\delta$を損失角という。高周波では、$\dot{\epsilon}$の実部の�
 とあらわされる。
 ミリ波を遮断するために銅板を使うのは相性がいいといえる。
 
+\section{Snellの法則}
+
+異なる媒質の境界面では、電磁波の反射や屈折が起こる。
+これはSnellの法則によって記述され、本研究における重要な法則になる。
+こちらはマクスウェルの方程式と境界条件を用いて導き出すことができる。
+
+媒質の境界面をx-y平面、各領域内で媒質がy方向に一様とする。
+比誘電率と比透磁率を第一媒質に対して$\dot{\epsilon_1}$、$\mu_1$、
+第二媒質に対して$\dot{\epsilon_2}$、$\mu_2$とする。
+損失があるときの複素比誘電率を、次のようにおく。
+$i$はそれぞれの媒質を表すので、1と2の値をとる。
+
+\begin{equation}
+  \dot{\epsilon_i} = \epsilon_i(1 - j\frac{\sigma_i}{\omega\epsilon_i\epsilon_0})
+\end{equation}
+
+ここで各媒質の波数の大きさは$k$として
+
+\begin{equation}
+  k_i = \frac{\omega\sqrt[]{\dot{\epsilon_i}\mu_i}}{c}
+\end{equation}
+
 \section{evanescent}
 
 \begin{equation}
