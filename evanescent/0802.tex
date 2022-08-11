@@ -108,11 +108,27 @@ $i$はそれぞれの媒質を表すので、1と2の値をとる。
   \dot{\epsilon_i} = \epsilon_i(1 - j\frac{\sigma_i}{\omega\epsilon_i\epsilon_0})
 \end{equation}
 
-ここで各媒質の波数の大きさは$k$として
+ただし、$\sigma$は導電率、$\omega$は電磁波の角周波数、$\epsilon$は無損失時の比誘電率、
+$\epsilon_0$は真空の誘電率を表す。
+今回の比透磁率$\mu$は実数とする。
+ここで各媒質の波数の大きさは$k$として以下のようになる。
+$c$は真空中の光速である。
 
 \begin{equation}
   k_i = \frac{\omega\sqrt[]{\dot{\epsilon_i}\mu_i}}{c}
 \end{equation}
+
+ここでTE波を例にSnellの法則を導き出す。
+TE波は電界の振動方向が紙面に垂直であり、伝搬方向に電界成分を持たない。
+紙面に垂直な方向は$y$軸なので、その電界を$E^i_y$として
+
+\begin{equation}
+  E^i_y = A_{iS}\exp[j(\omega t - \boldsymbol{k}_i\cdot\boldsymbol{r})]
+\end{equation}
+
+と書く。$A_{iS}$は電界振幅、$\boldsymbol{k}_i$は媒質中の波数ベクトル、
+$\boldsymbol{r}$は波面の任意の点への位置ベクトルとなる。
+添え字の$i$は３つの状態を持ち、入射・透過・反射をそれぞれ$i$、$t$、$r$で表す。
 
 \section{evanescent}
 
