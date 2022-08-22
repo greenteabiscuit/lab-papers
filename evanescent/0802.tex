@@ -130,7 +130,7 @@ TE波は電界の振動方向が紙面に垂直であり、伝搬方向に電界
 $\boldsymbol{r}$は波面の任意の点への位置ベクトルとなる。
 添え字の$i$は３つの状態を持ち、入射・透過・反射をそれぞれ$i$、$t$、$r$で表す。
 
-\section{evanescent}
+\section{全反射}
 
 電磁波が密な媒質から疎な媒質に入射する場合、
 入射角を徐々に大きくすると入射角より屈折角のほうが先に90度となる。
@@ -140,7 +140,7 @@ $\boldsymbol{r}$は波面の任意の点への位置ベクトルとなる。
 全反射時のTE波の透過電界成分は以下のように書ける。
 
 \begin{equation}
-  E^t_y = \exp[-j(\sqrt[]{\epsilon_1\mu_1}k_0\sin\theta_t)x]\exp(-\frac{z}{z_g})
+  E^t_y = \exp[-j(\sqrt[]{\epsilon_1\mu_1}k_0\sin\theta_t)x]\exp\left(-\frac{z}{z_g}\right)
 \end{equation}
 
 \begin{equation}
@@ -158,5 +158,24 @@ $z_g$ は第二媒質への電界の侵入深さを表し、電磁波は境界�
 注意しなければならないのはエネルギーは浸みださないことである。
 振幅反射係数の和はすべて$1$となり、エネルギーもすべて反射する。
 
+TODO:図を挿入する
+
+\section{電波の伝搬ロス}
+
+自由空間を伝搬する電波の損失$L$は以下の式で表される。
+
+\begin{equation}
+  L = \left(\frac{4\pi d}{\lambda} \right)^2
+\end{equation}
+
+このとき$\lambda$は波長、$d$は距離となる。
+例えば28GHzの電波を考えると波長は10mmなので、
+0.25cm離れたところでは-49.3dBの減衰がみられる。
+800MHz（波長375mm）の電波であれば、
+同じ-49.3dBの減衰がみられるのは10m離れたところとなる。
+
+TODO:図を挿入する
+
+\section{リンクバジェット}
 
 \end{document}
