@@ -6,6 +6,8 @@
 \usepackage{bm}
 % 画像
 \usepackage[dvipdfmx]{graphicx}
+\bibliographystyle{myjunsrt}
+\renewcommand{\bibname}{参考文献}
 
 
 \begin{document}
@@ -176,6 +178,15 @@ TODO:図を挿入する
 
 TODO:図を挿入する
 
+TODO:ここを直す
+FPGAのほうが最大57倍の処理速度を実現できた事例も
+存在する\cite{fowers_2021_energy_comparison_fpgas_gpus}。
+
+
 \section{リンクバジェット}
+
+\newpage
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{common_bibliography}
 
 \end{document}
