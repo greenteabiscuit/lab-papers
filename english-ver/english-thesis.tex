@@ -7,7 +7,7 @@
 % 画像
 \usepackage[dvipdfmx]{graphicx}
 \bibliographystyle{myjunsrt}
-\renewcommand{\bibname}{参考文献}
+\renewcommand{\bibname}{References}
 
 
 \begin{document}
@@ -64,11 +64,13 @@ The parameter in Eq. \ref{eq:tangent_delta} is known as the loss tangent.
 $\delta$を損失角という。高周波では、$\dot{\epsilon}$の実部の寄与が大きくなり、低周波では虚部の寄与が大きくなる。
 言い換えると、誘電体に交流電場が加わったときにそのエネルギーの一部が熱となってしまう比率ともいえる。
 
-\section{表皮効果}
+\section{Skin effect}
 
-本研究における実験では銅板でミリ波を遮断することが多くある。
-導体である銅板の導電率$\sigma$は非常に大きくなり、
-振幅減衰定数$\alpha$と位相定数$\beta$は
+In many of the experiments in this study, 
+millimeter waves are blocked by copper plates.
+The conductivity of the conductor $\sigma$ becomes very large,
+and the amplitude damping constant $\alpha$ and the phase constant$\beta$
+can be written as follows.
 
 \begin{equation}
   \alpha \approx \beta \approx \sqrt[]{\frac{\omega\mu\mu_0\sigma}{2}}
@@ -84,16 +86,18 @@ $\delta$を損失角という。高周波では、$\dot{\epsilon}$の実部の�
   \delta = \frac{1}{\alpha} = \sqrt[]{\frac{2}{\omega\mu\mu_0\sigma}}
 \end{equation}
 
-このことから、電磁波の周波数が上昇し、導電率が大きくなるほど表皮深さが浅くなることを示す。
-このとき、銅板の表面近傍にのみ電流が流れ、表皮効果（skin effect）と呼ぶ。
-電流が流れるということは抵抗が存在することを意味し、表皮抵抗は
+This indicates that the skin depth becomes shallower
+as the frequency of the electromagnetic wave increases and the conductivity increases.
+In this case, the current flows only near the surface of the copper plate,
+which is called the skin effect.
+The fact that current flows means that resistance exists,
+and the skin resistance is written as follows.
 
 \begin{equation}
   Re\{Z_W\} = \sqrt[]{\frac{\omega\mu\mu_0}{2}} = \frac{1}{\delta\sigma}
 \end{equation}
 
-とあらわされる。
-ミリ波を遮断するために銅板を使うのは相性がいいといえる。
+Therefore copper plates can be used to effectively block millimeter waves.
 
 \section{Snellの法則}
 
