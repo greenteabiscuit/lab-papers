@@ -136,14 +136,18 @@ TE波は電界の振動方向が紙面に垂直であり、伝搬方向に電界
 $\boldsymbol{r}$は波面の任意の点への位置ベクトルとなる。
 添え字の$i$は３つの状態を持ち、入射・透過・反射をそれぞれ$i$、$t$、$r$で表す。
 
-\section{全反射}
+\section{Total Reflection}
 
-電磁波が密な媒質から疎な媒質に入射する場合、
-入射角を徐々に大きくすると入射角より屈折角のほうが先に90度となる。
-このとき、入射電磁波が透過することなく境界面で反射後に
-すべて入射側に戻る現象を全反射という。
+When an electromagnetic wave is incident on a sparse medium from a dense medium,
+the refraction angle reaches 90 degrees before the incident angle
+as the incident angle is gradually increased.
+This phenomenon in which the incident electromagnetic wave
+returns to the incident side after being reflected
+at the boundary surface without being transmitted is called total reflection.
 
-全反射時のTE波の透過電界成分は以下のように書ける。
+The transmitted field components of the TE wave at total reflection
+can be written as follows.
+
 
 \begin{equation}
   E^t_y = \exp[-j(\sqrt[]{\epsilon_1\mu_1}k_0\sin\theta_t)x]\exp\left(-\frac{z}{z_g}\right)
@@ -179,7 +183,7 @@ and all energy is also reflected.
 \end{figure}
 
 
-\section{電波の伝搬ロス}
+\section{Transmission loss of electromagnetic waves}
 
 自由空間を伝搬する電波の損失$L$は以下の式で表される。
 
