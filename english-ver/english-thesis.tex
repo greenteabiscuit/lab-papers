@@ -45,7 +45,7 @@ is considered to arise from the flux density $\boldsymbol{D}$.
   \boldsymbol{D} = C\epsilon \epsilon_0 \boldsymbol{E}(\boldsymbol{r})exp(j\omega t)
 \end{equation}
 
-We derive $C=1 - j\sigma / \omega\epsilon\epsilon_0$ from the equation above.
+We derive the constant $C=1 - j\sigma / \omega\epsilon\epsilon_0$ from the equation above.
 Thus the electric flux density can be written as
 
 \begin{equation} \label{eq:electric_flux_density_tangent_delta}
@@ -61,8 +61,10 @@ Thus the electric flux density can be written as
 \end{equation}
 
 The parameter in Eq. \ref{eq:tangent_delta} is known as the loss tangent.
-高周波では、$\dot{\epsilon}$の実部の寄与が大きくなり、低周波では虚部の寄与が大きくなる。
-言い換えると、誘電体に交流電場が加わったときにそのエネルギーの一部が熱となってしまう比率ともいえる。
+At high frequencies, the contribution of the real part of $\epsilon$ becomes larger,
+while at low frequencies, the contribution of the imaginary part becomes larger.
+In other words, it can be said that when an AC electric field is applied to a dielectric,
+a part of its energy is the ratio that becomes heat.
 
 \section{Skin effect}
 
@@ -104,11 +106,14 @@ At the boundary surfaces of different media, reflection and refraction of electr
 This is described by Snell's law.
 This law can be derived using Maxwell's equations and boundary conditions.
 
-媒質の境界面をx-y平面、各領域内で媒質がy方向に一様とする。
-比誘電率と比透磁率を第一媒質に対して$\dot{\epsilon_1}$、$\mu_1$、
-第二媒質に対して$\dot{\epsilon_2}$、$\mu_2$とする。
-損失があるときの複素比誘電率を、次のようにおく。
-$i$はそれぞれの媒質を表すので、1と2の値をとる。
+The boundary plane of the medium is the x-y plane,
+and the medium is uniform in the y direction within each region.
+The relative permittivity and relative permeability are
+$\dot{\epsilon_1}$ and $\mu_1$ for the first medium, and
+$\dot{\epsilon_2}$ and $\mu_2$ for the second medium.
+Let the complex permittivity in the presence of loss be
+$i$ for each medium, so take values of 1 and 2, respectively.
+
 
 \begin{equation}
   \dot{\epsilon_i} = \epsilon_i(1 - j\frac{\sigma_i}{\omega\epsilon_i\epsilon_0})
@@ -157,7 +162,8 @@ can be written as follows.
   z_g = \frac{c}{\omega\sqrt[]{\epsilon_1\mu_1\sin^{2}\theta - \epsilon_2\mu_2}}
 \end{equation}
 
-$z_g$ は第二媒質への電界の侵入深さを表し、電磁波は境界面へわずかにしみでていることがわかる。
+$z_g$ represents the depth of penetration of the electric field into the second medium,
+indicating that the electromagnetic wave is seeping slightly into the boundary surface.
 Even during total reflection, 
 electromagnetic waves also slightly penetrate to the other side of the boundary.
 This component is called the evanescent wave.
