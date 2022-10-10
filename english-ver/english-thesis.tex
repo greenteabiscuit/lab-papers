@@ -119,27 +119,34 @@ $i$ for each medium, so take values of 1 and 2, respectively.
   \dot{\epsilon_i} = \epsilon_i(1 - j\frac{\sigma_i}{\omega\epsilon_i\epsilon_0})
 \end{equation}
 
-ただし、$\sigma$は導電率、$\omega$は電磁波の角周波数、$\epsilon$は無損失時の比誘電率、
-$\epsilon_0$は真空の誘電率を表す。
-今回の比透磁率$\mu$は実数とする。
-ここで各媒質の波数の大きさは$k$として以下のようになる。
-$c$は真空中の光速である。
+Here $\sigma$ is the conductivity,
+$\omega$ is the angular frequency of the electromagnetic wave,
+$\epsilon$ is the dielectric constant when there is no loss, and
+$\epsilon_0$ is the dielectric constant of vacuum.
+The specific permeability $\mu$ is assumed to be a real number this time.
+Here the magnitude of the wavenumber of each medium is as follows as $k$.
+$c$ is the speed of light in vacuum.
 
 \begin{equation}
   k_i = \frac{\omega\sqrt[]{\dot{\epsilon_i}\mu_i}}{c}
 \end{equation}
 
-ここでTE波を例にSnellの法則を導き出す。
-TE波は電界の振動方向が紙面に垂直であり、伝搬方向に電界成分を持たない。
-紙面に垂直な方向は$y$軸なので、その電界を$E^i_y$として
+Here we derive Snell's law using the TE wave as an example.
+For TE waves,
+the oscillation direction of the electric field is perpendicular to the surface,
+and there is no electric field component in the direction of propagation.
+Since the direction perpendicular to the surface is the y-axis,
+its electric field is $E^i_y$ and can be written as follows:
 
 \begin{equation}
   E^i_y = A_{iS}\exp[j(\omega t - \boldsymbol{k}_i\cdot\boldsymbol{r})]
 \end{equation}
 
-と書く。$A_{iS}$は電界振幅、$\boldsymbol{k}_i$は媒質中の波数ベクトル、
-$\boldsymbol{r}$は波面の任意の点への位置ベクトルとなる。
-添え字の$i$は３つの状態を持ち、入射・透過・反射をそれぞれ$i$、$t$、$r$で表す。
+$A_{iS}$ is the electric field amplitude,
+$\boldsymbol{k}_i$is the wavenumber vector in the medium, and
+$\boldsymbol{r}$ is the position vector to an arbitrary point on the wavefront.
+The subscript $i$ has three states,
+where incident, transmitted, and reflected are denoted by i, t, and r, respectively.
 
 \section{Total Reflection}
 
