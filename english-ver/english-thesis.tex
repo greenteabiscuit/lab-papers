@@ -218,10 +218,13 @@ TODO:画像追加
 \section{Cutoff Frequency}
 
 A cutoff frequency, corner frequency, or break frequency
-is a boundary in a system's frequency respoonse at which
+is a boundary in a system's frequency response at which
 energy flowing through the system begins to be reduced
 rather than passing through.
-Cutoff frequency in a rectangular waveguide can be calculated as follows,
+This means that the signals with a frequency above the cut-off frequency
+will travel through a waveguide and signals below this frequency
+will be attenuated.
+Cutoff frequency $f_c$ in a rectangular waveguide can be calculated as follows,
 where $a$ is the wall length, and $\mu$ and $\epsilon$ are
 the permeability and permittivity of the material
 that fill the waveguide, respectively.
@@ -231,7 +234,7 @@ that fill the waveguide, respectively.
 \end{equation}
 
 In a circular waveguide with radius of $a$,
-this could be written as
+$f_c$ could be written as
 
 \begin{equation}
   f_c = \frac{1.8412}{2\pi a\sqrt[]{\mu\epsilon}}
