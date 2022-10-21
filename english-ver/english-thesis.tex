@@ -89,6 +89,34 @@ The following equations describing the electric and magnetic fields can be deriv
   E_z = 0
 \end{equation}
 
+\begin{equation}
+  H_x = -j\frac{1}{\omega\mu\epsilon}\frac{\partial^2F_z}{\partial x \partial z}
+\end{equation}
+
+\begin{equation}
+  H_y = -j\frac{1}{\omega\mu\epsilon}\frac{\partial^2F_z}{\partial y \partial z}
+\end{equation}
+
+\begin{equation}
+  H_z = -j\frac{1}{\omega\mu\epsilon}(\frac{\partial^2}{\partial z^2} + k^2)F_z
+\end{equation}
+
+Here, $k$ is the wave number.
+If the $F_z$, which is the z-axis component of the vector $F$, is found,
+then the electric and magnetic fields can be found.
+From Maxwell's equations, the vector potential $F$ must satisfy the vector wave equation
+in a source-free region.
+
+\begin{equation}
+  (\nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2})\boldsymbol{F} = 0
+\end{equation}
+
+Assuming that there is only one frequency, the time dependence can be written as
+
+\begin{equation}
+  e^{j\omega t} = e^{j 2\pi ft}
+\end{equation}
+
 TODO: write the rest later.
 
 Combining these results, the solution for $F_z$ can be written as
