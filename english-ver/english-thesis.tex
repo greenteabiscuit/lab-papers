@@ -51,6 +51,59 @@ and can allow hostile devices to detect the radiated signals \cite{security_esti
 Therefore, using directive antennas, which form directional beams towards the receiver,
 can be considered to be more safe.
 
+\section{Mathematical analysis of waveguides}
+
+In a source-free region, it is known that
+
+\begin{equation}
+  \nabla D = 0
+\end{equation}
+
+where $D$ is the electric flux density.
+If a vector quantity is divergenceless,
+then it can be expressed as the curl of another quantity.
+The solution for $D$ and the corresponding electric field $E$
+can be written as:
+
+\begin{equation}
+  D = -\nabla \times F
+\end{equation}
+
+\begin{equation}
+  E = \frac{-1}{\epsilon}\nabla \times F
+\end{equation}
+
+where $\epsilon$ is the permittivity of the medium where the wave propagates.
+Here for simplicity, it is assumed that $E_z$ is zero.
+The following equations describing the electric and magnetic fields can be derived from Maxwell's equations.
+
+\begin{equation}
+  E_x = -\frac{1}{\epsilon}\frac{\partial F_z}{\partial y}
+\end{equation}
+
+\begin{equation}
+  E_y = \frac{1}{\epsilon}\frac{\partial F_z}{\partial x}
+\end{equation}
+
+\begin{equation}
+  E_z = 0
+\end{equation}
+
+TODO: write the rest later.
+
+Combining these results, the solution for $F_z$ can be written as
+
+\begin{equation}
+  \begin{split}
+    F_z &= A \cos(k_x x)\cos(k_y y)\exp(-j k_Z z) \\
+        & = A \cos(\frac{m\pi x}{a}) \cos(\frac{n \pi y}{b})\exp(-j k_Z z)
+  \end{split}
+\end{equation}
+
+Only certain distributions will satisfy the required differential equations
+and the boundary conditions. These configurations are called modes.
+Since this solution assumed that $E_z$ is zero, this mode is written as the $TE_mn$ mode.
+
 \section{Loss tangent}
 
 In a dielectric material, dielectric loss quantifies the inherent dissipation
