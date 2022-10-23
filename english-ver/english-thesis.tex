@@ -119,7 +119,7 @@ then the electric and magnetic fields can be found.
 From Maxwell's equations, the vector potential $F$ must satisfy the vector wave equation
 in a source-free region.
 
-\begin{equation}
+\begin{equation} \label{eq:vector_wave_equation}
   (\nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2})\boldsymbol{F} = 0
 \end{equation}
 
@@ -128,6 +128,72 @@ Assuming that there is only one frequency, the time dependence can be written as
 \begin{equation}
   e^{j\omega t} = e^{j 2\pi ft}
 \end{equation}
+
+Thus, the equation [\ref{eq:vector_wave_equation}] can be rewritten as follows:
+
+\begin{equation} \label{eq:simplified}
+  \nabla ^ 2 F_z + k^2 F_z = 0
+\end{equation}
+
+The technique of separation of variables is used to solve this equation.
+It can be assumed that $F_z$ can be separated into the product of 3 functions.
+
+\begin{equation} \label{eq:separation_of_vars}
+  F_z(x,y,z) = X(x)Y(y)Z(z)
+\end{equation}
+
+Therefore, when equation [\ref{eq:separation_of_vars}] is plugged into equation [\ref{eq:simplified}],
+the following equation is derived
+(the prime represents the derivative):
+
+\begin{equation} \label{eq:simplified_derivative_equation}
+  \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} = -k^2
+\end{equation}
+
+For simplicity, the wavenumber $k$ will be broken into components as below:
+
+\begin{equation} \label{eq:break_down_wavenumber}
+  k^2 = k_x^2 + k_y^2 + k_z^2
+\end{equation}
+
+Using equation [\ref{eq:break_down_wavenumber}] and the fact that all variables are
+independent in equation [\ref{eq:simplified_derivative_equation}],
+the followng ordinary differential equations are derived:
+
+\begin{equation} \label{eq:three_ordinary}
+  \left\{
+  \begin{alignedat}{3}
+    X'' + k_x^2 X = 0 \\
+    Y'' + k_y^2 Y = 0 \\
+    Z'' + k_z^2 Z = 0
+  \end{alignedat}
+  \right.
+\end{equation}
+
+Solving the above equations, we get:
+
+\begin{equation} \label{eq:three_solved_ordinary}
+  \left\{
+  \begin{alignedat}{3}
+    X(x) &= c_1 \cos (k_x x) + c_2 \sin (k_x x) \\
+    Y(y) &= c_3 \cos (k_y y) + c_4 \sin (k_y y) \\
+    Z(z) &= c_5 e^{j k_z z} + c_6 e^{-j k_z z}
+  \end{alignedat}
+  \right.
+\end{equation}
+
+The variable $c_5$ can be eliminated as $0$,
+since waves analyzed here are propagating in the +z direction.
+Plugging in the solutions above, $F_z$ can be written as
+
+\begin{equation}
+  F_z = [c_1 \cos (k_x x) + c_2 \sin (k_x x)][c_3 \cos (k_y y) + c_4 \sin (k_y y)]c_6 e^{-j k_z z}
+\end{equation}
+
+Using the condition that tangential electric fields in perfect conductors must be zero,
+$E_x$ must be zero when $y=0$ and $y=b$.
+The same could be said for $E_y$,
+which is also zero when $x=0$ and $x=a$
 
 TODO: write the rest later.
 
