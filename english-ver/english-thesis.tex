@@ -208,7 +208,7 @@ Combining these results, the solution for $F_z$ can be written as
 
 Only certain distributions will satisfy the required differential equations
 and the boundary conditions. These configurations are called modes.
-Since this solution assumed that $E_z$ is zero, this mode is written as the $TE_mn$ mode.
+Since this solution assumed that $E_z$ is zero, this mode is written as the $TE_{mn}$ mode.
 
 Due to Maxwell's Equations,
 the fields within the waveguide always have a specific "form" or "waveshape",
@@ -230,7 +230,52 @@ TODO add figure
 
 \section{Horn Antennas}
 
+Horn antennas are used in high frequency bands spanning from 300MHz
+to even as high as 100GHz.
+Horn antennas often have a directional radiation pattern with a high antenna gain,
+which can range up to 25 dB in some cases, with 10-20 dB being typical.
+Horn antennas have a wide impedance bandwidth,
+implying that the input impedance is slowly varying over a wide frequency range (which also implies low values for S11 or VSWR). The bandwidth for practical horn antennas can be on the order of 20:1 (for instance, operating from 1 GHz-20 GHz),
+with a 10:1 bandwidth not being uncommon.
 
+\section{Antenna impedance}
+
+
+Antenna impedance relates the voltage to the current at the input to the antenna.
+This is an important parameter to look out for when conducting experiments.
+
+For instance, when an antenna has an impedance of 50 ohms,
+this means that if a sinusoidal voltage is applied at the antenna terminals with an amplitude of 1 Volt,
+then the current will have an amplitude of 1/50 = 0.02 Amps.
+Since the impedance is a real number, the voltage is in-phase with the current.
+
+Alternatively, when the impedance is given by a complex number,
+the phase will need to be considered additionaly to the amplitude.
+If impedance $Z$ is writen as $50 + j*50$, where $j$ is an imaginary number,
+then the impedance has a magnitude equal to:
+
+\begin{equation}
+  \sqrt[]{50^2 + 50 ^2} = 70.71
+\end{equation}
+
+The phase can be calculated as:
+
+\begin{equation}
+  \tan^{-1}(\frac{Im(Z)}{Re(Z)}) = \frac{\pi}{4}
+\end{equation}
+
+The real part of the antenna impedance represents power that is either radiated away or absorbed within the antenna.
+The imaginary part of the impedance represents power
+that is stored in the near field of the antenna.
+This is non-radiated power.
+An antenna with a real input impedance (zero imaginary part)
+is said to be resonant.
+
+\subsection{Impedance in low frequencies}
+
+When we are dealing with low frequencies,
+the transmission line that connects the transmitter or receiver
+to the antenna is short relative to the wavelength.
 
 \section{Loss tangent}
 
