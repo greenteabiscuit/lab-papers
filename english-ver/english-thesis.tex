@@ -193,10 +193,49 @@ Plugging in the solutions above, $F_z$ can be written as
 Using the condition that tangential electric fields in perfect conductors must be zero,
 $E_x$ must be zero when $y=0$ and $y=b$.
 The same could be said for $E_y$,
-which is also zero when $x=0$ and $x=a$
+which is also zero when $x=0$ and $x=a$.
+$E_x$ can be calculated as:
 
-TODO: write the rest later.
+\begin{equation}
+  \begin{split}
+    E_x &= -\frac{1}{\epsilon} \frac{\partial F_z}{\partial y} \\
+        &= - \frac{c_6 k_y}{\epsilon}[c_1 \cos (k_x x) + c_2 \sin (k_x x)][-c_3 \sin (k_y y) + c_4 \cos(k_y y)]e^{-jk_z z}
+  \end{split}
+\end{equation}
 
+The boundary condition for $E_x$ is given by:
+
+\begin{equation}
+  E_x(x, y=0, z) = 0
+\end{equation}
+
+This implies that $c_4$ must be equal to zero.
+As for the second boundary condition,
+
+\begin{equation}
+  E_x(x, y=b, z) = 0
+\end{equation}
+
+This means that $c_3 \sin (k_y b) = 0$, which means that the wavenumber $k_y$
+can be written as follows:
+
+\begin{equation}
+  k_y = \frac{n\pi}{b}
+\end{equation}
+
+$n$ here is a natural number.
+This states that the only solutions for $Y(y)$ function must be sinusoids,
+and must have a wavenumber
+which consists an integer number of multiples of a half-wavelength.
+Simiarly in the y-axis, the following can be derived:
+
+\begin{equation}
+  k_x = \frac{n\pi}{a}
+\end{equation}
+
+This statement implies that the only functions of x that satisfy
+the differential equation and the required boundary conditions
+must be an integer multiple of half-sinusoids within the waveguide.
 Combining these results, the solution for $F_z$ can be written as
 
 \begin{equation}
