@@ -297,6 +297,20 @@ the power delivered to the antenna can be calculated as:
   P_A = \frac{V^2 * Z_A}{(Z_A + Z_S) ^2}
 \end{equation}
 
+If $Z_A$ is much smaller in magnitude than $Z_S$,
+then no power will be delivered to the antenna and
+it won't transmit or receive energy.
+The same can be said when $Z_A$ is much larger in magnitude than $Z_S$.
+The ideal value for antenna impedance when maximum power is transferred is given as:
+
+\begin{equation}
+  Z_A = Z_S^*
+\end{equation}
+
+where $Z_S*$ is the complex conjugate of $Z_S$.
+For example, if $Z_S = 30 + 30j$, then $Z_A = 30 - 30j$ is the ideal
+impedance for maximum power transfer.
+
 \subsection{Impedance in high frequencies}
 
 If the antenna is matched to the transmission line (ZA=ZO),
