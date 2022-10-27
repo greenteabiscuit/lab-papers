@@ -238,7 +238,7 @@ Horn antennas have a wide impedance bandwidth,
 implying that the input impedance is slowly varying over a wide frequency range (which also implies low values for S11 or VSWR). The bandwidth for practical horn antennas can be on the order of 20:1 (for instance, operating from 1 GHz-20 GHz),
 with a 10:1 bandwidth not being uncommon.
 
-\section{Antenna impedance}
+\section{Antenna Impedance}
 
 
 Antenna impedance relates the voltage to the current at the input to the antenna.
@@ -276,6 +276,31 @@ is said to be resonant.
 When we are dealing with low frequencies,
 the transmission line that connects the transmitter or receiver
 to the antenna is short relative to the wavelength.
+
+Consider an antenna which is represented as an impedance given by $Z_a$,
+hooked up to a voltage source (of magnitude $V$) with source impedance given by $Z_s$.
+The equivalent circuit of this is shown in
+Figure \ref{fig:low_freq_circuit_diagram}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/low_freq_circuit_diagram.png}
+    \caption{Circuit model of antenna connected to voltage source}
+    \label{fig:low_freq_circuit_diagram}
+  \end{center}
+\end{figure}
+
+Using the equation $P=IV$ from circuit theory,
+the power delivered to the antenna can be calculated as:
+
+\begin{equation}
+  P_A = \frac{V^2 * Z_A}{(Z_A + Z_S) ^2}
+\end{equation}
+
+\subsection{Impedance in high frequencies}
+
+If the antenna is matched to the transmission line (ZA=ZO),
+then the input impedance does not depend on the length of the transmission line.
 
 \section{Loss tangent}
 
