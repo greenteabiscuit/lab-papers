@@ -220,7 +220,7 @@ As for the second boundary condition,
 This means that $c_3 \sin (k_y b) = 0$, which means that the wavenumber $k_y$
 can be written as follows:
 
-\begin{equation}
+\begin{equation} \label{eq:wavenumber_y}
   k_y = \frac{n\pi}{b}
 \end{equation}
 
@@ -230,8 +230,8 @@ and must have a wavenumber
 which consists an integer number of multiples of a half-wavelength.
 Simiarly in the y-axis, the following can be derived:
 
-\begin{equation}
-  k_x = \frac{n\pi}{a}
+\begin{equation} \label{eq:wavenumber_x}
+  k_x = \frac{m\pi}{a}
 \end{equation}
 
 This statement implies that the only functions of x that satisfy
@@ -266,6 +266,8 @@ Metal waveguides cannot support the TEM
 Their exists no solution to Maxwell's equations
 that also satisfy the required boundary conditions for this mode to occur.
 
+TODO: add from here https://www.antenna-theory.com/tutorial/waveguides/waveguides3.php
+
 TODO add figure
 
 \section{Horn Antennas}
@@ -293,6 +295,45 @@ The magnitude of the E-field can be written as:
 
 This equation implies that the far-fields of the horn antenna
 is the Fourier Transform of the fields at the opening of the horn.
+
+TODO: copy here https://www.thefouriertransform.com/applications/radiation.php
+
+Modeling the electric field as the magnetic surface current $M_S$,
+it can be written as:
+
+\begin{equation}
+  M_S = E_a \times \hat{n}
+\end{equation}
+
+$\hat{n}$ is the unit vector perpendicular to the surface.
+The electric fields $E$ and magnetic fields $H$ in the far field can be written as:
+
+\begin{equation}
+  E = \eta H \times \hat{r}
+\end{equation}
+
+\begin{equation}
+  H = \hat{r} \times \frac{E}{\eta}
+\end{equation}
+
+Here, $\eta$ is the characteristic impedance of free space,
+which is about 377 Ohms. $\hat{r}$ is the direction of propagation for the plane wave.
+
+TODO: paste 3D model photo of horn antenna
+
+The waveguide feed acts as a high-pass filter,
+which blocks any energy below its cutoff frequency.
+The antenna gain is affected by the geometry of the horn antenna.
+
+\section{Radar}
+
+Radar works by transmitting an electromagnetic wave from an antenna.
+The wave then bounces off some object, and the returned energy is measured.
+The amount of energy returned is a function of the radar cross section of the object.
+
+If we can estimate the fields radiated by an antenna,
+we can estimate the surface electric current induced on an object
+(such as an airplane).
 
 \section{Antenna Gain}
 
@@ -742,6 +783,34 @@ rather than passing through.
 This means that the signals with a frequency above the cut-off frequency
 will travel through a waveguide and signals below this frequency
 will be attenuated.
+
+Using the fact that
+the components of the wavenumber must satisfy the relationship:
+
+\begin{equation}
+  k_x^2 + k_y^2 + k_z^2 = \omega^2\mu\epsilon = \left(\frac{2\pi f}{c}\right)^2
+\end{equation}
+
+Assuming the situations are the same as
+in the equations \ref{eq:wavenumber_y} and \ref{eq:wavenumber_x},
+by plugging them in we get:
+
+\begin{equation}
+  \left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2 + k_z^2 = k^2 = \left(\frac{2\pi f}{c}\right)^2
+\end{equation}
+
+$k_z^2 > 0$ is the necessary condition for propagation to occur.
+If this is true, then $k_z$ is a real number,
+so that the field components will contain complex exponentials,
+which represent propagating waves.
+Otherwise when $k_z^2 < 0$,
+$k_z$ will be an imaginary number,
+in which case the complex exponential becomes a decaying real exponential.
+In this case, the fields will not propagate but instead quickly die out within the waveguide.
+Electromagnetic fields that die off instead of propagate are referred to as evanescent waves.
+
+TODO add here https://www.antenna-theory.com/tutorial/waveguides/waveguides3.php
+
 Cutoff frequency $f_c$ in a rectangular waveguide can be calculated as follows,
 where $a$ is the wall length, and $\mu$ and $\epsilon$ are
 the permeability and permittivity of the material
@@ -814,7 +883,34 @@ smartphones before making transactions from their bank accounts.
 
 \section{Two Dimensional Waveguide Sheets}
 
-\section{Waveguide Simulation}
+\section{Finite Element Boundary Integral Method}
+
+The finite element boundary integral method
+combines the finite element
+method (FEM) and the surface integral equation
+embodied in the extended boundary condition
+method (EBCM).
+
+The theory of the extended boundary condition
+method is well known and only the equations
+which are required for the extension of the technique to the inhomogeneous problem will be given
+here.
+Consider a scatterer illuminated by a plane
+wave. The incident field $\bar{E_i}$ and the scattered field
+$\bar{E_s}$, can be expanded in the spherical vector harmonics $\bar{M}$ and $\bar{N}$.
+
+\begin{equation}
+  \bar{E_i} = \sum_{\nu}D_{\nu}[a_{\nu}\bar{M}_{\nu}^1(k_0\bar{r})+b_{\nu}\bar{N}_{\nu}^1(k_0\bar{r})]
+\end{equation}
+
+\begin{equation}
+  \bar{E_s} = \sum_{\nu}D_{\nu}[f_{\nu}\bar{M}_{\nu}^4(k_0\bar{r})+g_{\nu}\bar{N}_{\nu}^4(k_0\bar{r})]
+\end{equation}
+
+The $a_{\nu}$ and $b_{\nu}$ coefficients are known, while $f_{\nu}$ and
+$q_{\nu}$, are initially unknown. $D_{\nu}$ is a normalization
+constant, $\nu$ is a combined index incorporating tht
+three spherical harmonic indices. and $k_0$ is the free space wave number.
 
 \section{Directivity Results}
 
