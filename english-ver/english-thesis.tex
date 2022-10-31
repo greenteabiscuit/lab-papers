@@ -280,6 +280,20 @@ with a 10:1 bandwidth not being uncommon.
 
 https://www.antenna-theory.com/antennas/aperture/horn.php
 
+TODO: add cross section of waveguide in H-plane
+
+TODO: add cross section of waveguide in V-plane
+
+The E-field in the far-field becomes linearly polarized.
+The magnitude of the E-field can be written as:
+
+\begin{equation}
+  |E| = \frac{k}{4 \pi r}(1 + \cos(\theta))\int_{-B/2}^{B/2}\int_{-A/2}^{A/2}E_A(x,y)e^{jk(x\sin\theta\cos\phi + y\sin\theta\sin\phi)}dxdy
+\end{equation}
+
+This equation implies that the far-fields of the horn antenna
+is the Fourier Transform of the fields at the opening of the horn.
+
 \section{Antenna Gain}
 
 The term antenna gain describes how much power is transmitted
@@ -798,6 +812,9 @@ vital information that cannot be leaked, and in places such as ATMs,
 where customers often look up important information on their
 smartphones before making transactions from their bank accounts.
 
+\section{Two Dimensional Waveguide Sheets}
+
+\section{Waveguide Simulation}
 
 \section{Directivity Results}
 
