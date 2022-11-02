@@ -282,7 +282,6 @@ that also satisfy the required boundary conditions for this mode to occur.
 
 TODO: add from here https://www.antenna-theory.com/tutorial/waveguides/waveguides3.php
 
-TODO add figure
 
 \section{Horn Antennas}
 
@@ -294,11 +293,21 @@ Horn antennas have a wide impedance bandwidth,
 implying that the input impedance is slowly varying over a wide frequency range (which also implies low values for S11 or VSWR). The bandwidth for practical horn antennas can be on the order of 20:1 (for instance, operating from 1 GHz-20 GHz),
 with a 10:1 bandwidth not being uncommon.
 
-https://www.antenna-theory.com/antennas/aperture/horn.php
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/horn_antenna_h_plane_cross_section.png}
+    \caption{Cross section of waveguide, cut in the H-plane}
+    \label{fig:horn_antenna_h_plane_cross_section}
+  \end{center}
+\end{figure}
 
-TODO: add cross section of horn antenna in H-plane
-
-TODO: add cross section of horn antenna in V-plane
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/horn_antenna_e_plane_cross_section.png}
+    \caption{Cross section of waveguide, cut in the E-plane}
+    \label{fig:horn_antenna_e_plane_cross_section}
+  \end{center}
+\end{figure}
 
 The E-field in the far-field becomes linearly polarized.
 The magnitude of the E-field can be written as:
