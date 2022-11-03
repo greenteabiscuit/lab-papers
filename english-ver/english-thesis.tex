@@ -5,6 +5,7 @@
 % 数式
 \usepackage{amsmath,amsfonts}
 \usepackage{bm}
+\usepackage{esint} % for double contour
 % 画像
 \usepackage[dvipdfmx]{graphicx}
 \bibliographystyle{myjunsrt}
@@ -914,6 +915,22 @@ smartphones before making transactions from their bank accounts.
 
 \section{Finite Element Boundary Integral Method}
 
+Exact numerical solutions of electromagnetic radiation
+and scattering problems including arbitrarily shaped conducting objects preferably rely on integral equations (IEs) being
+solved by the method of moments (MoM), usually employing
+Galerkin's method with triangular Rao-Wilton-Glisson (RWG)
+vector basis functions.
+For problems including arbitrarily shaped and inhomogeneous dielectric
+objects, the hybrid finite element—boundary integral (FEBI)
+method has been developed, where the fields in the
+interior region of the dielectric objects are formulated with the
+FE method and the fields in the exterior region with an IE.
+The two regions are coupled together at the boundaries of the
+objects via the field continuity conditions. In order to avoid
+interior resonances and for improved convergence within the
+iterative solver, the combined field integral equation (CFIE) is
+used, which is a linear combination of the electric field integral equation (EFIE) and the magnetic field integral equation
+(MFIE).
 The finite element boundary integral method
 combines the finite element
 method (FEM) and the surface integral equation
@@ -942,6 +959,84 @@ constant, $\nu$ is a combined index incorporating tht
 three spherical harmonic indices. and $k_0$ is the free space wave number.
 
 TODO: write rest https://core.ac.uk/download/pdf/36739115.pdf
+
+\subsection{Boundary Integral Equation Methods}
+
+We can reformulate boundary value problems for partial differential equations in a
+domain as integral equations on the boundary of that domain.
+Boundary integral equation methods refer to the numerical
+solution of these integral equations.
+Since we only solve a problem on the boundary, there is an
+overall reduction in dimension by one.
+Also because of its meshless characteristics,
+it can compute solutions in complicated domains.
+In some situations, it is easier to integrate than to differentiate.
+The difference between partial differential equations and integral equations is that
+numerical solution of partial differential equations yield sparse matrices, while
+numerical solutions of boundary integral equations yield dense
+matrices.
+
+Consider the two-point boundary value problem in one dim: todo: % https://appliedmath.ucmerced.edu/sites/appliedmath.ucmerced.edu/files/page/documents/introduction_to_boundary_integral_equation_methods.pdf
+
+\section{Radiation Conditions}
+
+When the outer boundary of a domain recedes to infinity,
+the domain is called unbounded or open.
+A condition must be specified at this outer boundary to obtain a unique solution
+for this problem.
+Such a condition is referred to as a radiation condition.
+
+Assuming that all sources and objects are immersed in free space
+and located within a finite distance from the origin of a coordinate system,
+the electric and magnetic fields are required to satisfy:
+
+\begin{equation} \label{eq:sommerfeld_radiation_condition_infinite}
+  \lim_{r \to \infty}\left[\nabla\times\begin{pmatrix}
+    \boldsymbol{E} \\
+    \boldsymbol{H}
+  \end{pmatrix} + jk_0\hat{r} \times\begin{pmatrix}
+    \boldsymbol{E} \\
+    \boldsymbol{H}
+  \end{pmatrix}\right] = 0
+\end{equation}
+
+where $r = \sqrt[]{x^2 + y^2 + z ^2}$.
+This is referred to as the Sommerfeld radiation condition for general three-dimensional fields,
+and is exactly valid at infinity.
+In numerical analysis,
+it is often desirable to reduce the size of a computational domain
+by using a finite boundary to truncate the infinite domain.
+When applied at such a finite boundary,
+\ref{eq:sommerfeld_radiation_condition_infinite} can be regarded as the
+lowest-order radiation condition with limited accuracy.
+Better accuracy can be achieved by developing higher-order conditions.
+
+\section{Huygens' principle}
+
+Huygens' principle provides expressions to calculate the fields everywhere based
+on knowledge of the fields surrounding an object.
+Consider a surface $S$ enclosing the source of radiation and any other objects
+so that the infinite space exterior to the surface is homogeneous (TODO ref fig).
+If the fields on the surface are known, the fields outside the surface are given by:
+
+\begin{equation}
+  \boldsymbol{E}(\boldsymbol{r}) = \oiint_S{-j\omega\mu[\hat{n'} \\
+  \times \boldsymbol{H}(\boldsymbol{r'})]G_0(\boldsymbol{r}, \boldsymbol{r'}) \\
+  + [n'\cdot\boldsymbol{E}(\boldsymbol{r}')]\nabla'G_0(\boldsymbol{r}, \boldsymbol{r'}) \\
+  + [\hat{n}' \times \boldsymbol{E}(\boldsymbol{r}')] \\
+  \times \nabla'G_0(\boldsymbol{r}, \boldsymbol{r'})}dS'
+\end{equation}
+
+TODO: keep writing
+
+\section{Summary}
+
+In this section we first reviewed Maxwell's equations,
+and Hugens' principle for calculating exterior fields from the field on a closed surface.
+
+TODO: insert figure
+
+\section{Rod Antennas}
 
 \section{Directivity Results}
 
