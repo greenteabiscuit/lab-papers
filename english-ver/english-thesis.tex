@@ -1029,6 +1029,12 @@ If the fields on the surface are known, the fields outside the surface are given
 
 TODO: keep writing
 
+\section{Variational Method}
+
+\begin{equation}
+  L\phi = f
+\end{equation}
+
 \section{Summary}
 
 In this section we first reviewed Maxwell's equations,
@@ -1038,7 +1044,45 @@ TODO: insert figure
 
 \section{Rod Antennas}
 
-\section{Directivity Results}
+\section{Qualitative Analysis}
+
+The authors constructed a 60GHz mmWave system to
+qualitatively analyze the characterstics of the PTFE waveguide.
+VR-WH1, a wireless HDMI transmission unit manufactured by Sharp, was used.
+Video was first streamed on a PC and transmitted via HDMI to the sender unit.
+The sender unit is enclosed in a brass box with a horn antenna attached to the front.
+The PTFE waveguide is attached to the horn antenna,
+which the authors held with their hands to control its beam emission direction.
+The receiver was placed a meter away from the waveguide tip,
+and the receiver was connected to an external monitor via HDMI.
+The authors also held a copper board between the sender and the receiver
+just in case of wave leakage.
+
+When using the 60GHz mmWave system,
+the authors discovered that the PTFE waveguide
+emits a sharp beam from its tip,
+as shown in Figures \ref{img:qualitative_waveguide_not_pointed} and \ref{img:qualitative_waveguide_pointed}.
+The video does not play (data is not received on the receiver)
+when the waveguide is not pointed to the receiver,
+and vice versa when pointed.
+
+\begin{figure}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/qualitative_waveguide_not_pointed.png}
+    \caption{Video does not play (data is not received) when the waveguide is not pointed to the receiver}
+    \label{img:qualitative_waveguide_not_pointed}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/qualitative_waveguide_pointed.png}
+    \caption{Video plays when the waveguide is pointed to the receiver}
+    \label{img:qualitative_waveguide_pointed}
+  \end{minipage}\hfill
+\end{figure}
+
+\section{Quantitive Analysis and Directivity Results}
 
 \newpage
 \addcontentsline{toc}{chapter}{\bibname}
