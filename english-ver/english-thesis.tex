@@ -2,6 +2,8 @@
 \renewcommand{\tablename}{Table }
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\refname}{References}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
 
 % 数式
 \usepackage{amsmath,amsfonts}
@@ -1085,11 +1087,26 @@ Imposing the stationary requirement $\delta F = 0$,
 we obtain
 
 \begin{equation}
-  Re\langle \delta\phi, L\phi-f\rangle = Re \langle \int_{\Omega} \delta\phi (L\phi - f)^{*} d\Omega \rangle = 0
+  Re\langle \delta\phi, L\phi-f\rangle = \Re \langle \int_{\Omega} \delta\phi (L\phi - f)^{*} d\Omega \rangle = 0
 \end{equation}
 
 $\delta\phi = 0$ can be ignored since it is an arbitrary variation,
 and from $L\phi - f = 0$, the first point is proved.
+
+The second point can be considered by taking the first variation of $\delta F$
+once more.
+This results in:
+
+\begin{equation} \label{eq:delta_delta_F}
+  \delta(\delta F) = \delta F(\phi + \delta \phi) - \delta F(\phi) = \Re\langle \delta\phi, L\delta\phi \rangle
+\end{equation}
+
+For a nontrivial (non-zero) $\delta\phi$,
+using the positive definite condition,
+we can conclude that $\delta(\delta F) > 0$.
+Rephrasing this, when $L > 0$ and $\delta \phi > 0$, 
+the result of Equation \ref{eq:delta_delta_F} is greater than 0.
+Therefore the stationary point is indeed at the minimum of $F$.
 
 \subsection{Galerkin's Method}
 
@@ -1151,7 +1168,7 @@ as shown in Fig. \ref{fig:ptfe_rod_antenna_anechoic_chamber}
 and \ref{img:horn_antenna_anechoic_chamber}.
 The PTFE rod antenna and the platform rotate in the anechoic chamber
 with the tip of the PTFE rod antenna at the center of the rotation.
-Fig. TODO add here shows the measured radiation patterns at 28GHz.
+Fig. TODO add here, edit the graphs to english format shows the measured radiation patterns at 28GHz.
 
 \begin{figure}
   \centering
