@@ -1047,8 +1047,8 @@ and Dirichlet condition is an example of a boundary condition.
 
 The operator $L$ is self-adjoint when it satisfies the following condition:
 
-\begin{equation}
-  <L\phi, \psi> = <\phi, L\psi>
+\begin{equation}\label{eq:boundary_problem_differential_equation}
+  \langle L\phi, \psi \rangle = \langle\phi, L\psi\rangle
 \end{equation}
 
 An example of a self-adjoint operator is $i\frac{d}{dx}$.
@@ -1057,12 +1057,39 @@ we must add another condition that the operator $L$ is positive definite,
 that is:
 
 \begin{equation}
-  <L\phi, \phi> =
+  \langle L\phi, \phi\rangle =
   \begin{cases}
     > 0 & \phi \neq 0 \\
     = 0 & \phi = 0
   \end{cases}
 \end{equation}
+
+And the solution to Equation \ref{eq:boundary_problem_differential_equation}
+can be obtained by minimizing the functional
+
+\begin{equation}
+  F(\tilde{\phi}) = \frac{1}{2}\langle L \tilde{\phi}, \tilde{\phi}\rangle \\
+  - \frac{1}{2}\langle \tilde{\phi}, f \rangle - \frac{1}{2}\langle f, \tilde{\phi} \rangle
+\end{equation}
+
+Here $\tilde{\phi}$ represents a trial function.
+To prove this variational principle,
+we first need to show the differential equation is the necessary consequence when the functional $F$ is stationary
+($\delta F = 0$).
+We also must prove that the stationary point is at the minimum of the functional $F$,
+which is equivalent to proving that $\delta(\delta F) > 0$.
+
+TODO write the rest
+
+Imposing the stationary requirement $\delta F = 0$,
+we obtain
+
+\begin{equation}
+  Re\langle \delta\phi, L\phi-f\rangle = Re \langle \int_{\Omega} \delta\phi (L\phi - f)^{*} d\Omega \rangle = 0
+\end{equation}
+
+$\delta\phi = 0$ can be ignored since it is an arbitrary variation,
+and from $L\phi - f = 0$, the first point is proved.
 
 \subsection{Galerkin's Method}
 
