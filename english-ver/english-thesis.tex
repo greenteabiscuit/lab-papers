@@ -1030,9 +1030,42 @@ TODO: keep writing
 
 \section{Variational Method}
 
+A typical boundary-value problem can be defined by a
+governing differntial equation in a domain $\Omega$,
+and the boundary conditions on the boundary $\Gamma$ that encloses the domain.
+
 \begin{equation}
   L\phi = f
 \end{equation}
+
+Here $L$ is a differential operator, $f$ is the excitation function,
+and $\phi$ is the unknown quantity.
+Poisson equation is an example of a governing differential equation in electromagnetics
+and Dirichlet condition is an example of a boundary condition.
+
+\subsection{The Ritz Method}
+
+The operator $L$ is self-adjoint when it satisfies the following condition:
+
+\begin{equation}
+  <L\phi, \psi> = <\phi, L\psi>
+\end{equation}
+
+An example of a self-adjoint operator is $i\frac{d}{dx}$.
+To obtain the solution,
+we must add another condition that the operator $L$ is positive definite,
+that is:
+
+\begin{equation}
+  <L\phi, \phi> =
+  \begin{cases}
+    > 0 & \phi \neq 0 \\
+    = 0 & \phi = 0
+  \end{cases}
+\end{equation}
+
+\subsection{Galerkin's Method}
+
 
 \section{Summary}
 
@@ -1092,12 +1125,6 @@ and \ref{img:horn_antenna_anechoic_chamber}.
 The PTFE rod antenna and the platform rotate in the anechoic chamber
 with the tip of the PTFE rod antenna at the center of the rotation.
 Fig. TODO add here shows the measured radiation patterns at 28GHz.
-
-\begin{figure}
-  \begin{center}
-
-  \end{center}
-\end{figure}
 
 \begin{figure}
   \centering
