@@ -796,14 +796,72 @@ A link budget is an accounting of all of the power gains and losses
 that a communication signal experiences in a telecommunication system;
 from a transmitter, through a communication medium such as radio waves,
 cable, waveguide, or optical fiber, to the receiver.
-A simple link budget equation looks like this:
+Link budget is controlled by three factors, 
+which are communication distance, transmitted power, and antenna gain.
+
+To calculate the link budget,
+we first need to calculate the EIRP (Equivalent Isotropically Radiated Power)[W],
+which is the sum of the output power of the transmitter, antenna gain, and cable loss,
+which can be written as follows:
 
 \begin{equation}
-  RP = TP + Gain - Loss
+  EIRP = TP + Gain - Loss
 \end{equation}
 
-RP and TP are short for received power and transmitted power, respectively.
-While RP and TP are in units of decibels-milliwatts, Gain and Loss are in units of decibels.
+EIRP and TP are short for received power and transmitted power, respectively.
+While EIRP and TP are in units of decibels-milliwatts,
+gain and loss are in units of decibels.
+TP is further determined by the cable loss and the transmissed power
+of the device itself.
+Here we omit some variables such as miscellaneous losses,
+which include polarization mismatch and fading margin.
+
+For example, when the input power of the transmitter and the gain is -11 dBm and 5 dBi,
+respectively, the EIRP is -6 dBm.
+If the gain on the receiver antenna is 5dBi and
+the path loss is 49.3 dB,
+the received power on the receiver antenna can be calculated as:
+
+\begin{equation}
+  P_r = EIRP - L_{a} + G_r = -50.3 dBm
+\end{equation}
+
+The table below summarizes the situation discussed above:
+
+\begin{table}[h]
+  \centering
+  \caption{Table of all factors affecting the communication system}
+  \label{table:communication_system_factors}
+  \begin{tabular}[]{lcc}
+    \hline
+    Factors & Values & Unit \\
+    \hline\hline
+    Tx Power & -10 & dBm \\
+    \hline
+    Tx Cable Loss & -1 & dB \\
+    \hline
+    Tx ANT Gain & 5 & dBi \\
+    \hline
+    EIRP & -6 & dBm \\
+    \hline
+    Distance & 0.25 & m \\
+    \hline
+    Air loss & -49.3 & dBi \\
+    \hline
+    Rx ANT Gain & 5 & dBi \\
+    \hline
+    Rx Cable Loss & -1 & dB \\
+    \hline
+    \hline
+    Rx Input & -51.3 & dBm \\
+    \hline
+  \end{tabular}
+\end{table}
+
+This indicates again the limitations of the millimeter wave in an open space.
+Millimeter waves with frequency of 28GHz have a loss of -49.3 dB
+just within 0.25 meters of communication distance.
+
 
 \section{Cutoff Frequency}
 
@@ -1129,10 +1187,17 @@ enables converting baseband signals of the 5 MHZ to 6 GHZ range
 up to the 27 GHz to 43 GHz range, and vice versa.
 It contains a 32 bit STM32F microcontroller
 containing both 12 bit analog to digital, digital to analog converters.
-The microcontroller also embeds a wave table of maximum 4096 words with 2 channels.
+The microcontroller also employs
+a wave table of maximum 4096 words with 2 channels,
+which can create and send constant wave signals.
+the microcontroller can also create arbitrary wave signals from
+data written in the flash memory.
 The device alone can produce constant wave and narrow band wave signals
 of under 100 kHz, and can modulate, demodulate, send, and receive
 millimeter wave signals.
+Upon receiving millimeter waves,
+the signal is demodulated and the baseband signal is converted to a digital signal,
+which can be analyzed on the computer by applying FFT.
 
 \begin{figure}
   \begin{center}
