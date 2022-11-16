@@ -10,6 +10,9 @@
 \usepackage{esint} % for double contour
 % 画像
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{fancyhdr} 
+\fancyhf{}
+\cfoot{\thepage}
 \bibliographystyle{myjunsrt}
 
 \begin{document}
@@ -42,7 +45,7 @@
 
 \renewcommand{\thepage}{\roman{page}}
 \cleardoublepage
-\pagestyle{headings}
+\pagestyle{fancy}
 \tableofcontents
 \listoffigures
 \listoftables
