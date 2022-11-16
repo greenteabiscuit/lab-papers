@@ -45,6 +45,17 @@ already implemented in 5G base station tools.
 
 \section{Security}
 
+\subsection{TEMPEST Attack}
+
+The TEMPEST attack is used to eavesdrop on
+leaked electromagnetic radiation that can directly
+provide plaintexts and other information.
+Leaked electromagnetic radiation can have a variety of sources,
+from cables, laptop computers, and antennas.
+
+\subsection{Attacks on omni-directional antennas}
+
+We look at an example of omni-directional antennas being attacked.
 In a hostile environment, the adversary's antenna can pick up signals from the
 transmitter when the SNR at the antenna of the adversary is high enough.
 In case of an omni-directional antenna, it can have a coverage of 360 degrees
@@ -1224,8 +1235,57 @@ The QPSK transmitter was implemented on the 28 GHz system to
 calculate the bit error rate. Bit error rate can be calculated as follows:
 
 \begin{equation}
-  BER = \frac{Number of error bits}{Number of total bits}
+  BER = \frac{Number\, of\, error\, bits}{Number\, of\, total\, bits}
 \end{equation}
+
+\section{Luneburg Lens}
+
+% refractive index = 屈折率
+
+A Luneburg lens is a spherically symmetric gradient-index lens.
+A typical Luneburg lens's refractive index n decreases radially
+from the center to the outer surface.
+They can be made for use with electromagnetic radiation
+from visible light to radio waves.
+
+Each point on the surface of an ideal Luneburg lens is the
+focal point for parallel radiation incident on the opposite side.
+Ideally, the dielectric constant $\epsilon_r$ of the material
+composing the lens falls from 2 at its center to 1 at its surface
+(or equivalently, the refractive index $n$ falls from $\sqrt[]{2}$ to $1$),
+derived from the equation below:
+
+\begin{equation}
+  n = \sqrt[]{\epsilon_r} = \sqrt[]{2 - \left(\frac{r}{R}\right)^2}
+\end{equation}
+
+Here $R$ is the radius of the lens.
+Because the refractive index at the surface is the same
+as that of the surrounding medium,
+no reflection occurs at the surface.
+Within the lens, the paths of the rays are arcs of ellipses.
+
+\subsection{Uses in a microwave antenna}
+
+A Luneburg lens can be used as the basis of a high-gain radio antenna.
+This antenna is comparable to a dish antenna,
+but uses the lens rather than a parabolic reflector as the main focusing element.
+As with the dish antenna,
+a feed to the receiver or from the transmitter is placed at the focus,
+the feed typically consisting of a horn antenna.
+The phase centre of the feed horn must coincide with the point of focus,
+but since the phase centre is invariably somewhat inside the mouth of the horn,
+it cannot be brought right up against the surface of the lens.
+Consequently it is necessary to use a variety of Luneburg lens
+that focuses somewhat beyond its surface,
+rather than the classic lens with the focus lying on the surface.
+A variation on the Luneburg lens antenna is the hemispherical
+Luneburg lens antenna or Luneburg reflector antenna.
+This uses just one hemisphere of a Luneburg lens,
+with the cut surface of the sphere resting on a reflecting metal ground plane.
+
+We apply the lens in our millimeter wave antenna setup to
+realize an antenna with higher resolution.
 
 \section{Qualitative Analysis}
 
