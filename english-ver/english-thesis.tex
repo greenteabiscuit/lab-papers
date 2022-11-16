@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{report}
+\documentclass[a4paper,12pt]{report}
 \renewcommand{\tablename}{Table }
 \renewcommand{\figurename}{Fig.}
 \renewcommand{\Re}{\operatorname{Re}}
@@ -10,6 +10,7 @@
 \usepackage{esint} % for double contour
 % 画像
 \usepackage[dvipdfmx]{graphicx}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=5cm]{geometry}
 \usepackage{fancyhdr} 
 \fancyhf{}
 \cfoot{\thepage}
@@ -46,6 +47,7 @@
 \renewcommand{\thepage}{\roman{page}}
 \cleardoublepage
 \pagestyle{fancy}
+\lhead{\rightmark}
 \tableofcontents
 \listoffigures
 \listoftables
