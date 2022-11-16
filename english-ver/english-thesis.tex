@@ -1421,11 +1421,43 @@ and loading the remaining ports by matched characteristic impedances.
 The modal option enables HFSS to use electromagnetic power to solve the simulation problem.
 
 \begin{figure}
-  \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/hfss_solution_type.png}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/hfss_solution_type.png}
     \caption{Solution Type for HFSS}
     \label{fig:hfss_solution_type}
-  \end{center}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/hfss_febi_hybrid_region.png}
+    \caption{Region Specification for HFSS}
+    \label{fig:hfss_febi_hybrid_region}
+  \end{minipage}\hfill
+\end{figure}
+
+A hybrid region is defined to enclose the model,
+and the type is specified as FE-BI (finite element boundary integral),
+as seen in Figure \ref{fig:hfss_febi_hybrid_region}.
+
+Two modes were designed for the wave port to excite the HFSS models.
+Both of them have integration lines defined,
+and modes are aligned analytically using the coordinate system.
+
+\begin{figure}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/hfss_waveport_modes.png}
+    \caption{Waveport Models for HFSS}
+    \label{fig:hfss_waveport_modes}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/hfss_driven_solution_setup.png}
+    \caption{Solution Setup for HFSS}
+    \label{fig:hfss_driven_solution_setup}
+  \end{minipage}\hfill
 \end{figure}
 
 \subsection{About the models}
