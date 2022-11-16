@@ -10,7 +10,7 @@
 \usepackage{esint} % for double contour
 % 画像
 \usepackage[dvipdfmx]{graphicx}
-\usepackage[left=3cm,right=2cm,top=3cm,bottom=5cm]{geometry}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=5cm]{geometry} % leave it at 5cm for bottom, otherwise will need to write more...
 \usepackage{fancyhdr} 
 \fancyhf{}
 \cfoot{\thepage}
@@ -1403,6 +1403,32 @@ Fig. TODO add here, edit the graphs to english format shows the measured radiati
     \label{img:horn_antenna_anechoic_chamber}
   \end{minipage}\hfill
 \end{figure}
+
+\chapter{PTFE Rod Antenna}
+
+\section{PTFE Rod Antenna Realization}
+
+\section{Simulation Using HFSS}
+
+\subsection{About the simulation conditions}
+
+Here we discuss the simulation conditions used in HFSS.
+As shown in Figure \ref{fig:hfss_solution_type},
+HFSS with Hybrid and Arrays was employed for the solution type.
+By choosing network analysis,
+HFSS solves the design by exciting the ports individually
+and loading the remaining ports by matched characteristic impedances.
+The modal option enables HFSS to use electromagnetic power to solve the simulation problem.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/hfss_solution_type.png}
+    \caption{Solution Type for HFSS}
+    \label{fig:hfss_solution_type}
+  \end{center}
+\end{figure}
+
+\subsection{About the models}
 
 \newpage
 \addcontentsline{toc}{chapter}{\bibname}
