@@ -1287,7 +1287,7 @@ calculate the bit error rate. Bit error rate can be calculated as follows:
 
 \subsection{SPI}
 
-
+\section{Grating Couplers}
 
 \section{Luneburg Lens}
 
@@ -1443,6 +1443,12 @@ as seen in Figure \ref{fig:hfss_febi_hybrid_region}.
 Two modes were designed for the wave port to excite the HFSS models.
 Both of them have integration lines defined,
 and modes are aligned analytically using the coordinate system.
+The two vectors representing the 
+integration lines span the diameter of the wave port,
+and are placed in perpendicular fashion (Figure \ref{fig:hfss_waveport_modes}).
+
+We chose the 58 GHz to 60 GHz for the solution setup of the simulation,
+with a step size of 1 GHz (Figure \ref{fig:hfss_driven_solution_setup}).
 
 \begin{figure}
   \centering
@@ -1460,7 +1466,26 @@ and modes are aligned analytically using the coordinate system.
   \end{minipage}\hfill
 \end{figure}
 
+\begin{figure}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/hfss_mode_integration_line_1.png}
+    \caption{Integration Line for HFSS}
+    \label{fig:hfss_mode_integration_line_1}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/hfss_mode_integration_line_2.png}
+    \caption{Integration Line for HFSS for HFSS}
+    \label{fig:hfss_mode_integration_line_2}
+  \end{minipage}\hfill
+\end{figure}
+
 \subsection{About the models}
+
+The models were all placed so that their radiation patterns
+were visualized on the x-y plane.
 
 \newpage
 \addcontentsline{toc}{chapter}{\bibname}
