@@ -1155,7 +1155,7 @@ A typical boundary-value problem can be defined by a
 governing differntial equation in a domain $\Omega$,
 and the boundary conditions on the boundary $\Gamma$ that encloses the domain.
 
-\begin{equation}
+\begin{equation} \label{eq:general_boundary_value_problem}
   L\phi = f
 \end{equation}
 
@@ -1257,6 +1257,108 @@ the result of Equation \ref{eq:delta_delta_F} is greater than 0.
 Therefore the stationary point is indeed at the minimum of $F$.
 
 \subsection{Galerkin's Method}
+
+\subsection{A Simple example}
+
+Here we look at a simple boundary-value problem and solve it using
+both the Ritz and Galerkin methods.
+The problem is about the determination of the static potential $\phi$
+between two infinite parallel plates.
+One plate is located at $x=0$ with $\phi=0$ and
+the other at $x=1$ with $\phi=1$.
+The space between is filled with a medium having a constant permittivity
+of $\epsilon$ F/m and a varying electric charge density of
+$\rho(x)=-(x+1)\epsilon$ C/$m^3$.
+
+The Poisson equation can be applied to this problem as follows
+(we do not take off the minus at the both sides of the equation
+for simplicity):
+
+\begin{equation} \label{eq:simple_boundary_value_problem}
+  -\frac{d^2\phi}{dx^2}\epsilon = -(x + 1)\epsilon
+\end{equation}
+
+The boundary conditions are given as:
+
+\begin{equation}
+  \left.\phi\right|_{x=0} = 0
+\end{equation}
+
+\begin{equation}
+  \left.\phi\right|_{x=1}=1
+\end{equation}
+
+This is simply a second-order differential equation,
+and can be solved easily by integrating the equation twice.
+Here we assume we do not know the exact solution
+and use the Ritz and Galerkin methods to find it.
+
+\subsubsection{Solution via the Ritz Method}
+
+In the Ritz method,
+a functional is defined where the minimum of the functional
+corresponds to the differential equation under the given boundary conditions.
+From eq. \ref{eq:boundary_problem_differential_equation},
+the differential operator $L$ is $-\frac{d^2}{dx^2}$ (which is
+a self-adjoint operator and satisfies the conditions to be used for the Ritz method),
+and $-(x+1)$ is the forcing function.
+Plugging them into the equation \ref{eq:general_boundary_value_problem},
+we get:
+
+\begin{equation}
+  F(\tilde{\phi}) = \frac{1}{2}\int_{0}^1 (-\frac{d^2}{dx^2}\phi) \phi^* dx \\
+  + \frac{1}{2}\int_{0}^1 \tilde{\phi}(x + 1) dx \\
+  + \frac{1}{2}\int_{0}^1 (x + 1)\tilde{\phi}^* dx
+\end{equation}
+
+Since the problem here does not contain imaginary numbers,
+we can say $\tilde{\phi} = \tilde{\phi}^*$.
+Also, since $i\frac{d}{dx}$ is also a self adjoint operator,
+
+\begin{equation}
+  (-\frac{d^2}{dx^2}\tilde{\phi}) \tilde{\phi}^* = \\
+  (i\frac{d}{dx}\tilde{\phi})(-i\frac{d}{dx}\tilde{\phi}^*) \\
+  = (i\frac{d}{dx}\tilde{\phi})(i\frac{d}{dx}\tilde{\phi})^* \\
+  = |(\frac{d}{dx}\tilde{\phi})|^2
+\end{equation}
+
+Therefore the functional equation can be simplifed as:
+
+\begin{equation} \label{eq:ritz_functional}
+  F(\tilde{\phi}) = \frac{1}{2}\int_{0}^1 (\frac{d}{dx}\tilde{\phi})^2 dx \\
+  + \int_{0}^1 \tilde{\phi}(x + 1) dx
+\end{equation}
+
+Here we use polynomials as one of the candidate trial functions:
+
+\begin{equation}
+  \tilde{\phi}(x) = c_1 + c_2 x + c_3 x^2 + c_4 x^3
+\end{equation}
+
+From the boundary conditions,
+the conditions $c_1 = 0$, $c_2 = 1 - c_3 - c_4$ are obtained.
+This reduces the current function to
+
+\begin{equation}
+  \tilde{\phi}(x) = x + c_3 (x^2 - x) + c_4 (x^3 - x)
+\end{equation}
+
+Substituting the above equation to \ref{eq:ritz_functional},
+the following derivatives are obtained:
+
+\begin{equation}
+  \frac{\partial F}{\partial c_3} = \frac{1}{3}c_3 + \frac{1}{2} c_4 - \frac{1}{4}
+\end{equation}
+
+\begin{equation}
+  \frac{\partial F}{\partial c_4} = \frac{1}{2}c_3 + \frac{4}{5} c_4 - \frac{23}{60}
+\end{equation}
+
+By setting these derivatives to zero,
+$c_3 = \frac{1}{2}$ and $c_4 = \frac{1}{6}$ can be computed.
+Here the trial functions employed were capable of representing
+the exact function, but this usually is impossible.
+In most situations, only approximate solutions can be achieved.
 
 
 \section{Summary}
