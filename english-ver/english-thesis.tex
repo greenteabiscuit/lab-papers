@@ -1297,8 +1297,17 @@ by using the hole dug into the bottom of the structure.
 
 \subsection{Adalm Pluto}
 
-The QPSK transmitter was implemented on the 28 GHz system to
-calculate the bit error rate. Bit error rate can be calculated as follows:
+he ADALM-PLUTO Active Learning Module (PlutoSDR) is
+a tool available from Analog Devices Inc. (ADI) that
+can be used to simulate fundamental features of software-defined radio (SDR)
+or radio frequency (RF).
+The Communications Toolbox Support Package for Analog Devices ADALM-PLUTO
+Radio (PlutoSDR) enables the programmer to use MATLAB and Simulink to prototype,
+verify, and test practical wireless systems.
+
+Here, the QPSK transmitter was implemented on Pluto to
+calculate the bit error rate in a 28GHz system.
+Bit error rate can be calculated as follows:
 
 \begin{equation}
   BER = \frac{Number\, of\, error\, bits}{Number\, of\, total\, bits}
@@ -1319,12 +1328,46 @@ durability and repeatable RF performance.
 
 \subsection{Spectrum Analyzer}
 
+The Anritsu MS2762A spectrum analyzer was used for the
+28 GHz system.
+Utilizing Anritsu's patented nonlinear transmission line (NLTL) technology,
+it provides continuous coverage from 6 GHz to 170 GHz,
+with displayed average noise level (DANL) of
+-141/-136/-129/-122 dBm to 90/110/145/170 GHz, respectively.
+Powered by a USB type-C port,
+the spectrum can be analyzed on a Windows PC
+using the software provided by Anritsu.
+As the MS2762A port only supports the 0.8 mm connector,
+the following adapters were used to convert it to a K connector port
+(shown in Figure \ref{img:ms2762a_adapter_diagram}).
+
+\begin{itemize}
+  \item 33W.8F50 (0.8 mm to W)
+  \item 34WFV50 (W to V)
+  \item 34VFKF50A (V to K)
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/ms2762a_adapter_diagram.JPG}
+    \caption{Conversion of the port on MS2762A}
+    \label{img:ms2762a_adapter_diagram}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/ms2762a_to_mz_mmant1.jpg}
+    \caption{The mz-mmAnt1 hooked up to the MS2762A}
+    \label{img:ms2762a_to_mz_mmant1}
+  \end{minipage}\hfill
+\end{figure}
 
 \section{Communication Medium Used in Embedded Systems}
 
 \subsection{UART}
 
-
+TODO
 
 \subsection{SPI}
 
