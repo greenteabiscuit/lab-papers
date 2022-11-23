@@ -1173,6 +1173,9 @@ The operator $L$ is self-adjoint when it satisfies the following condition:
 \end{equation}
 
 An example of a self-adjoint operator is $i\frac{d}{dx}$.
+(A simple instance of this can be calculated by using the operator
+on $\phi = e^{ix}$.
+Check the following $[L\phi]\phi^*=\phi [L^*\phi^*]$ is satisfied)
 To obtain the solution,
 we must add another condition that the operator $L$ is positive definite,
 that is:
@@ -1190,7 +1193,7 @@ can be obtained by minimizing the functional
 
 \begin{equation}
   F(\tilde{\phi}) = \frac{1}{2}\langle L \tilde{\phi}, \tilde{\phi}\rangle \\
-  - \frac{1}{2}\langle \tilde{\phi}, f \rangle - \frac{1}{2}\langle f, \tilde{\phi} \rangle
+  - \langle \tilde{\phi}, f \rangle - \langle f, \tilde{\phi} \rangle
 \end{equation}
 
 Here $\tilde{\phi}$ represents a trial function.
@@ -1199,9 +1202,35 @@ we first need to show the differential equation is the necessary consequence whe
 ($\delta F = 0$).
 We also must prove that the stationary point is at the minimum of the functional $F$,
 which is equivalent to proving that $\delta(\delta F) > 0$.
+Taking the variation again,
 
-TODO write the rest
+\begin{equation}
+  \delta F = \frac{1}{2}\langle L\delta\phi,\phi \rangle + \frac{1}{2}\langle L\phi,\delta\phi \rangle \\
+              - \frac{1}{2}\langle \delta\phi,f \rangle - \frac{1}{2}\langle f, \delta\phi \rangle
+\end{equation}
 
+and using the condition is that L is self-adjoint,
+
+\begin{equation}
+  \frac{1}{2}\langle L\delta\phi,\phi \rangle = \frac{1}{2}\langle L\phi,\delta\phi \rangle
+\end{equation}
+
+allows us to simplify the equation as follows:
+
+\begin{equation}
+  \delta F = \frac{1}{2}\langle \delta\phi, L\phi - f \rangle \\
+  - \frac{1}{2}\langle L\phi - f, \delta\phi \rangle
+\end{equation}
+
+The definition of the inner product lets us have
+
+\begin{equation}
+  \delta F = \frac{1}{2}\langle \delta\phi, L\phi - f \rangle \\
+  - \frac{1}{2}\langle \delta\phi, L\phi - f \rangle^* \\
+  = Re\langle \delta\phi, L\phi-f\rangle
+\end{equation}
+
+Here $Re$ denotes the real part of the equation it encloses. 
 Imposing the stationary requirement $\delta F = 0$,
 we obtain
 
@@ -1434,6 +1463,8 @@ Failure to do so may affect the timing of sending and receiving
 data that can cause discrepancies during data handling.
 The allowable difference of baud rate is up to 10\%
 before the timing of bits gets too far off.
+
+TODO: add packet
 
 \subsection{SPI}
 
