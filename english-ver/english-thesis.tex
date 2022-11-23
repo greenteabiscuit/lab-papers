@@ -1261,12 +1261,21 @@ the signal is demodulated and the baseband signal is converted to a digital sign
 which can be analyzed on the computer by applying FFT.
 
 \begin{figure}
-  \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/mz_mmcon1_loopback.jpg}
-    \caption{MZ-mmcon1}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/mz_mmcon1_loopback.jpg}
+    \caption{MZ-mmcon1 in loopback mode}
     \label{fig:mz_mmcon1_loopback}
-  \end{center}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/adalm_pluto.jpg}
+    \caption{Adalm Pluto}
+    \label{img:adalm_pluto}
+  \end{minipage}\hfill
 \end{figure}
+
 
 \subsection{MZ-mmAnt1}
 
@@ -1367,7 +1376,64 @@ the following adapters were used to convert it to a K connector port
 
 \subsection{UART}
 
-TODO
+UART, or universal asynchronous receiver-transmitter,
+is one of the most used device-to-device communication protocols.
+When properly configured,
+UART can work with many different types of serial protocols that
+involve transmitting and receiving serial data.
+In serial communication,
+data is transferred bit by bit using a single line or wire.
+In two-way communication,
+two wires are used for successful serial data transfer.
+Depending on the application and system requirements,
+serial communications needs less circuitry and wires,
+which reduces the cost of implementation.
+Here we explain the fundamental principles when using UART,
+with a focus on packet transmissionand standard frame protocol.
+
+The image of the interface is shown below:
+
+TODO: add image
+
+The two signals of each UART device are named:
+
+\begin{itemize}
+  \item Transmitter (Tx)
+  \item Receiver (Rx)
+\end{itemize}
+
+TODO: add image here
+
+The transmitting UART is connected to a controlling data bus that
+sends data in a parallel form.
+From this,
+the data will now be transmitted on the transmission line (wire) serially,
+bit by bit, to the receiving UART.
+This, in turn,
+will convert the serial data into parallel for the receiving device.
+
+For UART and most serial communications,
+the baud rate needs to be set the same on both
+the transmitting and receiving device.
+The baud rate is the rate at which information is transferred
+to a communication channel.
+In the serial port context,
+the set baud rate will serve as the maximum number of
+bits per second to be transferred.
+
+The UART interface does not use a clock signal to
+synchronize the transmitter and receiver devices;
+it transmits data asynchronously.
+Instead of a clock signal,
+the transmitter generates a bitstream based on its clock signal
+while the receiver is using its internal clock signal
+to sample the incoming data.
+The point of synchronization is managed by having the same baud rate
+on both devices.
+Failure to do so may affect the timing of sending and receiving
+data that can cause discrepancies during data handling.
+The allowable difference of baud rate is up to 10\%
+before the timing of bits gets too far off.
 
 \subsection{SPI}
 
