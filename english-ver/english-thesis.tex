@@ -1270,6 +1270,31 @@ which can be analyzed on the computer by applying FFT.
 
 \subsection{MZ-mmAnt1}
 
+The MZ-mmAnt1 is a patch antenna designed for
+propagation of 28 GHz millimeter waves,
+with an antenna gain of roughly 5 dB.
+Using a SMPM to K connector adapter,
+the antenna can be hooked to the band pass filter
+and the up / down converter.
+The antenna can also be hooked up to a tripod
+by using the hole dug into the bottom of the structure.
+
+\begin{figure}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/mz-mmant1.jpg}
+    \caption{mz-mmAnt1}
+    \label{img:mz_mmant1}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/waveguide_coax_adapter.jpg}
+    \caption{Waveguide to Coax Adapter}
+    \label{img:waveguide_coax_adapter}
+  \end{minipage}\hfill
+\end{figure}
+
 \subsection{Adalm Pluto}
 
 The QPSK transmitter was implemented on the 28 GHz system to
@@ -1278,6 +1303,22 @@ calculate the bit error rate. Bit error rate can be calculated as follows:
 \begin{equation}
   BER = \frac{Number\, of\, error\, bits}{Number\, of\, total\, bits}
 \end{equation}
+
+\subsection{Waveguide to Coax Adapter}
+
+For the 28 GHz system,
+we used the WR-28 UG-599/U square cover flange to 2.92mm
+female waveguide to coax adapter, 
+which operates from 26.5 GHz to 40 GHz.
+The product ID of this adapter is PEWCA1078.
+This adapter offers a WR-28 waveguide interface size
+coupled with a precision tolerance UG-599/U flange.
+The PEWCA1078 is
+constructed of copper and plated in gold to ensure
+durability and repeatable RF performance.
+
+\subsection{Spectrum Analyzer}
+
 
 \section{Communication Medium Used in Embedded Systems}
 
@@ -1335,6 +1376,14 @@ During SPI communication,
 the data is simultaneously transmitted
 (shifted out serially onto the MOSI/SDO bus)
 and received (the data on the bus (MISO/SDI) is sampled or read in).
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/SPI_communication.png}
+    \caption{SPI Communication}
+    \label{fig:SPI_Communication}
+  \end{center}
+\end{figure}
 
 \section{Grating Couplers}
 
