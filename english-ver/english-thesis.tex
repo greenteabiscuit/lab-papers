@@ -1435,6 +1435,10 @@ by using the hole dug into the bottom of the structure.
   \end{minipage}\hfill
 \end{figure}
 
+\subsection{Shield Box}
+
+TODO: write about brass box
+
 \subsection{Adalm Pluto}
 
 he ADALM-PLUTO Active Learning Module (PlutoSDR) is
@@ -1719,14 +1723,33 @@ and vice versa when pointed.
 \section{Quantitive Analysis and Directivity Results}
 
 Working with NTT Docomo,
-we analyzed the radiation patterns of the PTFE rod antenna.
+the radiation patterns of the PTFE rod antenna were analyzed.
+The employed PTFE rod antenna had a diameter of 10 millimeters
+with a length of 20 centimeters.
 A PTFE rod antenna and the horn antenna were placed in
-an anechoic chamber, with a spinning platform attached to the PTFE rod antenna,
+an anechoic chamber with 1.2 meters in between.
+
+\begin{figure}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/ptfe_rod_antenna_20cm.jpg}
+    \caption{PTFE rod antenna with a diameter of 10 mm and length of 20 cm}
+    \label{fig:ptfe_rod_antenna_20cm} 
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/anechoic_chamber_120_centimeters.jpg}
+    \caption{Placement of antenna in anechoic chamber}
+    \label{img:anechoic_chamber_120_centimeters}
+  \end{minipage}\hfill
+\end{figure}
+
+The rod antenna was placed on a spinning platform ,
 as shown in Fig. \ref{fig:ptfe_rod_antenna_anechoic_chamber}
 and \ref{img:horn_antenna_anechoic_chamber}.
 The PTFE rod antenna and the platform rotate in the anechoic chamber
 with the tip of the PTFE rod antenna at the center of the rotation.
-Fig. TODO add here, edit the graphs to english format shows the measured radiation patterns at 28GHz.
 
 \begin{figure}
   \centering
@@ -1742,6 +1765,33 @@ Fig. TODO add here, edit the graphs to english format shows the measured radiati
     \caption{Horn antenna in anechoic chamber}
     \label{img:horn_antenna_anechoic_chamber}
   \end{minipage}\hfill
+\end{figure}
+
+The results are shown in Figures
+\ref{fig:radiation_pattern_comparison_27_29_vertical}
+and \ref{img:radiation_pattern_comparison_27_29_horizontal}.
+The half power beamwidth was at around 20 degrees for both
+vertical and horizontal radiation patterns,
+and no significant difference was seen across all of the frequencies.
+There is a slight distortion in the data due to
+the PTFE rod antenna's slight change in its orientation
+while spinning.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/radiation_pattern_comparison_27_29_vertical.png}
+    \caption{Vertical Radiation Pattern}
+    \label{fig:radiation_pattern_comparison_27_29_vertical} 
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/radiation_pattern_comparison_27_29_horizontal.png}
+    \caption{Horizontal Radiation Pattern}
+    \label{img:radiation_pattern_comparison_27_29_horizontal}
+  \end{center}
 \end{figure}
 
 \chapter{PTFE Rod Antenna}
