@@ -74,15 +74,35 @@ several-hundred megahertz \cite{docomo_6G_white_paper}.
 
 \section{Problem Statement}
 
-Propagation losses in line-of sight (LOS) and
-performance degradation in non-line-of-sight (NLOS)
-environments are crucial issues for mobile communication
-systems in the millimeter wave bands. 
-Solutions such as beamforming and
-beam steering techniques employing array antenna systems
-can mitigate these issues, and are
-already implemented in 5G base station tools.
-\cite{https://doi.org/10.48550/arxiv.2001.05021}
+Millimeter wave 5G technology can provide massive capacity
+and even lower latency than previous technologies such as 4G.
+However, millimeter waves also have problems and limitations
+that need to be addressed:
+
+\begin{itemize}
+  \item[] \textbf{Performance degradation in NLOS environments}
+  Propagation losses in line-of sight (LOS),
+  where the path between the device and the base station is unobstructed,
+  and performance degradation in non-line-of-sight (NLOS),
+  where the path is blocked,
+  environments are crucial issues for mobile communication
+  systems in the millimeter wave bands.
+  As the received power on the device decreases,
+  the communication area becomes much smaller than when
+  utilizing lower frequency bands.
+  \item[] \textbf{High directivity}
+  Due to the high directivity of millimeter waves,
+  solutions such as beamforming and
+  beam steering techniques employing array antenna systems
+  are necessary to mitigate these issues.
+  These technologies are already implemented in 5G base station tools.
+  \cite{https://doi.org/10.48550/arxiv.2001.05021}
+  \item[] \textbf{Short propagation distance}
+  Due to its high frequency,
+  millimeter waves have high propagation loss,
+  and can only travel short distances.
+\end{itemize}
+
 
 
 \section{Thesis Statement}
@@ -1121,8 +1141,6 @@ numerical solution of partial differential equations yield sparse matrices, whil
 numerical solutions of boundary integral equations yield dense
 matrices.
 
-Consider the two-point boundary value problem in one dim: todo: % https://appliedmath.ucmerced.edu/sites/appliedmath.ucmerced.edu/files/page/documents/introduction_to_boundary_integral_equation_methods.pdf
-
 \section{Radiation Conditions}
 
 When the outer boundary of a domain recedes to infinity,
@@ -1462,7 +1480,28 @@ by using the hole dug into the bottom of the structure.
 
 \subsection{Shield Box}
 
-TODO: write about brass box
+A brass shield box was designed to
+emit the 60 GHz millimeter waves
+in a straightforward direction and
+prevent the waves from leaking out
+to other directions,
+as shown in Figure 
+
+\begin{figure}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/brass_box.jpg}
+    \caption{Shield Box}
+    \label{img:brass_box}
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/inside_brass_box.jpg}
+    \caption{VR-WH1 placed inside brass box}
+    \label{img:inside_brass_box}
+  \end{minipage}\hfill
+\end{figure}
 
 \subsection{Adalm Pluto}
 
@@ -1715,7 +1754,8 @@ VR-WH1, a wireless HDMI transmission unit manufactured by Sharp, was used.
 Video was first streamed on a PC and transmitted via HDMI to the sender unit.
 The sender unit is enclosed in a brass box with a horn antenna attached to the front.
 The PTFE waveguide is attached to the horn antenna,
-which the authors held with their hands to control its beam emission direction.
+which the authors held with their hands to control
+its beam emission direction.
 The receiver was placed a meter away from the waveguide tip,
 and the receiver was connected to an external monitor via HDMI.
 The authors also held a copper board between the sender and the receiver
@@ -1724,7 +1764,8 @@ just in case of wave leakage.
 When using the 60GHz mmWave system,
 the authors discovered that the PTFE waveguide
 emits a sharp beam from its tip,
-as shown in Figures \ref{img:qualitative_waveguide_not_pointed} and \ref{img:qualitative_waveguide_pointed}.
+as shown in Figures \ref{img:qualitative_waveguide_not_pointed}
+and \ref{img:qualitative_waveguide_pointed}.
 The video does not play (data is not received on the receiver)
 when the waveguide is not pointed to the receiver,
 and vice versa when pointed.
