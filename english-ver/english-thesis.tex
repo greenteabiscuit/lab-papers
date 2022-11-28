@@ -1415,7 +1415,7 @@ TODO: insert figure
 
 \section{Tools to Use}
 
-\subsection{MZ-mmCon11}
+\subsection{MZ-mmCon1}
 
 MZ-mmCon1, show in Figure \ref{fig:mz_mmcon1_loopback},
 enables converting baseband signals of the 5 MHZ to 6 GHZ range
@@ -1432,7 +1432,8 @@ of under 100 kHz, and can modulate, demodulate, send, and receive
 millimeter wave signals.
 Upon receiving millimeter waves,
 the signal is demodulated and the baseband signal is converted to a digital signal,
-which can be analyzed on the computer by applying FFT.
+which can be analyzed on the computer by applying Fast Fourier Transformation (FFT).
+Figure \ref{fig:mz_mmcon1_fft_viz} shows the FFT result visualized on the installed software.
 
 \begin{figure}
   \centering
@@ -1448,6 +1449,14 @@ which can be analyzed on the computer by applying FFT.
     \caption{Adalm Pluto}
     \label{img:adalm_pluto}
   \end{minipage}\hfill
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/mz_mmcon1_fft_viz.png}
+    \caption{FFT visualization on the software}
+    \label{fig:mz_mmcon1_fft_viz}
+  \end{center}
 \end{figure}
 
 
