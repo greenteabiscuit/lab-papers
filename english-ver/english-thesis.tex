@@ -1602,9 +1602,7 @@ which reduces the cost of implementation.
 Here we explain the fundamental principles when using UART,
 with a focus on packet transmissionand standard frame protocol.
 
-The image of the interface is shown below:
-
-TODO: add image
+The image of the interface with data bus is shown in Figure \ref{fig:uart_interface_data_bus}.
 
 The two signals of each UART device are named:
 
@@ -1613,7 +1611,13 @@ The two signals of each UART device are named:
   \item Receiver (Rx)
 \end{itemize}
 
-TODO: add image here
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/uart_interface_data_bus.png}
+    \caption{UART with data bus}
+    \label{fig:uart_interface_data_bus}
+  \end{center}
+\end{figure}
 
 The transmitting UART is connected to a controlling data bus that
 sends data in a parallel form.
@@ -1645,8 +1649,15 @@ Failure to do so may affect the timing of sending and receiving
 data that can cause discrepancies during data handling.
 The allowable difference of baud rate is up to 10\%
 before the timing of bits gets too far off.
+The image of the UART packet is shown in Figure \ref{fig:uart_packet}:
 
-TODO: add packet
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/uart_packet.png}
+    \caption{UART packet}
+    \label{fig:uart_packet}
+  \end{center}
+\end{figure}
 
 \subsection{SPI}
 
