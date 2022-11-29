@@ -990,7 +990,64 @@ just within 0.25 meters of communication distance.
 
 \section{Scattering parameters (S-parameters)}
 
-TODO: write here
+Scattering parameters or S-parameters
+(the elements of a scattering matrix or S-matrix)
+describe the electrical behavior of linear electrical networks
+when undergoing various steady state stimuli by electrical signals.
+S-parameters do not use open or short circuit conditions to
+characterize a linear electrical network;
+instead, matched loads are used.
+These terminations are much easier to use at high signal frequencies
+than open-circuit and short-circuit terminations.
+
+For a generic multi-port network, the ports are numbered from $1$ to $N$,
+where N is the total number of ports. 
+For port i,
+the associated S-parameter definition is in terms of
+incident and reflected 'power waves',
+$a_i$ and $b_i$, respectively.
+Kurokawa \cite{1125964} defines the incident power wave for each port as
+
+\begin{equation}
+  a_i = \frac{1}{2}k_i (V_i + Z_i I_i)
+\end{equation}
+
+and the reflected wave for each port is defined as
+
+\begin{equation}
+  b_i = \frac{1}{2}k_i (V_i - Z_i^* I_i)
+\end{equation}
+
+Here $Z_i$ is the impedance for port i,
+$Z_{i}^{*}$ is the complex conjugate of $Z_{i}$,
+$V_{i}$ and $I_{i}$ are respectively the complex amplitudes
+of the voltage and current at port $i$,
+and
+
+\begin{equation}
+  k_i = \left(\sqrt[]{|Re(Z_i)|}\right)^{-1}
+\end{equation}
+
+The relation between the vectors $a$ and $b$,
+whose i-th components are the power waves $a_{i}$
+and $b_{i}$ respectively,
+can be expressed using the S-parameter matrix $S$:
+
+\begin{equation}
+  \textbf{b} = \textbf{S} \textbf{a}
+\end{equation}
+
+When using explicit components, the equation above can be rewritten to:
+
+\begin{equation}
+  \begin{pmatrix}
+    S_{11} & \dots  &S_{1n} \\
+    \vdots & \ddots & \vdots \\
+    S_{n1} & \dots  & S_{nn}
+  \end{pmatrix}
+\end{equation}
+
+Next, we consider two-port S-parameters.
 
 \section{Cutoff Frequency}
 
