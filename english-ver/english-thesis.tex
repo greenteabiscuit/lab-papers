@@ -1166,7 +1166,7 @@ Assuming the situations are the same as
 in the equations \ref{eq:wavenumber_y} and \ref{eq:wavenumber_x},
 by plugging them in we get:
 
-\begin{equation}
+\begin{equation} \label{eq:wavenumber_relation}
   \left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2 + k_z^2 = k^2 = \left(\frac{2\pi f}{c}\right)^2
 \end{equation}
 
@@ -1180,9 +1180,27 @@ in which case the complex exponential becomes a decaying real exponential.
 In this case, the fields will not propagate but instead quickly die out within the waveguide.
 Electromagnetic fields that die off instead of propagate are referred to as evanescent waves.
 
-TODO add here https://www.antenna-theory.com/tutorial/waveguides/waveguides3.php
+By setting $k_z=0$,
+the lowest frequency in which propagation occurs can be found.
+This is the transition between
+the cutoff region (evanescent) and the propagation region.
+Equation \ref{eq:wavenumber_relation} can be rewritten as:
 
-Cutoff frequency $f_c$ in a rectangular waveguide can be calculated as follows,
+\begin{equation}
+  \left(\frac{m\pi}{a}\right)^2 + \left(\frac{n\pi}{b}\right)^2 =\\
+   \left(\frac{2\pi f}{c}\right)^2
+\end{equation}
+
+The lowest value the left hand side of the equation can take
+occurs when $m=1$ and $n=0$.
+This gives the cutoff frequency for this waveguide:
+
+\begin{equation}
+  f_c = \frac{c}{2a}
+\end{equation}
+
+Generally, cutoff frequency $f_c$ in a rectangular waveguide can be
+calculated as follows,
 where $a$ is the wall length, and $\mu$ and $\epsilon$ are
 the permeability and permittivity of the material
 that fill the waveguide, respectively.
@@ -1199,6 +1217,8 @@ $f_c$ could be written as
 \end{equation}
 
 \section{Usecases}
+
+TODO: move this
 
 This approach show the advantages in the following aspects compared to
 other communication mediums.
