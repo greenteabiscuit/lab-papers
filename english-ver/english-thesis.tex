@@ -1048,6 +1048,35 @@ When using explicit components, the equation above can be rewritten to:
 \end{equation}
 
 Next, we consider two-port S-parameters.
+In this case the relationship between the reflected,
+incident power waves and the S-parameter matrix is given by:
+
+\begin{equation}
+  \left(
+    \begin{array}{c}
+      b_1 \\
+      b_2
+    \end{array}
+  \right) = \begin{pmatrix}
+    S_{11} & S_{12} \\
+    S_{21} & S_{22}
+  \end{pmatrix}
+  \left(
+    \begin{array}{c}
+      a_1 \\
+      a_2
+    \end{array}
+  \right)
+\end{equation}
+
+Each value of the S-parameter matrix has the following generic descriptions:
+
+\begin{itemize}
+  \item $S_{11}$ is the input port voltage reflection coefficient
+  \item $S_{12}$ is the reverse voltage gain
+  \item $S_{21}$ is the forward voltage gain
+  \item $S_{22}$ is the output port voltage reflection coefficient.
+\end{itemize}
 
 \section{Cutoff Frequency}
 
