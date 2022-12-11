@@ -1078,6 +1078,73 @@ Each value of the S-parameter matrix has the following generic descriptions:
   \item $S_{22}$ is the output port voltage reflection coefficient.
 \end{itemize}
 
+\subsection{Complex linear gain}
+
+The complex linear gain G is given by
+
+\begin{equation}
+  G = S_{21} = \frac{b_2}{a_1}
+\end{equation}
+
+That is the linear ratio of the output reflected power wave
+divided by the input incident power wave,
+all values expressed as complex quantities.
+For lossy networks it is sub-unitary,
+for active networks $|G| > 1$.
+It will be equal with the voltage gain only when the
+device has equal input and output impedances.
+
+\subsection{Scalar linear gain}
+
+The scalar linear gain (or linear gain magnitude) is given by
+
+\begin{equation}
+  |G| = |S_{21}|
+\end{equation}
+
+This represents the gain magnitude (absolute value),
+the ratio of the output power-wave to the input power-wave,
+and it equals the square-root of the power gain.
+This is a real-value (or scalar) quantity,
+the phase information being dropped.
+
+\subsection{Scalar logarithmic gain}
+
+The scalar logarithmic (decibel or dB) expression for gain ($g$) is:
+
+\begin{equation}
+  g = 20 \log_{10}|S_{21}|
+\end{equation}
+
+This is more commonly used than scalar linear gain
+and a positive quantity is normally understood as simply a "gain",
+while a negative quantity is a "negative gain" (a "loss"),
+equivalent to its magnitude in dB.
+For example, at 100 MHz,
+a 10 m length of cable may have a gain of −1 dB,
+equal to a loss of 1 dB.
+
+\subsection{Insertion loss}
+
+In case the two measurement ports use the same reference
+impedance, the insertion loss ($IL$) is the reciprocal of the magnitude of the transmission coefficient |S21| expressed in decibels.
+It is thus given by
+
+\begin{equation}
+  IL = -20\log_10|S_{21}|
+\end{equation}
+
+It is the extra loss produced by the introduction of
+the device under test (DUT)
+between the 2 reference planes of the measurement.
+The extra loss may be due to intrinsic loss in the
+DUT and/or mismatch.
+In case of extra loss the insertion loss is defined to be
+positive. The negative of insertion loss expressed in
+decibels is defined as insertion gain and is equal to the
+scalar logarithmic gain.
+
+
 \section{Cutoff Frequency}
 
 A cutoff frequency, corner frequency, or break frequency
@@ -1168,69 +1235,6 @@ smartphones before making transactions from their bank accounts.
 
 \section{Two Dimensional Waveguide Sheets}
 
-\section{Finite Element Boundary Integral Method}
-
-Exact numerical solutions of electromagnetic radiation
-and scattering problems including arbitrarily shaped conducting objects preferably rely on integral equations (IEs) being
-solved by the method of moments (MoM), usually employing
-Galerkin's method with triangular Rao-Wilton-Glisson (RWG)
-vector basis functions.
-For problems including arbitrarily shaped and inhomogeneous dielectric
-objects, the hybrid finite element—boundary integral (FEBI)
-method has been developed, where the fields in the
-interior region of the dielectric objects are formulated with the
-FE method and the fields in the exterior region with an IE.
-The two regions are coupled together at the boundaries of the
-objects via the field continuity conditions. In order to avoid
-interior resonances and for improved convergence within the
-iterative solver, the combined field integral equation (CFIE) is
-used, which is a linear combination of the electric field integral equation (EFIE) and the magnetic field integral equation
-(MFIE).
-The finite element boundary integral method
-combines the finite element
-method (FEM) and the surface integral equation
-embodied in the extended boundary condition
-method (EBCM).
-
-The theory of the extended boundary condition
-method is well known and only the equations
-which are required for the extension of the technique to the inhomogeneous problem will be given
-here.
-Consider a scatterer illuminated by a plane
-wave. The incident field $\bar{E_i}$ and the scattered field
-$\bar{E_s}$, can be expanded in the spherical vector harmonics $\bar{M}$ and $\bar{N}$.
-
-\begin{equation}
-  \bar{E_i} = \sum_{\nu}D_{\nu}[a_{\nu}\bar{M}_{\nu}^1(k_0\bar{r})+b_{\nu}\bar{N}_{\nu}^1(k_0\bar{r})]
-\end{equation}
-
-\begin{equation}
-  \bar{E_s} = \sum_{\nu}D_{\nu}[f_{\nu}\bar{M}_{\nu}^4(k_0\bar{r})+g_{\nu}\bar{N}_{\nu}^4(k_0\bar{r})]
-\end{equation}
-
-The $a_{\nu}$ and $b_{\nu}$ coefficients are known, while $f_{\nu}$ and
-$q_{\nu}$, are initially unknown. $D_{\nu}$ is a normalization
-constant, $\nu$ is a combined index incorporating tht
-three spherical harmonic indices. and $k_0$ is the free space wave number.
-
-TODO: write rest https://core.ac.uk/download/pdf/36739115.pdf
-
-\subsection{Boundary Integral Equation Methods}
-
-We can reformulate boundary value problems for partial differential equations in a
-domain as integral equations on the boundary of that domain.
-Boundary integral equation methods refer to the numerical
-solution of these integral equations.
-Since we only solve a problem on the boundary, there is an
-overall reduction in dimension by one.
-Also because of its meshless characteristics,
-it can compute solutions in complicated domains.
-In some situations, it is easier to integrate than to differentiate.
-The difference between partial differential equations and integral equations is that
-numerical solution of partial differential equations yield sparse matrices, while
-numerical solutions of boundary integral equations yield dense
-matrices.
-
 \section{Radiation Conditions}
 
 When the outer boundary of a domain recedes to infinity,
@@ -1263,24 +1267,6 @@ When applied at such a finite boundary,
 \ref{eq:sommerfeld_radiation_condition_infinite} can be regarded as the
 lowest-order radiation condition with limited accuracy.
 Better accuracy can be achieved by developing higher-order conditions.
-
-\section{Huygens' principle}
-
-Huygens' principle provides expressions to calculate the fields everywhere based
-on knowledge of the fields surrounding an object.
-Consider a surface $S$ enclosing the source of radiation and any other objects
-so that the infinite space exterior to the surface is homogeneous (TODO ref fig).
-If the fields on the surface are known, the fields outside the surface are given by:
-
-\begin{equation}
-  \boldsymbol{E}(\boldsymbol{r}) = \oiint_S{-j\omega\mu[\hat{n'} \\
-  \times \boldsymbol{H}(\boldsymbol{r'})]G_0(\boldsymbol{r}, \boldsymbol{r'}) \\
-  + [n'\cdot\boldsymbol{E}(\boldsymbol{r}')]\nabla'G_0(\boldsymbol{r}, \boldsymbol{r'}) \\
-  + [\hat{n}' \times \boldsymbol{E}(\boldsymbol{r}')] \\
-  \times \nabla'G_0(\boldsymbol{r}, \boldsymbol{r'})}dS'
-\end{equation}
-
-TODO: keep writing
 
 \section{Variational Method}
 
@@ -1389,12 +1375,10 @@ Rephrasing this, when $L > 0$ and $\delta \phi > 0$,
 the result of Equation \ref{eq:delta_delta_F} is greater than 0.
 Therefore the stationary point is indeed at the minimum of $F$.
 
-\subsection{Galerkin's Method}
-
 \subsection{A Simple example}
 
 Here we look at a simple boundary-value problem and solve it using
-both the Ritz and Galerkin methods.
+the Ritz methods.
 The problem is about the determination of the static potential $\phi$
 between two infinite parallel plates.
 One plate is located at $x=0$ with $\phi=0$ and
@@ -1425,6 +1409,7 @@ This is simply a second-order differential equation,
 and can be solved easily by integrating the equation twice.
 Here we assume we do not know the exact solution
 and use the Ritz and Galerkin methods to find it.
+Here we introduce the Ritz method.
 
 \subsubsection{Solution via the Ritz Method}
 
