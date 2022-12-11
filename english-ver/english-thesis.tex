@@ -943,14 +943,13 @@ shrinking to a point at each vertex, behind the antennas.
 To formulate the Fresnel zone,
 we consider an arbitrary point P in the LoS, at a distance $d_1$ and $d_2$
 with respect to each of the two antennas.
-The TX antenna and RX antenna are placed at point A and B, respectively.
 To obtain the radius $r_n$ of zone $n$,
 note that the volume of the zone is delimited by all points
 for which the difference in distances,
 between the direct wave $D = d_1 + d_2$ and the reflected wave
 is the constant of $n\frac{\lambda}{2}$.
-This effectively defines an ellipsoid with the major axis and foci
-at the antennas.
+This effectively defines an ellipsoid with the major axis along $\overline{AB}$
+and foci (points $A$ and $B$) at the antennas.
 
 \begin{equation}
   \overline{AP} + \overline{PB} - D = n\frac{\lambda}{2}
@@ -973,7 +972,15 @@ $r_n$ can be solved as:
 
 where $d_1, d_2 >> n\lambda$.
 
-TODO add image
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/fresnel_zone.png}
+    \caption{Fresnel zone}
+    \label{fig:fresnel_zone}
+  \end{center}
+\end{figure}
+
+% : $D$ is the distance between the transmitter and the receiver; $r$ is the radius of the first Fresnel zone ($n=1$) at point $P$. $P$ is $d_1$ away from the transmitter, and $d_2$ away from the receiver.
 
 \section{Link budget}
 
