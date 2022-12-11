@@ -413,9 +413,6 @@ that also satisfy the required boundary conditions for this mode to occur.
   \end{center}
 \end{figure}
 
-TODO: add from here https://www.antenna-theory.com/tutorial/waveguides/waveguides3.php
-
-
 \section{Horn Antennas}
 
 Horn antennas are used in high frequency bands spanning from 300MHz
@@ -451,9 +448,6 @@ The magnitude of the E-field can be written as:
 
 This equation implies that the far-fields of the horn antenna
 is the Fourier Transform of the fields at the opening of the horn.
-
-TODO: copy here https://www.thefouriertransform.com/applications/radiation.php
-
 Modeling the electric field as the magnetic surface current $M_S$,
 it can be written as:
 
@@ -931,7 +925,55 @@ and all energy is also reflected.
 
 \section{Fresnel zone}
 
-TODO add
+A Fresnel zone is one of a series of confocal prolate ellipsoidal regions
+of space between and around a transmitter and a receiver.
+The primary wave will travel in a relative straight line from the transmitter to the receiver.
+The concept of Fresnel zone clearance may be used to analyze
+interference by obstacles near the path of a radio beam.
+The first zone must be kept largely free from obstructions to
+avoid interfering with the radio reception.
+For establishing Fresnel zones, first determine the RF line of sight
+(RF LoS), which in simple terms is a straight line
+between the transmitting and receiving antennas.
+Now the zone surrounding the RF LoS is said to be the Fresnel zone.
+The cross sectional radius of each Fresnel zone is the longest
+at the midpoint of the RF LoS,
+shrinking to a point at each vertex, behind the antennas.
+
+To formulate the Fresnel zone,
+we consider an arbitrary point P in the LoS, at a distance $d_1$ and $d_2$
+with respect to each of the two antennas.
+The TX antenna and RX antenna are placed at point A and B, respectively.
+To obtain the radius $r_n$ of zone $n$,
+note that the volume of the zone is delimited by all points
+for which the difference in distances,
+between the direct wave $D = d_1 + d_2$ and the reflected wave
+is the constant of $n\frac{\lambda}{2}$.
+This effectively defines an ellipsoid with the major axis and foci
+at the antennas.
+
+\begin{equation}
+  \overline{AP} + \overline{PB} - D = n\frac{\lambda}{2}
+\end{equation}
+
+Rewriting the expression using $d_1$, $d_2$, and $r_n$,
+the equation can be given as:
+
+\begin{equation}
+  d_1\left(\sqrt[]{1 + r_n^2/d_1^2}\right) + \\
+  d_2\left(\sqrt[]{1 + r_n^2/d_n^2 - 1}\right) = n\frac{\lambda}{2}
+\end{equation}
+
+By applying binomial approximation for the square root,
+$r_n$ can be solved as:
+
+\begin{equation}
+  r_n \approx \sqrt[]{n\frac{d_1 d_2}{D}\lambda}
+\end{equation}
+
+where $d_1, d_2 >> n\lambda$.
+
+TODO add image
 
 \section{Link budget}
 
@@ -1518,10 +1560,7 @@ In most situations, only approximate solutions can be achieved.
 
 \section{Summary}
 
-In this section we first reviewed Maxwell's equations,
-and Hugens' principle for calculating exterior fields from the field on a closed surface.
-
-TODO: insert figure
+In this section we first reviewed Maxwell's equations.
 
 \section{Rod Antennas}
 
