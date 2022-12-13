@@ -71,32 +71,29 @@ wave bands are supported to achieve ultra-high speed
 wireless data communications of several gigabits per second
 using a frequency bandwidth of
 several-hundred megahertz \cite{docomo_6G_white_paper}.
+TODO write more
 
 \section{Problem Statement}
 
 Millimeter wave 5G technology can provide massive capacity
 and even lower latency than previous technologies such as 4G.
+This requires a 5G antenna with a low latency,
+low path loss, and a steady radiation pattern.
 However, millimeter waves also have problems and limitations
 that need to be addressed:
 
 \begin{itemize}
-  \item[] \textbf{Performance degradation in NLOS environments}
-  Propagation losses in line-of sight (LOS),
-  where the path between the device and the base station is unobstructed,
-  and performance degradation in non-line-of-sight (NLOS),
-  where the path is blocked,
-  environments are crucial issues for mobile communication
-  systems in the millimeter wave bands.
-  As the received power on the device decreases,
-  the communication area becomes much smaller than when
-  utilizing lower frequency bands.
-  \item[] \textbf{High directivity}
-  Due to the high directivity of millimeter waves,
-  solutions such as beamforming and
-  beam steering techniques employing array antenna systems
-  are necessary to mitigate these issues.
-  These technologies are already implemented in 5G base station tools.
-  \cite{https://doi.org/10.48550/arxiv.2001.05021}
+  \item[] \textbf{High cost of mmWave area construction}
+  Costly delivery of base station and horn antennas for area construction
+  is high when building 5G communication systems.
+  Overall size and internal structure of antennas differ according
+  to their corresponding frequency bands.
+  Threrefore, when processing high-frequency antennas for small sizes,
+  the corresponding processing accurancy is bound to increase.
+  This leads to higher processing costs.
+
+  \item[] \textbf{Irreversibility of mmWave area construction}
+
   \item[] \textbf{Short propagation distance}
   Due to its high frequency,
   millimeter waves have high propagation loss,
