@@ -96,11 +96,19 @@ that need to be addressed:
   Equipment and devices for constructing a mmWave area are generally heavy,
   fixed and normally irreversible once construction has been completed.
 
-  \item[] \textbf{Risk of data breach}
-  Due to its high frequency,
-  mmWaves can deliver higher throughput and capacity.
-  However, threats such as TEMPEST attacks and
-  power analysis attacks can pose a great risk to privacy and data breach.
+  \item[] \textbf{High cost of MIMO}
+  Multiple-input/multiple-out (MIMO) technology is an established wireless communications technique
+  for sending and receiving multiple data signals simultaneously over the same radio channel.
+  5G New Radio introduces the concept of massive MIMO,
+  which involves the MIMO technology on a larger scale for
+  greater network coverage and capacity.
+  However, this introduces new challenges,
+  one of them being the cost of implementation and delivery.
+  Device designers must understand the 3D beam patterns and
+  ensure the beams can connect to the base station
+  and deliver the desired performance,
+  reliability, and user experience.
+  This can result in higher design and implementation costs.
 \end{itemize}
 
 In addition to these general drawbacks,
@@ -181,29 +189,6 @@ This paper designs a high resolution PTFE rod antenna
 and details the design and implementation process.
 
 The thesis chapters are organizazed as follows.
-
-
-\section{Security}
-
-\subsection{TEMPEST Attack}
-
-The TEMPEST attack is used to eavesdrop on
-leaked electromagnetic radiation that can directly
-provide plaintexts and other information.
-Leaked electromagnetic radiation can have a variety of sources,
-from cables, laptop computers, and antennas.
-
-\subsection{Attacks on omni-directional antennas}
-
-We look at an example of omni-directional antennas being attacked.
-In a hostile environment, the adversary's antenna can pick up signals from the
-transmitter when the SNR at the antenna of the adversary is high enough.
-In case of an omni-directional antenna, it can have a coverage of 360 degrees
-and send data in all directions horizontally.
-This can be both a waste of power and network capacity,
-and can allow hostile devices to detect the radiated signals \cite{security_estimation_model}.
-Therefore, using directive antennas, which form directional beams towards the receiver,
-can be considered to be more safe.
 
 \chapter{Theory of Physical Communication Mediums}
 
