@@ -124,7 +124,25 @@ wave bands are supported to achieve ultra-high speed
 wireless data communications of several gigabits per second
 using a frequency bandwidth of
 several-hundred megahertz \cite{docomo_6G_white_paper}.
-TODO write more
+This situation requires a reliable communication medium to
+ensure that the full capacity of mmWaves is utilized.
+
+There are many types of components used in the 5G communication systems,
+such as SMA cables, K cables, horn antennas and dielectric waveguides.
+Most of the components are designed to meet the
+requirements of higher operating frequency, guidance accuracy, and anti-interference
+capability by improving the specifications in the system.
+Under the above requirements, the weaknesses of SMA cables, K cables and
+horn antennas are apparent in the fact that they are heavy, rigid and expensive.
+Furthermore, the high resolution beam emitted from dielectric waveguides
+and horn antennas hinder developers and engineers from creating
+a local area network with wide coverage.
+However, dielectric waveguides have distinctive advantages,
+including their flexibility to be bent, cheaper costs, smaller weight
+and shorter delivery time.
+Therefore,
+new usecases of dielectric waveguides can be explored
+to provide a reliable and flexible infrastructure to users.
 
 \section{Problem Statement}
 
@@ -1441,43 +1459,6 @@ $f_c$ could be written as
   f_c = \frac{1.8412}{2\pi a\sqrt[]{\mu\epsilon}}
 \end{equation}
 
-\section{Usecases}
-
-TODO: move this
-
-This approach show the advantages in the following aspects compared to
-other communication mediums.
-
-\begin{enumerate}
-  \item \textbf{Cost efficiency} Flexible
-  dielectric waveguides are cheaper compared to SMA cables and horn antennas.
-  The length and radius of the PTFE sticks can be also adjusted easily.
-  \item \textbf{Flexibility} Flexible dielectric waveguides can be bent
-  flexibly, unlike horn antennas, which make them suitable in environments
-  with less space.
-  \item \textbf{Low propagation loss} Compared to SMA cables, dielectric waveguides
-  have less loss when propagating signals in the millimeter wave bands.
-\end{enumerate}
-
-The high resolution beam from the dielectric waveguide
-enables users and devices to create an one to one
-connection with the access point.
-From the perspective of security, this eliminates the possibility of
-malicious devices spying on the electromagnetic signals emitted from the device.
-
-This approach allows the users and their devices to create a
-secure connection in the physical layer.
-Numerous studies have been done on the software side to protect the
-data communicated between the device and the access point by using
-encryption algorithms, such as AES.
-Our approach is different from previous studies
-in the sense that secure communication zones are created in the physical world.
-
-This approach can be used in offices where employees handle
-vital information that cannot be leaked, and in places such as ATMs,
-where customers often look up important information on their
-smartphones before making transactions from their bank accounts.
-
 \section{Two Dimensional Waveguide Sheets}
 
 \section{Radiation Conditions}
@@ -1734,11 +1715,41 @@ In this section we first reviewed Maxwell's equations.
 
 \subsection{Vector network analyzers}
 
-TODO
+A network analyzer is an instrument that measures the
+network parameters, mainly S-parameters, of electrical networks.
+Network analyzers are often used to characterize two-port networks
+such as amplifiers and filters,
+but they can be used on networks with an arbitrary number of ports.
+The vector network analyzer differs from the scalar network analyzer
+in the fact that the
+vector network analyzer measures both amplitude and phase properties.
 
-\subsection{Connectors}
+A network analyzer, like most electronic instruments requires periodic calibration.
+There are several different methods of calibration.
 
-TODO
+\begin{itemize}
+  \item SOLT : an acronym for Short, Open, Load, Through,
+  this is the simplest calibration method. As the name suggests,
+  this requires access to known standards with a short circuit, open circuit,
+  a precision load (usually 50 ohms) and a through connection.
+  It is best if the test ports have the same type of connector (N, 3,5 mm etc.),
+  but of a different gender.
+  SOLT is suitable for coaxial measurements,
+  where it is possible to obtain the short, open, load and through.
+  The SOLT calibration method is less suitable for waveguide measurements,
+  where it is difficult to obtain an open circuit or a load,
+  or for measurements on non-coaxial test fixtures,
+  where the same problems with finding suitable standards exist.
+  \item TRL (through-reflect-line calibration):
+  This technique is useful for microwave, noncoaxial environments such as fixture,
+  wafer probing, or waveguide.
+  TRL uses a transmission line,
+  significantly longer in electrical length than the through line,
+  of known length and impedance as one standard.
+  TRL also requires a high-reflection standard (usually, a short or open)
+  whose impedance does not have to be well characterized,
+  but it must be electrically the same for both test ports.
+\end{itemize}
 
 \subsection{MZ-mmCon1}
 
