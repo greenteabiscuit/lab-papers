@@ -360,7 +360,9 @@ The thesis chapters are organizazed as follows.
   \item[] \textbf{Chapter 7:} Outlook of the future work
 \end{itemize}
 
-\chapter{Theory of Physical Communication Mediums}
+%=======
+
+\chapter{Mathematical Theory of Electromagnetism and Waveguides }
 
 \section{Mathematical analysis of waveguides}
 
@@ -1711,6 +1713,68 @@ In this section we first reviewed Maxwell's equations.
 
 \section{Rod Antennas}
 
+\section{Grating Couplers}
+
+\section{Luneburg Lens}
+
+% refractive index = 屈折率
+
+A Luneburg lens is a spherically symmetric gradient-index lens,
+shown in Figure \ref{fig:luneburg_lens}.
+A typical Luneburg lens's refractive index n decreases radially
+from the center to the outer surface.
+They can be made for use with electromagnetic radiation
+from visible light to radio waves.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/luneburg_lens.png}
+    \caption{Luneburg lens}
+    \label{fig:luneburg_lens}
+  \end{center}
+\end{figure}
+
+Each point on the surface of an ideal Luneburg lens is the
+focal point for parallel radiation incident on the opposite side.
+Ideally, the dielectric constant $\epsilon_r$ of the material
+composing the lens falls from 2 at its center to 1 at its surface
+(or equivalently, the refractive index $n$ falls from $\sqrt[]{2}$ to $1$),
+derived from the equation below:
+
+\begin{equation}
+  n = \sqrt[]{\epsilon_r} = \sqrt[]{2 - \left(\frac{r}{R}\right)^2}
+\end{equation}
+
+Here $R$ is the radius of the lens.
+Because the refractive index at the surface is the same
+as that of the surrounding medium,
+no reflection occurs at the surface.
+Within the lens, the paths of the rays are arcs of ellipses.
+
+\subsection{Uses in a microwave antenna}
+
+A Luneburg lens can be used as the basis of a high-gain radio antenna.
+This antenna is comparable to a dish antenna,
+but uses the lens rather than a parabolic reflector as the main focusing element.
+As with the dish antenna,
+a feed to the receiver or from the transmitter is placed at the focus,
+the feed typically consisting of a horn antenna.
+The phase centre of the feed horn must coincide with the point of focus,
+but since the phase centre is invariably somewhat inside the mouth of the horn,
+it cannot be brought right up against the surface of the lens.
+Consequently it is necessary to use a variety of Luneburg lens
+that focuses somewhat beyond its surface,
+rather than the classic lens with the focus lying on the surface.
+A variation on the Luneburg lens antenna is the hemispherical
+Luneburg lens antenna or Luneburg reflector antenna.
+This uses just one hemisphere of a Luneburg lens,
+with the cut surface of the sphere resting on a reflecting metal ground plane.
+
+We apply the lens in our millimeter wave antenna setup to
+realize an antenna with higher resolution.
+
+\chapter{Qualitative Analysis of Dielectric waveguides}
+
 \section{Tools to Use}
 
 \subsection{Vector network analyzers}
@@ -2054,65 +2118,6 @@ and received (the data on the bus (MISO/SDI) is sampled or read in).
   \end{center}
 \end{figure}
 
-\section{Grating Couplers}
-
-\section{Luneburg Lens}
-
-% refractive index = 屈折率
-
-A Luneburg lens is a spherically symmetric gradient-index lens,
-shown in Figure \ref{fig:luneburg_lens}.
-A typical Luneburg lens's refractive index n decreases radially
-from the center to the outer surface.
-They can be made for use with electromagnetic radiation
-from visible light to radio waves.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/luneburg_lens.png}
-    \caption{Luneburg lens}
-    \label{fig:luneburg_lens}
-  \end{center}
-\end{figure}
-
-Each point on the surface of an ideal Luneburg lens is the
-focal point for parallel radiation incident on the opposite side.
-Ideally, the dielectric constant $\epsilon_r$ of the material
-composing the lens falls from 2 at its center to 1 at its surface
-(or equivalently, the refractive index $n$ falls from $\sqrt[]{2}$ to $1$),
-derived from the equation below:
-
-\begin{equation}
-  n = \sqrt[]{\epsilon_r} = \sqrt[]{2 - \left(\frac{r}{R}\right)^2}
-\end{equation}
-
-Here $R$ is the radius of the lens.
-Because the refractive index at the surface is the same
-as that of the surrounding medium,
-no reflection occurs at the surface.
-Within the lens, the paths of the rays are arcs of ellipses.
-
-\subsection{Uses in a microwave antenna}
-
-A Luneburg lens can be used as the basis of a high-gain radio antenna.
-This antenna is comparable to a dish antenna,
-but uses the lens rather than a parabolic reflector as the main focusing element.
-As with the dish antenna,
-a feed to the receiver or from the transmitter is placed at the focus,
-the feed typically consisting of a horn antenna.
-The phase centre of the feed horn must coincide with the point of focus,
-but since the phase centre is invariably somewhat inside the mouth of the horn,
-it cannot be brought right up against the surface of the lens.
-Consequently it is necessary to use a variety of Luneburg lens
-that focuses somewhat beyond its surface,
-rather than the classic lens with the focus lying on the surface.
-A variation on the Luneburg lens antenna is the hemispherical
-Luneburg lens antenna or Luneburg reflector antenna.
-This uses just one hemisphere of a Luneburg lens,
-with the cut surface of the sphere resting on a reflecting metal ground plane.
-
-We apply the lens in our millimeter wave antenna setup to
-realize an antenna with higher resolution.
 
 \section{Qualitative Analysis}
 
@@ -2237,6 +2242,8 @@ while spinning.
 \chapter{PTFE Rod Antenna}
 
 \section{PTFE Rod Antenna Realization}
+
+TODO
 
 \section{Simulation Using HFSS}
 
