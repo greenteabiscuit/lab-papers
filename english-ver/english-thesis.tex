@@ -2348,70 +2348,12 @@ while spinning.
   \end{center}
 \end{figure}
 
-\subsection{S-parameter results from VNA based on simulation results}
-%todo move to after simulation
-Based on the simulation results,
-a new dielectric waveguide was fabricated for the 28 GHz range.
-Using a PTFE dielectric waveguide with a diameter of 10 millimeters
-and length of 80 millimeters,
-the waveguide was sharpened to fit the coax-waveguide adapter
-with little to zero gap between the waveguide and the dielectric material,
-as shown in Fig. \ref{fig:waveguide_28ghz_after_sim}.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/waveguide_28ghz_after_sim.png}
-    \caption{Dielectric waveguide fabricated for the 28 GHz range}
-    \label{fig:waveguide_28ghz_after_sim} 
-  \end{center}
-\end{figure}
-
-The S11 and S21 parameters were measured on the VNA.
-The signals were received using the mmAnt1
-and the number of points was set to 1001.
-The frequency sweep was set to the range of 18 GHz to 30 GHz,
-and the IFBW is 1 kHz.
-The dielectric waveguide and the receiver antenna were placed
-in the same line with 0 degrees of insertion angle
-and distance of 10 cm.
-
-The results are shown in
-Fig. \ref{fig:s11_comparison} and \ref{fig:s21_comparison}.
-For S11 parameters,
-there is only -6 dB which is smaller compared to the simulation results.
-Also, the loss was smaller in the 28 GHz range
-compared to when having no dielectric waveguide,
-which is around -15 dB.
-This shows that the PTFE dielectric waveguide
-is contributing to less insertion loss.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s11_comparison.png}
-    \caption{Comparison of S11 parameters with dielectric waveguide and no waveguide}
-    \label{fig:s11_comparison} 
-  \end{center}
-\end{figure}
-
-For S21 parameters,
-the dielectric waveguide antenna again contributed to less loss,
-with a difference of about 10 dB at the same distance.
-Even when the distance was set to 20 cm,
-having the dielectric waveguide still resulted in less loss.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s21_comparison.png}
-    \caption{Comparison of S21 parameters with dielectric waveguide and no waveguide}
-    \label{fig:s21_comparison} 
-  \end{center}
-\end{figure}
 
 \section{Summary}
 
 %TODO
 
-\chapter{Simulation of Dielectric Waveguide Antennas}
+\chapter{Dielectric Waveguide Antennas with Different Geometrical Tips}
 
 \subsection{About the simulation conditions}
 
@@ -2540,6 +2482,66 @@ The S11 parameter was also smallest at the radius of 7.5 millimeters to 8 millim
     \label{fig:dome_s_params_across_different_radii} 
   \end{center}
 \end{figure}
+
+\subsection{S-parameter results from VNA based on simulation results}
+
+Based on the simulation results,
+a new dielectric waveguide was fabricated for the 28 GHz range.
+Using a PTFE dielectric waveguide with a diameter of 10 millimeters
+and length of 80 millimeters,
+the waveguide was sharpened to fit the coax-waveguide adapter
+with little to zero gap between the waveguide and the dielectric material,
+as shown in Fig. \ref{fig:waveguide_28ghz_after_sim}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/waveguide_28ghz_after_sim.png}
+    \caption{Dielectric waveguide fabricated for the 28 GHz range}
+    \label{fig:waveguide_28ghz_after_sim} 
+  \end{center}
+\end{figure}
+
+The S11 and S21 parameters were measured on the VNA.
+The signals were received using the mmAnt1
+and the number of points was set to 1001.
+The frequency sweep was set to the range of 18 GHz to 30 GHz,
+and the IFBW is 1 kHz.
+The dielectric waveguide and the receiver antenna were placed
+in the same line with 0 degrees of insertion angle
+and distance of 10 cm.
+
+The results are shown in
+Fig. \ref{fig:s11_comparison} and \ref{fig:s21_comparison}.
+For S11 parameters,
+there is only -6 dB which is smaller compared to the simulation results.
+Also, the loss was smaller in the 28 GHz range
+compared to when having no dielectric waveguide,
+which is around -15 dB.
+This shows that the PTFE dielectric waveguide
+is contributing to less insertion loss.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s11_comparison.png}
+    \caption{Comparison of S11 parameters with dielectric waveguide and no waveguide}
+    \label{fig:s11_comparison} 
+  \end{center}
+\end{figure}
+
+For S21 parameters,
+the dielectric waveguide antenna again contributed to less loss,
+with a difference of about 10 dB at the same distance.
+Even when the distance was set to 20 cm,
+having the dielectric waveguide still resulted in less loss.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s21_comparison.png}
+    \caption{Comparison of S21 parameters with dielectric waveguide and no waveguide}
+    \label{fig:s21_comparison} 
+  \end{center}
+\end{figure}
+
 
 \section{Summary}
 
