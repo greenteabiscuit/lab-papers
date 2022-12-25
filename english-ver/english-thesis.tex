@@ -2394,7 +2394,7 @@ dielectric waveguide antennas in the next chapter.
 %todo copy arman's way of writing
 
 Working with NTT Docomo,
-the radiation patterns of the PTFE rod antenna were analyzed.
+the radiation patterns of the PTFE dielectric waveguide antenna were analyzed.
 The employed PTFE rod antenna had a diameter of 10 millimeters
 with a length of 20 centimeters.
 A PTFE rod antenna and the horn antenna were placed in
@@ -2589,8 +2589,14 @@ with a step size of 1 GHz (Figure \ref{fig:hfss_driven_solution_setup}).
   \end{minipage}\hfill
 \end{figure}
 
-\section{About the models}
+\section{The 3D models of the dielectric waveguides}
 
+3D models of the dielectric waveguide antennas were
+created on the HFSS simulator software.
+They were all made with dielectric material with
+permittivity of 2.1 and surrounded by vacuum.
+For the wave port,
+PEC (perfect electric conductor) material was chosen.
 The models were all placed so that their radiation patterns
 were visualized on the x-y plane.
 3 types of models were designed for the simulation as seen in
@@ -2608,6 +2614,8 @@ with each corresponding tip of optimized geometric shapes.
     \label{fig:3_hfss_simulation_models} 
   \end{center}
 \end{figure}
+
+\section{Simulation results}
 
 Directivity of the beam is the narrowest when using the dome shaped
 dielectric waveguide antenna.
@@ -2628,6 +2636,17 @@ Half power beamwidth of the dome shaped antenna
 was smallest at the radius of 7.5 millimeters to 8 millimeters,
 as shown in Fig. \ref{fig:dome_half_power_beamwidth_across_different_radii}.
 The S11 parameter was also smallest at the radius of 7.5 millimeters to 8 millimeters.
+
+From the simulation results,
+it can be said that the dome-shaped antenna is the most suitable
+for creating beams with narrow beamwidth,
+which can be employed in distributed network areas.
+The pencil-like dielectric waveguide,
+with its wide beamwidth,
+can be used in other usecases
+where its broad coverage can be utilized
+(we will not cover this topic in this paper).
+
 
 \begin{figure}
   \begin{center}
