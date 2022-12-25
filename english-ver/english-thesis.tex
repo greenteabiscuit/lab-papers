@@ -2546,6 +2546,13 @@ and modes are aligned analytically using the coordinate system.
 The two vectors representing the 
 integration lines span the diameter of the wave port,
 and are placed in perpendicular fashion (Figure \ref{fig:hfss_waveport_modes}).
+The integration lines serves in calibrating wave ports
+to ensure consistent results.
+This calibration is required in order to determine the
+direction and polarity of fields and to make voltage calculations.
+Defining a separate integration line is required when analyzing
+multiple modes,
+as the orientation of the electric field may vary.
 
 We chose the 58 GHz to 60 GHz for the solution setup of the simulation,
 with a step size of 1 GHz (Figure \ref{fig:hfss_driven_solution_setup}).
@@ -2596,7 +2603,7 @@ with each corresponding tip of optimized geometric shapes.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/3_hfss_simulation_models.png}
+    \includegraphics[clip, keepaspectratio, width=0.4\linewidth]{img/3_hfss_simulation_models.png}
     \caption{HFSS simulation models}
     \label{fig:3_hfss_simulation_models} 
   \end{center}
@@ -2650,7 +2657,7 @@ as shown in Fig. \ref{fig:waveguide_28ghz_after_sim}.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/waveguide_28ghz_after_sim.png}
+    \includegraphics[clip, keepaspectratio, width=0.4\linewidth]{img/waveguide_28ghz_after_sim.png}
     \caption{Dielectric waveguide fabricated for the 28 GHz range}
     \label{fig:waveguide_28ghz_after_sim} 
   \end{center}
@@ -2677,7 +2684,7 @@ is contributing to less insertion loss.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s11_comparison.png}
+    \includegraphics[clip, keepaspectratio, width=0.8\linewidth]{img/s11_comparison.png}
     \caption{Comparison of S11 parameters with dielectric waveguide and no waveguide}
     \label{fig:s11_comparison} 
   \end{center}
@@ -2691,7 +2698,7 @@ having the dielectric waveguide still resulted in less loss.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s21_comparison.png}
+    \includegraphics[clip, keepaspectratio, width=0.8\linewidth]{img/s21_comparison.png}
     \caption{Comparison of S21 parameters with dielectric waveguide and no waveguide}
     \label{fig:s21_comparison} 
   \end{center}
