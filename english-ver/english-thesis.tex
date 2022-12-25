@@ -2489,12 +2489,23 @@ such as the lens-like shape of the Luneburg lens in Section \ref{section:Lunebur
 By applying the lens effect to the dielectric waveguide,
 it can be inferred that the half-power beamwidth
 of the beam emitted from the antenna will become narrower.
-
-
+Also, we were only able to work with waveguides
+of constant length in
+limited frequency bands.
+There is a need to simulate the performance
+of the dielectric waveguides in
+other frequency bands such as 60 GHz.
+We also must simulate with different shapes of the waveguides
+to see the geometrical effect on the beamwidth and reflective characteristics.
 
 \section{About the simulation conditions}
 
-Here we discuss the simulation conditions used in HFSS.
+Here we discuss the simulation conditions used in Ansys HFSS.
+Ansys HFSS is a 3D electromagnetic (EM) simulation software
+for designing and simulating high-frequency electronic products
+such as antennas, antenna arrays, RF or microwave components,
+high-speed interconnects, filters, connectors,
+IC packages and printed circuit boards.
 As shown in Figure \ref{fig:hfss_solution_type},
 HFSS with Hybrid and Arrays was employed for the solution type.
 By choosing network analysis,
@@ -2521,6 +2532,13 @@ The modal option enables HFSS to use electromagnetic power to solve the simulati
 A hybrid region is defined to enclose the model,
 and the type is specified as FE-BI (finite element boundary integral),
 as seen in Figure \ref{fig:hfss_febi_hybrid_region}.
+For antenna or scattering problems,
+the air region surrounding the model must be included
+and terminated with an absorbing boundary condition.
+The integral equation approach is more suitable for solving these
+boundary conditions problems,
+and FEBI makes it possible to combine the integral equation procedure
+with the finite element method. 
 
 Two modes were designed for the wave port to excite the HFSS models.
 Both of them have integration lines defined,
@@ -2620,7 +2638,7 @@ The S11 parameter was also smallest at the radius of 7.5 millimeters to 8 millim
   \end{center}
 \end{figure}
 
-\subsection{S-parameter results from VNA based on simulation results}
+\section{Fabrication and Evaluation}
 
 Based on the simulation results,
 a new dielectric waveguide was fabricated for the 28 GHz range.
@@ -2679,6 +2697,16 @@ having the dielectric waveguide still resulted in less loss.
   \end{center}
 \end{figure}
 
+Having little to no gap between the inserted dielectric waveguide
+and the coax-waveguide adapter is critical to have
+low reflective characteristics.
+Less air gap leads to higher efficiency of mode transformation
+and less reflective loss.
+The pencil-like shape of the dielectric waveguide
+on the inserted side also plays a big role to suppressing
+reflective loss.
+This is also likely due to the pencil-like shape
+contributing to the efficiency of mode transformation.
 
 \section{Summary}
 
