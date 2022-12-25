@@ -2389,16 +2389,25 @@ dielectric waveguide antennas in the next chapter.
 
 \chapter{Quantitative Analysis of Dielectric Waveguide Antennas}
 
-\subsection{Directivity Results}
-
-%todo copy arman's way of writing
+\section{Directivity Results}
 
 Working with NTT Docomo,
 the radiation patterns of the PTFE dielectric waveguide antenna were analyzed.
 The employed PTFE rod antenna had a diameter of 10 millimeters
 with a length of 20 centimeters.
-A PTFE rod antenna and the horn antenna were placed in
+A PTFE dielectric waveguide antenna and the horn antenna were placed in
 an anechoic chamber with 1.2 meters in between.
+The waveguide antenna is also placed on a platform made out
+of foamed styrol material,
+which has permittivity close to the one of air.
+A vector network analyzer was
+used both as the analyzer and the signal generator.
+After the constant wave of the specific frequency is created on the
+analyzer,
+the signal is sent via a coaxial cable to the dielectric waveguide antenna.
+The emitted beam is caught by the horn antenna attached on the opposite side,
+which transmits the signals back to the analyzer.
+
 
 \begin{figure}
   \centering
@@ -2416,11 +2425,11 @@ an anechoic chamber with 1.2 meters in between.
   \end{minipage}\hfill
 \end{figure}
 
-The rod antenna was placed on a spinning platform ,
+The dielectric waveguide antenna was placed on a spinning platform,
 as shown in Figure \ref{fig:ptfe_rod_antenna_anechoic_chamber}
 and \ref{img:horn_antenna_anechoic_chamber}.
-The PTFE rod antenna and the platform rotate in the anechoic chamber
-with the tip of the PTFE rod antenna at the center of the rotation.
+The dielectric waveguide antenna and the platform rotate in the anechoic chamber
+with the tip of the dielectric waveguide antenna at the center of the rotation.
 
 \begin{figure}
   \centering
@@ -2448,6 +2457,21 @@ There is a slight distortion in the data due to
 the PTFE rod antenna's slight change in its orientation
 while spinning.
 
+From the experiment,
+we were able to quantify the resolution in terms of the
+half-power beamwidth.
+However, depending on its usecases,
+half-power beamwidth of 20 degrees is not enough
+and still needs tuning.
+Also, we were only able to experiment
+in the 28 GHz range due to manufacturing restrictions
+of the waveguide adapter.
+Further investigations must be done on the 60 GHz ranges as well.
+As the dielectric waveguide antenna used in this experiment
+was a normal rod antenna,
+geometric modifications to its shape also need to be considered.
+To address these problems,
+we explain the details of the simulation in the next chapter.
 
 \begin{figure}
   \begin{center}
