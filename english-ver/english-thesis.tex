@@ -5,14 +5,14 @@
 \renewcommand{\Im}{\operatorname{Im}}
 
 % 数式
-\usepackage{CJKutf8}
+\usepackage{xeCJK}
+\setCJKmainfont{IPAMincho}
+\setCJKsansfont{MS Gothic}
 \usepackage{amsmath,amsfonts}
 \usepackage{bm}
 \usepackage{esint} % for double contour
 % 画像
 \usepackage[dvipdfmx]{graphicx}
-% use xelatex on overleaf!!! otherwise results in errors
-
 \usepackage[dvipdfmx]{color}
 \graphicspath{ {./img/} }
 \usepackage[left=3cm,right=2cm,top=3cm,bottom=5cm]{geometry} % leave it at 5cm for bottom, otherwise will need to write more...
@@ -26,7 +26,6 @@
 \pagestyle{empty}
 
 %%%%% title %%%%%
-\begin{CJK}{UTF8}{min}
 \begin{center}
   \textbf{
       {\Huge 修士学位論文} \\
@@ -46,7 +45,6 @@
       {\LARGE 三谷 怜司}
   }
   \end{center}
-\end{CJK}
   
   \newpage
 
@@ -118,7 +116,6 @@ processing materials,
 it can effectively reduce the cost of goods by at least
 80\%.
 
-\begin{CJK}{UTF8}{min}
 \chapter*{\centering 論文要旨}
 
 通信技術の急速な発展に伴い、
@@ -130,7 +127,7 @@ it can effectively reduce the cost of goods by at least
 しかし、現在使用されているアンテナやケーブルなどの部品は、
 一定の加工費と加工時間が必要で、
 設計や実装に制約が生じる。
-さらに、特定の周波数や損失に対応したアンテナやケーブルについては、
+特定の周波数や損失に対応したアンテナやケーブルについては
 その特性上、より多くの時間と費用を要する。
 さらに、従来の部品で作られたインフラは
 一度部品を配置すると変更することができない、不可逆なものとなっている。
@@ -167,7 +164,6 @@ Sパラメータと半値幅が最適化されるような
 5G事業者は短期間でネットワークエリアの仕様を満たすことができるようになる上、
 加工材料の面では、既存の材料を使うときに比べ80\%以上のコスト削減が可能となる。
 
-\end{CJK}
 
 \newpage
 
@@ -234,10 +230,8 @@ such as SMA cables, K cables, horn antennas, and dielectric waveguides.
 Most of the components are designed to meet the
 requirements of higher operating frequency, guidance accuracy, and anti-interference
 capability by improving the specifications in the system.
-Under the above requirements, the weaknesses of SMA cables, K cables,
-metallic waveguides and
-horn antennas are apparent in the fact that they are heavy,
-rigid and expensive (Figures \ref{fig:sma_cables} \ref{fig:metallic_waveguide}).
+Under the above requirements, the weaknesses of SMA cables, K cables and
+horn antennas are apparent in the fact that they are heavy, rigid and expensive.
 Furthermore, the high resolution beam emitted from dielectric waveguides
 and horn antennas hinder developers and engineers from creating
 a local area network with wide coverage.
@@ -249,21 +243,7 @@ Therefore,
 new usecases of dielectric waveguides can be explored
 to provide a reliable and flexible infrastructure to users.
 
-\begin{figure}
-  \centering
-  \begin{minipage}{0.45\textwidth}
-    \centering
-    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/sma_cables.jpg}
-    \caption{SMA cables}
-    \label{fig:sma_cables}
-  \end{minipage}\hfill
-  \begin{minipage}{0.45\textwidth}
-    \centering
-    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/metallic_waveguide.jpg}
-    \caption{Metallic waveguides}
-    \label{fig:metallic_waveguide}
-  \end{minipage}\hfill
-\end{figure}
+% todo could add photos of k cables horn antennas and dielectric waveguides
 
 \section{Problem Statement}
 
@@ -1918,7 +1898,7 @@ Here the trial functions employed were capable of representing
 the exact function, but this usually is impossible.
 In most situations, only approximate solutions can be achieved.
 
-\section{Luneburg Lens} \label{section:Luneburg}
+\section{Luneburg Lens}
 
 % refractive index = 屈折率
 
@@ -2389,6 +2369,8 @@ and vice versa when pointed.
   \end{minipage}\hfill
 \end{figure}
 
+% TODO: add sharpened PTFE waveguide analysis.
+
 \section{Summary}
 
 In this chapter,
@@ -2403,25 +2385,16 @@ dielectric waveguide antennas in the next chapter.
 
 \chapter{Quantitative Analysis of Dielectric Waveguide Antennas}
 
-\section{Directivity Measurements with NTT Docomo}
+\subsection{Directivity Results}
+
+%todo copy arman's way of writing
 
 Working with NTT Docomo,
-the radiation patterns of the PTFE dielectric waveguide antenna were analyzed.
+the radiation patterns of the PTFE rod antenna were analyzed.
 The employed PTFE rod antenna had a diameter of 10 millimeters
 with a length of 20 centimeters.
-A PTFE dielectric waveguide antenna and the horn antenna were placed in
+A PTFE rod antenna and the horn antenna were placed in
 an anechoic chamber with 1.2 meters in between.
-The waveguide antenna is also placed on a platform made out
-of foamed styrol material,
-which has permittivity close to the one of air.
-A vector network analyzer was
-used both as the analyzer and the signal generator.
-After the constant wave of the specific frequency is created on the
-analyzer,
-the signal is sent via a coaxial cable to the dielectric waveguide antenna.
-The emitted beam is caught by the horn antenna attached on the opposite side,
-which transmits the signals back to the analyzer.
-
 
 \begin{figure}
   \centering
@@ -2439,11 +2412,11 @@ which transmits the signals back to the analyzer.
   \end{minipage}\hfill
 \end{figure}
 
-The dielectric waveguide antenna was placed on a spinning platform,
+The rod antenna was placed on a spinning platform ,
 as shown in Figure \ref{fig:ptfe_rod_antenna_anechoic_chamber}
 and \ref{img:horn_antenna_anechoic_chamber}.
-The dielectric waveguide antenna and the platform rotate in the anechoic chamber
-with the tip of the dielectric waveguide antenna at the center of the rotation.
+The PTFE rod antenna and the platform rotate in the anechoic chamber
+with the tip of the PTFE rod antenna at the center of the rotation.
 
 \begin{figure}
   \centering
@@ -2461,8 +2434,6 @@ with the tip of the dielectric waveguide antenna at the center of the rotation.
   \end{minipage}\hfill
 \end{figure}
 
-\section{Directivity Results}
-
 The results are shown in Figures
 \ref{fig:radiation_pattern_comparison_27_29_vertical}
 and \ref{img:radiation_pattern_comparison_27_29_horizontal}.
@@ -2473,21 +2444,6 @@ There is a slight distortion in the data due to
 the PTFE rod antenna's slight change in its orientation
 while spinning.
 
-From the experiment,
-we were able to quantify the resolution in terms of the
-half-power beamwidth.
-However, depending on its usecases,
-half-power beamwidth of 20 degrees is not enough
-and still needs tuning.
-Also, we were only able to experiment
-in the 28 GHz range due to manufacturing restrictions
-of the waveguide adapter.
-Further investigations must be done on the 60 GHz ranges as well.
-As the dielectric waveguide antenna used in this experiment
-was a normal rod antenna,
-geometric modifications to its shape also need to be considered.
-To address these problems,
-we explain the details of the simulation in the next chapter.
 
 \begin{figure}
   \begin{center}
@@ -2519,33 +2475,11 @@ and see how the geometrical shape has an effect on space resolution.
 
 \chapter{Dielectric Waveguide Antennas with Different Geometrical Tips}
 
-In the previous chapters,
-we described in detail the experiments conducted
-on the dielectric waveguide antenna.
-Although the directivity results show that
-half-power beamwidth of 20 degrees can be achieved,
-effects of the geometrical shape of the antenna have not been considered,
-such as the lens-like shape of the Luneburg lens in Section \ref{section:Luneburg}.
-By applying the lens effect to the dielectric waveguide,
-it can be inferred that the half-power beamwidth
-of the beam emitted from the antenna will become narrower.
-Also, we were only able to work with waveguides
-of constant length in
-limited frequency bands.
-There is a need to simulate the performance
-of the dielectric waveguides in
-other frequency bands such as 60 GHz.
-We also must simulate with different shapes of the waveguides
-to see the geometrical effect on the beamwidth and reflective characteristics.
+%todo copy arman's way of writing
 
-\section{About the simulation conditions}
+\subsection{About the simulation conditions}
 
-Here we discuss the simulation conditions used in Ansys HFSS.
-Ansys HFSS is a 3D electromagnetic (EM) simulation software
-for designing and simulating high-frequency electronic products
-such as antennas, antenna arrays, RF or microwave components,
-high-speed interconnects, filters, connectors,
-IC packages and printed circuit boards.
+Here we discuss the simulation conditions used in HFSS.
 As shown in Figure \ref{fig:hfss_solution_type},
 HFSS with Hybrid and Arrays was employed for the solution type.
 By choosing network analysis,
@@ -2572,13 +2506,6 @@ The modal option enables HFSS to use electromagnetic power to solve the simulati
 A hybrid region is defined to enclose the model,
 and the type is specified as FE-BI (finite element boundary integral),
 as seen in Figure \ref{fig:hfss_febi_hybrid_region}.
-For antenna or scattering problems,
-the air region surrounding the model must be included
-and terminated with an absorbing boundary condition.
-The integral equation approach is more suitable for solving these
-boundary conditions problems,
-and FEBI makes it possible to combine the integral equation procedure
-with the finite element method. 
 
 Two modes were designed for the wave port to excite the HFSS models.
 Both of them have integration lines defined,
@@ -2586,13 +2513,6 @@ and modes are aligned analytically using the coordinate system.
 The two vectors representing the 
 integration lines span the diameter of the wave port,
 and are placed in perpendicular fashion (Figure \ref{fig:hfss_waveport_modes}).
-The integration lines serves in calibrating wave ports
-to ensure consistent results.
-This calibration is required in order to determine the
-direction and polarity of fields and to make voltage calculations.
-Defining a separate integration line is required when analyzing
-multiple modes,
-as the orientation of the electric field may vary.
 
 We chose the 58 GHz to 60 GHz for the solution setup of the simulation,
 with a step size of 1 GHz (Figure \ref{fig:hfss_driven_solution_setup}).
@@ -2629,14 +2549,8 @@ with a step size of 1 GHz (Figure \ref{fig:hfss_driven_solution_setup}).
   \end{minipage}\hfill
 \end{figure}
 
-\section{The 3D models of the dielectric waveguides}
+\subsection{About the models}
 
-3D models of the dielectric waveguide antennas were
-created on the HFSS simulator software.
-They were all made with dielectric material with
-permittivity of 2.1 and surrounded by vacuum.
-For the wave port,
-PEC (perfect electric conductor) material was chosen.
 The models were all placed so that their radiation patterns
 were visualized on the x-y plane.
 3 types of models were designed for the simulation as seen in
@@ -2649,13 +2563,11 @@ with each corresponding tip of optimized geometric shapes.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.4\linewidth]{img/3_hfss_simulation_models.png}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/3_hfss_simulation_models.png}
     \caption{HFSS simulation models}
     \label{fig:3_hfss_simulation_models} 
   \end{center}
 \end{figure}
-
-\section{Simulation results}
 
 Directivity of the beam is the narrowest when using the dome shaped
 dielectric waveguide antenna.
@@ -2677,17 +2589,6 @@ was smallest at the radius of 7.5 millimeters to 8 millimeters,
 as shown in Fig. \ref{fig:dome_half_power_beamwidth_across_different_radii}.
 The S11 parameter was also smallest at the radius of 7.5 millimeters to 8 millimeters.
 
-From the simulation results,
-it can be said that the dome-shaped antenna is the most suitable
-for creating beams with narrow beamwidth,
-which can be employed in distributed network areas.
-The pencil-like dielectric waveguide,
-with its wide beamwidth,
-can be used in other usecases
-where its broad coverage can be utilized
-(we will not cover this topic in this paper).
-
-
 \begin{figure}
   \begin{center}
     \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/dome_half_power_beamwidth_across_different_radii.png}
@@ -2704,7 +2605,7 @@ where its broad coverage can be utilized
   \end{center}
 \end{figure}
 
-\section{Fabrication and Evaluation}
+\subsection{S-parameter results from VNA based on simulation results}
 
 Based on the simulation results,
 a new dielectric waveguide was fabricated for the 28 GHz range.
@@ -2716,7 +2617,7 @@ as shown in Fig. \ref{fig:waveguide_28ghz_after_sim}.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.4\linewidth]{img/waveguide_28ghz_after_sim.png}
+    \includegraphics[clip, keepaspectratio, width=0.5\linewidth]{img/waveguide_28ghz_after_sim.png}
     \caption{Dielectric waveguide fabricated for the 28 GHz range}
     \label{fig:waveguide_28ghz_after_sim} 
   \end{center}
@@ -2743,7 +2644,7 @@ is contributing to less insertion loss.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.8\linewidth]{img/s11_comparison.png}
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s11_comparison.png}
     \caption{Comparison of S11 parameters with dielectric waveguide and no waveguide}
     \label{fig:s11_comparison} 
   \end{center}
@@ -2757,22 +2658,12 @@ having the dielectric waveguide still resulted in less loss.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[clip, keepaspectratio, width=0.8\linewidth]{img/s21_comparison.png}
+    \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/s21_comparison.png}
     \caption{Comparison of S21 parameters with dielectric waveguide and no waveguide}
     \label{fig:s21_comparison} 
   \end{center}
 \end{figure}
 
-Having little to no gap between the inserted dielectric waveguide
-and the coax-waveguide adapter is critical to have
-low reflective characteristics.
-Less air gap leads to higher efficiency of mode transformation
-and less reflective loss.
-The pencil-like shape of the dielectric waveguide
-on the inserted side also plays a big role to suppressing
-reflective loss.
-This is also likely due to the pencil-like shape
-contributing to the efficiency of mode transformation.
 
 \section{Summary}
 
