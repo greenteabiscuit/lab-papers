@@ -5,7 +5,9 @@
 \renewcommand{\Im}{\operatorname{Im}}
 
 % 数式
-\usepackage{CJKutf8}
+\usepackage{xeCJK}
+\setCJKmainfont{IPAMincho}
+\setCJKsansfont{MS Gothic}
 \usepackage{amsmath,amsfonts}
 \usepackage{bm}
 \usepackage{esint} % for double contour
@@ -26,7 +28,6 @@
 \pagestyle{empty}
 
 %%%%% title %%%%%
-\begin{CJK}{UTF8}{min}
 \begin{center}
   \textbf{
       {\Huge 修士学位論文} \\
@@ -46,7 +47,6 @@
       {\LARGE 三谷 怜司}
   }
   \end{center}
-\end{CJK}
   
   \newpage
 
@@ -63,7 +63,7 @@ for antennas and cables, essential components for signal processing,
 is growing by leaps and
 bounds.
 In addition,
-demand for mmWave antennas and cables are increasing as
+demand for mmWave antennas and cables is increasing as
 components for specific bands are necessary for individual
 merchants to build their own Local 5G base stations.
 
@@ -118,7 +118,6 @@ processing materials,
 it can effectively reduce the cost of goods by at least
 80\%.
 
-\begin{CJK}{UTF8}{min}
 \chapter*{\centering 論文要旨}
 
 通信技術の急速な発展に伴い、
@@ -130,7 +129,7 @@ it can effectively reduce the cost of goods by at least
 しかし、現在使用されているアンテナやケーブルなどの部品は、
 一定の加工費と加工時間が必要で、
 設計や実装に制約が生じる。
-さらに、特定の周波数や損失に対応したアンテナやケーブルについては、
+特定の周波数や損失に対応したアンテナやケーブルについては、
 その特性上、より多くの時間と費用を要する。
 さらに、従来の部品で作られたインフラは
 一度部品を配置すると変更することができない、不可逆なものとなっている。
@@ -166,8 +165,6 @@ Sパラメータと半値幅が最適化されるような
 以上により、
 5G事業者は短期間でネットワークエリアの仕様を満たすことができるようになる上、
 加工材料の面では、既存の材料を使うときに比べ80\%以上のコスト削減が可能となる。
-
-\end{CJK}
 
 \newpage
 
