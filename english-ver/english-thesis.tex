@@ -1624,15 +1624,15 @@ by plugging them in we get:
 $k_z^2 > 0$ is the necessary condition for propagation to occur.
 If this is true, then $k_z$ is a real number,
 so the field components will contain complex exponentials,
-which represent propagating waves.
-Otherwise when $k_z^2 < 0$,
+representing propagating waves.
+Otherwise, when $k_z^2 < 0$,
 $k_z$ will be an imaginary number,
 in which case the complex exponential becomes a decaying real exponential.
 In this case, the fields will not propagate but instead quickly die out within the waveguide.
-Electromagnetic fields that die off instead of propagate are referred to as evanescent waves.
+Electromagnetic fields that die off instead of propagate are called evanescent waves.
 
 By setting $k_z=0$,
-the lowest frequency in which propagation occurs can be found.
+the lowest frequency at which propagation occurs can be found.
 This is the transition between
 the cutoff region (evanescent) and the propagation region.
 Equation \ref{eq:wavenumber_relation} can be rewritten as:
@@ -1642,7 +1642,7 @@ Equation \ref{eq:wavenumber_relation} can be rewritten as:
    \left(\frac{2\pi f}{c}\right)^2
 \end{equation}
 
-The lowest value the left hand side of the equation can take
+The lowest value that the left-hand side of the equation can take
 occurs when $m=1$ and $n=0$.
 This gives the cutoff frequency for this waveguide:
 
@@ -1650,11 +1650,11 @@ This gives the cutoff frequency for this waveguide:
   f_c = \frac{c}{2a}
 \end{equation}
 
-Generally, cutoff frequency $f_c$ in a rectangular waveguide can be
+Generally, the cutoff frequency $f_c$ in a rectangular waveguide can be
 calculated as follows,
 where $a$ is the wall length, and $\mu$ and $\epsilon$ are
 the permeability and permittivity of the material
-that fill the waveguide, respectively.
+that fills the waveguide, respectively.
 
 \begin{equation}
   f_c = \frac{1}{2a\sqrt[]{\mu\epsilon}}
@@ -1673,11 +1673,11 @@ When the outer boundary of a domain recedes to infinity,
 the domain is called unbounded or open.
 A condition must be specified at this outer boundary to obtain a unique solution
 for this problem.
-Such a condition is referred to as a radiation condition.
+This condition is referred to as a radiation condition.
 
 Assuming that all sources and objects are immersed in free space
 and located within a finite distance from the origin of a coordinate system,
-the electric and magnetic fields are required to satisfy:
+the electric and magnetic fields are required to satisfy the following.
 
 \begin{equation} \label{eq:sommerfeld_radiation_condition_infinite}
   \lim_{r \to \infty}\left[\nabla\times\begin{pmatrix}
@@ -1696,14 +1696,13 @@ In numerical analysis,
 it is often desirable to reduce the size of a computational domain
 by using a finite boundary to truncate the infinite domain.
 When applied at such a finite boundary,
-\ref{eq:sommerfeld_radiation_condition_infinite} can be regarded as the
-lowest-order radiation condition with limited accuracy.
+\ref{eq:sommerfeld_radiation_condition_infinite} can be considered the lowest order radiation condition with limited accuracy.
 Better accuracy can be achieved by developing higher-order conditions.
 
 \section{Variational Method}
 
-A typical boundary-value problem can be defined by a
-governing differntial equation in a domain $\Omega$,
+A typical boundary value problem can be defined by a
+different governing equation in a domain $\Omega$,
 and the boundary conditions on the boundary $\Gamma$ that encloses the domain.
 
 \begin{equation} \label{eq:general_boundary_value_problem}
@@ -1713,7 +1712,7 @@ and the boundary conditions on the boundary $\Gamma$ that encloses the domain.
 Here $L$ is a differential operator, $f$ is the excitation function,
 and $\phi$ is the unknown quantity.
 Poisson equation is an example of a governing differential equation in electromagnetics
-and Dirichlet condition is an example of a boundary condition.
+and the Dirichlet condition is an example of a boundary condition.
 
 \subsection{The Ritz Method}
 
@@ -1726,7 +1725,7 @@ The operator $L$ is self-adjoint when it satisfies the following condition:
 An example of a self-adjoint operator is $i\frac{d}{dx}$.
 (A simple instance of this can be calculated by using the operator
 on $\phi = e^{ix}$.
-Check the following $[L\phi]\phi^*=\phi [L^*\phi^*]$ is satisfied)
+Check that the following $[L\phi]\phi^*=\phi [L^*\phi^*]$ is satisfied).
 To obtain the solution,
 we must add another condition that the operator $L$ is positive definite,
 that is:
@@ -1739,7 +1738,7 @@ that is:
   \end{cases}
 \end{equation}
 
-And the solution to Equation \ref{eq:boundary_problem_differential_equation}
+And the solution to equation \ref{eq:boundary_problem_differential_equation}
 can be obtained by minimizing the functional
 
 \begin{equation}
@@ -1749,9 +1748,9 @@ can be obtained by minimizing the functional
 
 Here $\tilde{\phi}$ represents a trial function.
 To prove this variational principle,
-we first need to show the differential equation is the necessary consequence when the functional $F$ is stationary
+we first need to show that the differential equation is the necessary consequence when the functional $F$ is stationary
 ($\delta F = 0$).
-We also must prove that the stationary point is at the minimum of the functional $F$,
+We also have to prove that the stationary point is at the minimum of the functional $F$,
 which is equivalent to proving that $\delta(\delta F) > 0$.
 Taking the variation again,
 
@@ -1794,7 +1793,7 @@ and from $L\phi - f = 0$, the first point is proved.
 
 The second point can be considered by taking the first variation of $\delta F$
 once more.
-This results in:
+This results in the following.
 
 \begin{equation} \label{eq:delta_delta_F}
   \delta(\delta F) = \delta F(\phi + \delta \phi) - \delta F(\phi) = \Re\langle \delta\phi, L\delta\phi \rangle
@@ -1805,12 +1804,11 @@ using the positive definite condition,
 we can conclude that $\delta(\delta F) > 0$.
 Rephrasing this, when $L > 0$ and $\delta \phi > 0$, 
 the result of Equation \ref{eq:delta_delta_F} is greater than 0.
-Therefore the stationary point is indeed at the minimum of $F$.
+Therefore, the stationary point is indeed at the minimum of $F$.
 
 \subsection{A Simple example}
 
-Here we look at a simple boundary-value problem and solve it using
-the Ritz methods \cite{10.5555/2655347}.
+Here, we examine a simple boundary value problem and solve it using the Ritz method \cite{10.5555/2655347}.
 The problem is about the determination of the static potential $\phi$
 between two infinite parallel plates.
 One plate is located at $x=0$ with $\phi=0$ and
@@ -1837,11 +1835,10 @@ The boundary conditions are given as:
   \left.\phi\right|_{x=1}=1
 \end{equation}
 
-This is simply a second-order differential equation,
+This is simply a second-order differential equation
 and can be solved easily by integrating the equation twice.
-Here we assume we do not know the exact solution
-and use the Ritz and Galerkin methods to find it.
-Here we introduce the Ritz method.
+Here we assume that we do not know the exact solution
+and use the Ritz method to find it.
 
 \subsubsection{Solution via the Ritz Method}
 
@@ -1863,7 +1860,7 @@ we get:
 
 Since the problem here does not contain imaginary numbers,
 we can say $\tilde{\phi} = \tilde{\phi}^*$.
-Also, since $i\frac{d}{dx}$ is also a self adjoint operator,
+Also, since $i\frac{d}{dx}$ is also a self-adjoint operator,
 
 \begin{equation}
   (-\frac{d^2}{dx^2}\tilde{\phi}) \tilde{\phi}^* = \\
@@ -1872,7 +1869,7 @@ Also, since $i\frac{d}{dx}$ is also a self adjoint operator,
   = |(\frac{d}{dx}\tilde{\phi})|^2
 \end{equation}
 
-Therefore the functional equation can be simplifed as:
+Therefore, the functional equation can be simplified as:
 
 \begin{equation} \label{eq:ritz_functional}
   F(\tilde{\phi}) = \frac{1}{2}\int_{0}^1 (\frac{d}{dx}\tilde{\phi})^2 dx \\
@@ -1885,15 +1882,14 @@ Here we use polynomials as one of the candidate trial functions:
   \tilde{\phi}(x) = c_1 + c_2 x + c_3 x^2 + c_4 x^3
 \end{equation}
 
-From the boundary conditions,
-the conditions $c_1 = 0$, $c_2 = 1 - c_3 - c_4$ are obtained.
+From the boundary conditions, conditions $c_1 = 0$, $c_2 = 1 - c_3 - c_4$ are obtained.
 This reduces the current function to
 
 \begin{equation}
   \tilde{\phi}(x) = x + c_3 (x^2 - x) + c_4 (x^3 - x)
 \end{equation}
 
-Substituting the above equation to \ref{eq:ritz_functional},
+Substituting the above equation into \ref{eq:ritz_functional},
 the following derivatives are obtained:
 
 \begin{equation}
@@ -1906,7 +1902,7 @@ the following derivatives are obtained:
 
 By setting these derivatives to zero,
 $c_3 = \frac{1}{2}$ and $c_4 = \frac{1}{6}$ can be computed.
-Here the trial functions employed were capable of representing
+Here, the trial functions employed were capable of representing
 the exact function, but this usually is impossible.
 In most situations, only approximate solutions can be achieved.
 
