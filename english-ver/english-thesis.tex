@@ -70,11 +70,11 @@ merchants to build their own Local 5G base stations.
 However, components such as antennas and cables used
 currently need certain
 processing costs and processing time,
-increasing the complexity and spectral characteristics
+increasing the complexity and spectral characteristics,
 and creating limitations in the design and implementation.
 Moreover, it takes
 more time and expense for specific antennas and cables
-because of their particular
+due to their particular
 characteristics.
 Furthermore, infrastructure created by traditional components
 is often irreversible, and cannot be changed once
@@ -87,30 +87,30 @@ mmWave antennas using dielectric waveguides to reduce the cost,
 processing time
 and create a distributive local area network.
 
-This paper designs mainly three kinds of dielectric waveguide antenna
-and details the design process and simulation process.
+This paper mainly designs three types of dielectric waveguide antennas
+and details the design process and the simulation process.
 First, we introduce the related background
 and how Maxwell's electromagnetic equations tie into the characteristics
 of dielectric waveguides.
-Then we describe the basic theory of the antenna's design,
+Then we describe the basic theory of the antenna design
 and simulate them on a simulator.
 After the structure and order are determined first,
 we iterate the simulation until
-the S-parameters and half-power beam width are optimized.
+the S parameters and half-power beam width are optimized.
 After
 assembling the dielectric waveguide antenna,
 we observe the actual
 test results and demonstrate the feasibility
-using the scalar network analyzer and vector network analyzer.
+using the scalar network analyzer and the vector network analyzer.
 
 The implemented antennas shows the antenna functions with less than 10dB
 insertion loss and around 20 degrees of half-power beamwidth.
 The proposed implementation
-method can effectively reduce the machining time within 1 day
+method can effectively reduce the machining time in 1 day
 due to the simple principle and the procedural process.
-Furthermore, the high resolution beam
+Furthermore, the high-resolution beam
 emitted from the tip of the antenna is narrow enough
-that multiple network areas can be built without interfering with each other
+that multiple network areas can be built without interfering with each other.
 
 These advantages will also enable Local 5G operators
 to fulfill the customers' requirements within a short period. In terms of
@@ -170,7 +170,7 @@ Sパラメータと半値幅が最適化されるような
 
 \chapter*{\centering Acknowledgments}
 
-I want to express my deepest gratitude and appreciation to my advisor
+I would like to express my deepest gratitude and appreciation to my advisor
 Professor Akihiro Nakao. Professor Akihiro Nakao has been supportive,
 friendly, and helpful throughout my master's program. His encouragement
 and understanding helped me overcome difficulties and created a space to
@@ -183,11 +183,10 @@ research in computer science, shaped my critical thinking, and challenged
 me to become a higher-level thinker.
 
 Working with Professor Ping Du has been an enlightening and enriching
-experience. Whenever I needed advice, he was always quick and patient to
-help. Moreover, he was always polite and willing to share his experiences
+experience. Whenever I needed advice, he was always friendly and patient. Moreover, he was always polite and willing to share his experiences
 and views on persuasive research.
-I want to thank the various senior students and staff in the lab. They
-have helped and guided me in every way during the two years of my master's
+We thank the various senior students and staff in the lab. They
+have helped and guided me in every way during the two years of my Master's
 degree.
 
 Most importantly, I would like to thank my family and friends for their
@@ -211,31 +210,31 @@ suggestions.
 \section{Background}
 
 The fifth generation (5G) mobile communication system
-is expected to provide new innovations to support the society
-with technical features including high speed, high
+is expected to provide new innovations to support society
+with technical features that include high speed, high
 capacity, low latency, and massive connectivity.
 5G in a given area can support a far higher number of devices
 and larger data traffic,
 which has already seen in the last 10 years \cite{pepper2013cisco}.
 As a special feature of 5G,
-high frequency bands such as the millimeter
-wave bands are supported to achieve ultra-high speed
+high frequency bands such as millimeter
+wave bands are supported to achieve ultra-high-speed
 wireless data communications of several gigabits per second
 using a frequency bandwidth of
-several-hundred megahertz \cite{docomo_6G_white_paper}.
+several hundreds of megahertz \cite{docomo_6G_white_paper}.
 This situation requires a reliable communication medium to
 ensure that the full capacity of mmWaves is utilized.
 
-There are many types of components used in the 5G communication systems,
+There are many types of components used in 5G communication systems,
 such as SMA cables, K cables, horn antennas, and dielectric waveguides.
 Most of the components are designed to meet the
 requirements of higher operating frequency, guidance accuracy, and anti-interference
 capability by improving the specifications in the system.
 Under the above requirements, the weaknesses of SMA cables, K cables,
-metallic waveguides and
+metallic waveguides, and
 horn antennas are apparent in the fact that they are heavy,
-rigid and expensive (Figures \ref{fig:sma_cables} \ref{fig:metallic_waveguide}).
-Furthermore, the high resolution beam emitted from dielectric waveguides
+rigid, and expensive (Figures \ref{fig:sma_cables} \ref{fig:metallic_waveguide}).
+Furthermore, the high-resolution beam emitted from dielectric waveguides
 and horn antennas hinder developers and engineers from creating
 a local area network with wide coverage.
 However, dielectric waveguides have distinctive advantages,
@@ -266,16 +265,16 @@ to provide a reliable and flexible infrastructure to users.
 
 Millimeter wave 5G technology can provide massive capacity
 and even lower latency than previous technologies such as 4G.
-This requires a 5G antenna with a low latency,
+This requires a 5G antenna with low latency,
 low path loss, and a steady radiation pattern.
 However, millimeter waves also have problems and limitations
-that need to be addressed:
+that need to be addressed.
 
 \begin{itemize}
   \item[] \textbf{High cost of mmWave area construction}
   Costly delivery of base station and horn antennas for area construction
   is high when building 5G communication systems.
-  Overall size and internal structure of antennas differ according
+  The overall size and internal structure of the antennas differ according
   to their corresponding frequency bands.
   Therefore, when processing high-frequency antennas for small sizes,
   the corresponding processing accuracy is bound to increase.
@@ -298,7 +297,7 @@ that need to be addressed:
   both in terms of speed and latency.
   Adding new wireless networks can mitigate this problem,
   but is not very effective for areas in similar frequency ranges.
-  Multiple-input/multiple-out (MIMO) technology is
+  Multiple-input/multiple-output (MIMO) technology is
   an established wireless communications technique
   for sending and receiving multiple data signals
   simultaneously over the same radio channel.
@@ -376,7 +375,7 @@ advantages in the following aspects.
   delivering time, this paper details the process
   from simulating the antenna to production;
   this presents a
-  procedural process that can be followed strictly to design and produce
+  procedural process that can be strictly followed to design and produce
   an antenna that meets the conditions. The overall time
   required for implementing the antenna can be done within a few days,
   which can
@@ -406,7 +405,7 @@ advantages in the following aspects.
   network in the system.
   It is possible to create a network for environments where
   devices are densely populated,
-  such as in a factories and farmlands
+  such as in factories and farmlands.
 \end{itemize}
 
 \section{Related Work}
@@ -421,8 +420,7 @@ to manufacture,
 and providing easy end-to-end integration
 with other circuits fuel acceleration of its development.
 Razavi et al. have
-designed mmWave planar antennas by employing the
-substrate integrated waveguide technology
+designed mmWave planar antennas employing substrate-integrated waveguide technology
 \cite{6840353}.
 However, dielectric losses of
 the transmission line rise sharply as the operating frequency
@@ -432,13 +430,13 @@ competitiveness in terms of manufacture and cost, the radiation
 efficiency is inevitably deteriorated,
 which limits its application in higher frequency band.
 
-Studies on the groove gap waveguide slot array antenna
+Studies on the groove-gap waveguide slot array antenna
 are also increasing recently,
 as seen in \cite{8736521}.
 Each plate, with small air gaps in between,
 does not need to have
 electrical contact with the neighboring plates.
-The electromagnetic (EM)
+Electromagnetic (EM)
 wave leakage is suppressed by the semiperiodic array of
 metallic pins along with a metallic top plate
 \cite[]{5608486,6157653,7931702,8359490,8668424}.
@@ -464,10 +462,10 @@ unsuitable for mass production.
 For high-frequency radiation systems,
 Jin et al. have proposed a waveguide
 based on multilayer integrated vertical-EBG structure
-that can be manufactured with less cost
+that can be manufactured at less cost
 \cite{9538996}.
-A vertical-EBG structure
-is designed to eliminate the EM wave leakage in the air
+A vertical EBG structure
+is designed to eliminate EM wave leakage in the air
 gap.
 A phase cancellation method is applied in spaces
 to narrow to set up EBG unit cells
@@ -484,13 +482,13 @@ which make them immobile.
 Furthermore, they still require high costs
 and long lead times for manufacturing,
 especially mass production,
-as all of them require some metallic and chemical processing.
+as all require some metallic and chemical processing.
 
 Dielectric materials have been used as antennas for some time.
 In millimeter wave bands, Kawai et al. have proposed an approach that expands
 communication areas by using a flexible dieletric waveguide,
 wchich has low loss characteristics in the millimeter wave band range \cite{new_area_formation_approach}.
-Fukuda et al. have proposed a leaky-wave antenna employing a bent dielectric waveguide for
+Fukuda et al. have proposed a leaky wave antenna employing a bent dielectric waveguide for
 millimeter wave bands \cite{leaky_wave_antenna_bent_dielectric}.
 The study utilizes the characteristics that the
 dielectric waveguide radiates electromagnetic waves by
@@ -518,7 +516,7 @@ manufacturing techniques.
   The whole process also effectively reduces the cost of
   manufacturing antennas from scratch.
   \item[] \textbf{Shorter lead time}
-  The PTFE takes a few days at most for delivery and can be directly used without tuning,
+  The PTFE takes a few days at most for delivery and can be used directly without tuning,
   which is much shorter compared to existing horn antennas and patch antennas.
   This significantly reduces the lead time of the antenna.
   \item[] \textbf{Flexibility of infrastructure}
@@ -546,12 +544,12 @@ The thesis chapters are organized as follows.
 \begin{itemize}
   \item[] \textbf{Chapter 1:} We introduce the background of the communication \\
   system and dielectric waveguides. Then we elaborate the problem statement and thesis \\
-  statement. Finally we describe the existing methods and their limitations \\
+  statement. Finally, we describe the existing methods and their limitations \\
   and introduce the innovations and contributions of the paper.
   \item[] \textbf{Chapter 2:} The theory of electromagnetic waves is discussed to understand \\
   basis of waveguides and antennas. \\
   Maxwell's equations and the laws derived from the equations are introduced in detail.
-  \item[] \textbf{Chapter 3:} Qualitative analysis of dielectric waveguide antennas \\
+  \item[] \textbf{Chapter 3:} The qualitative analysis of the dielectric waveguide antennas \\
   was conducted in a laboratory environment. \\
   We explain the methodology and how the experiment can be reproduced.
   \item[] \textbf{Chapter 4:} Quantitative analysis of dielectric waveguide antennas \\
@@ -563,7 +561,7 @@ The thesis chapters are organized as follows.
   The results obtained from the simulations show that the waveguide antenna can indeed \\
   contribute to create distributed network areas.
   \item[] \textbf{Chapter 6:} Conclusion of this paper
-  \item[] \textbf{Chapter 7:} Outlook of the future work
+  \item[] \textbf{Chapter 7:} Perspective of future work
 \end{itemize}
 
 %=======
@@ -572,14 +570,14 @@ The thesis chapters are organized as follows.
 
 \section{Mathematical analysis of waveguides}
 
-Waveguides are devices for transporting electromagnetic energy
+Waveguides are devices that transport electromagnetic energy
 from one region to another.
 There are a variety of waveguides, from hollow tubes made out of metal to
 sticks made of teflon.
-First we analyze waveguides that are hollow metal tubes
+First, we analyze waveguides that are hollow metal tubes
 (often rectangular or circular in cross section).
 These waveguides are capable of directing power precisely to where it is needed,
-can handle large amounts of power and function as a high-pass filter.
+can handle large amounts of power, and function as a high-pass filter.
 
 \begin{figure}
   \begin{center}
@@ -611,7 +609,7 @@ can be written as:
 \end{equation}
 
 where $\epsilon$ is the permittivity of the medium where the wave propagates.
-Here for simplicity, it is assumed that $E_z$ is zero.
+Here, for simplicity, it is assumed that $E_z$ is zero.
 The following equations describing the electric and magnetic fields can be derived from Maxwell's equations.
 
 \begin{equation}
@@ -667,7 +665,7 @@ It can be assumed that $F_z$ can be separated into the product of 3 functions.
   F_z(x,y,z) = X(x)Y(y)Z(z)
 \end{equation}
 
-Therefore, when equation [\ref{eq:separation_of_vars}] is plugged into equation [\ref{eq:simplified}],
+Therefore, when equation [\ref{eq:separation_of_vars}] is substituted into equation [\ref{eq:simplified}],
 the following equation is derived (the prime represents the derivative):
 
 \begin{equation} \label{eq:simplified_derivative_equation}
@@ -773,7 +771,7 @@ Only certain distributions will satisfy the required differential equations
 and the boundary conditions. These configurations are called modes.
 Since this solution assumed that $E_z$ is zero, this mode is written as the $TE_{mn}$ mode.
 
-Due to Maxwell's Equations,
+Due to Maxwell's equations,
 the fields within the waveguide always have a specific "form" or "waveshape",
 which are known as modes.
 Assume the waveguide is oriented such that the energy is to be transmitted along the waveguide axis, the z-axis.
@@ -804,7 +802,7 @@ to even as high as 100GHz.
 Horn antennas often have a directional radiation pattern with a high antenna gain,
 which can range up to 25 dB in some cases, with 10-20 dB being typical.
 Horn antennas have a wide impedance bandwidth,
-implying that the input impedance is slowly varying over a wide frequency range (which also implies low values for S11 or VSWR). The bandwidth for practical horn antennas can be on the order of 20:1 (for instance, operating from 1 GHz-20 GHz),
+implying that the input impedance slowly varies over a wide frequency range (which also implies low values for S11 or VSWR). The bandwidth for practical horn antennas can be on the order of 20:1 (for instance, operating from 1 GHz-20 GHz),
 with a 10:1 bandwidth not being uncommon.
 
 \begin{figure}
@@ -861,15 +859,14 @@ which is about 377 Ohms. $\hat{r}$ is the direction of propagation for the plane
   \end{center}
 \end{figure}
 
-The waveguide feed acts as a high-pass filter,
-which blocks any energy below its cutoff frequency.
+The waveguide feed acts as a high-pass filter that blocks any energy below its cut-off frequency.
 The antenna gain is affected by the geometry of the horn antenna.
 
 \section{Radar}
 
 Radar works by transmitting an electromagnetic wave from an antenna.
 The wave then bounces off some object, and the returned energy is measured.
-The amount of energy returned is a function of the radar cross section of the object.
+The amount of energy returned is a function of the radar cross-section of the object.
 
 If we can estimate the fields radiated by an antenna,
 we can estimate the surface electric current induced on an object
@@ -889,12 +886,12 @@ would receive 3 dB more power than a lossless isotropic antenna.
 Antenna Gain is sometimes discussed as a function of angle.
 In this case, we are essentially plotting the radiation pattern,
 where the units (or magnitude of the pattern) are measured in antenna gain.
-Often manufacturers of antennas
-(be they wifi antennas, gps antennas, or tv antennas) specify the antenna gain.
+Often, manufacturers of antennas
+(be they wifi antennas, GPS antennas, or tv antennas) specify the antenna gain.
 For instance, manufacturers of wifi antennas may market the wifi antenna as a "high gain antenna",
 which is more expensive than a similar low gain antenna.
 Here we discuss how different devices have different gain,
-as the need for high/low gain differs depends on the situation.
+as the need for high/low gain differs depending on the situation.
 
 \begin{table}[h]
   \centering
@@ -917,17 +914,17 @@ as the need for high/low gain differs depends on the situation.
 
 
 Antenna impedance relates the voltage to the current at the input to the antenna.
-This is an important parameter to look out for when conducting experiments.
+This is an important parameter to look for when conducting experiments.
 
-For instance, when an antenna has an impedance of 50 ohms,
+For example, when an antenna has an impedance of 50 ohms,
 this means that if a sinusoidal voltage is applied at the antenna terminals with an amplitude of 1 Volt,
-then the current will have an amplitude of 1/50 = 0.02 Amps.
-Since the impedance is a real number, the voltage is in-phase with the current.
+then the current will have an amplitude of 1 / 50 = 0.02 amps.
+Since the impedance is a real number, the voltage is in phase with the current.
 
 Alternatively, when the impedance is given by a complex number,
-the phase will need to be considered additionaly to the amplitude.
-If impedance $Z$ is writen as $50 + j*50$, where $j$ is an imaginary number,
-then the impedance has a magnitude equal to:
+the phase will need to be considered additional to the amplitude.
+If the impedance $Z$ is written as $50 + j*50$, where $j$ is an imaginary number,
+then the impedance has a magnitude equal to
 
 \begin{equation}
   \sqrt[]{50^2 + 50 ^2} = 70.71
@@ -939,9 +936,9 @@ The phase can be calculated as:
   \tan^{-1}(\frac{Im(Z)}{Re(Z)}) = \frac{\pi}{4}
 \end{equation}
 
-The real part of the antenna impedance represents power that is either radiated away or absorbed within the antenna.
+The real part of the antenna impedance represents the power that is either radiated away or absorbed within the antenna.
 The imaginary part of the impedance represents power
-that is stored in the near field of the antenna.
+that is stored in the near-field of the antenna.
 This is non-radiated power.
 An antenna with a real input impedance (zero imaginary part)
 is said to be resonant.
@@ -974,9 +971,9 @@ the power delivered to the antenna can be calculated as:
 
 If $Z_A$ is much smaller in magnitude than $Z_S$,
 then no power will be delivered to the antenna and
-it won't transmit or receive energy.
+it will not transmit or receive energy.
 The same can be said when $Z_A$ is much larger in magnitude than $Z_S$.
-The ideal value for antenna impedance when maximum power is transferred is given as:
+The ideal value for antenna impedance when maximum power is transferred is given as
 
 \begin{equation}
   Z_A = Z_S^*
@@ -988,9 +985,9 @@ impedance for maximum power transfer.
 
 \subsection{Impedance in high frequencies}
 
-In low-frequency circuit theory, the wires that connect things don't matter.
+In low-frequency circuit theory, the wires that connect things do not matter.
 Once the wires become a significant fraction of a wavelength,
-the situation changes. For instance,
+the situation changes. For example,
 a short circuit has an impedance of zero ohms. However,
 if the impedance is measured at the end of a quarter wavelength transmission line,
 the impedance appears to be infinite,
@@ -1002,7 +999,7 @@ unless the antenna is matched to the transmission line.
 Consider the situation shown in Figure \ref{fig:high_freq_circuit_diagram}.
 The impedance is to be measured at the end of a transmission line
 (with characteristic impedance $Z_0$) and Length $L$.
-The end of the transmission line is hooked to an antenna with impedance $Z_A$.
+The end of the transmission line is connected to an impedance antenna $Z_A$.
 
 \begin{figure}
   \begin{center}
@@ -1012,7 +1009,7 @@ The end of the transmission line is hooked to an antenna with impedance $Z_A$.
   \end{center}
 \end{figure}
 
-Input impedance $Z_in$ is given by:
+The input impedance $Z_in$ is given by:
 
 \begin{equation}
   Z_{in} = Z_0 \frac{Z_A + j Z_0 \tan(\frac{2\pi f}{c}) L}{Z_0 + j Z_A \tan(\frac{2\pi f}{c}) L}
@@ -1047,11 +1044,11 @@ The two antennas are considered to be in free space.
   \end{center}
 \end{figure}
 
-Assume that $P_T$ watts of total power are delivered
-to the transmit antenna and that the transmit antenna is omnidirectional, lossless,
+Assume that $P_T$ watts of total power is delivered
+to the transmit antenna and that the transmit antenna is omnidirectional and lossless
 and that the receive antenna is in the far field of the transmit antenna.
 Then the power density $p$ (in Watts per square meter)
-from the transmit antenna is given by:
+of the transmit antenna is given by:
 
 \begin{equation}
   p = \frac{P_T}{4\pi R^2}
@@ -1066,7 +1063,7 @@ then the power density can be written as:
 \end{equation}
 
 The gain term factors in the directionality and losses of a real antenna.
-Assume now that the receive antenna has an effective aperture given by $A_ER$.
+Assume now that the receiver antenna has an effective aperture given by $A_ER$.
 Then the power received by this antenna $P_R$ is given by:
 
 \begin{equation}
@@ -1090,8 +1087,8 @@ Friis Transmission Formula, and relates the free space path loss,
 antenna gains and wavelength to the received and transmit powers.
 
 When we plug in the wave equation $c = f\lambda$,
-where $c$ is the speed of light, $f$ is the frequency,
-and $lambda$ is the wavelength, we get:
+where $c$ is the speed of light, $f$ is the frequency
+and $lambda$ is the wavelength, we get the following:
 
 \begin{equation} \label{eq:friis_transmission_formula_ver2}
   P_R = \frac{P_T G_T G_R c^2}{(4\pi R f)^2}
@@ -1113,8 +1110,8 @@ loss $L$ (in decibels) in free space can be rewritten as follows:
 
 At 28GHz, which has the wave length of 1 cm,
 the loss at the distance of 0.25 cm can be computed as -49.3 decibels.
-At 800MHz (wave length of 37.5 cm), the same loss of -49.3 decibels can be seen at
-the distance of 10 meters.
+At 800 MHz (wave length 37.5 cm), the same loss of -49.3 decibels can be seen at
+a distance of 10 meters.
 The comparison of these two frequencies is shown in Figure \ref{fig:loss_comparison}.
 
 \begin{figure}
@@ -1130,7 +1127,7 @@ The comparison of these two frequencies is shown in Figure \ref{fig:loss_compari
 In a dielectric material, dielectric loss quantifies the inherent dissipation
 of electromagnetic energy, and can be parametrized in terms of the loss tangent.
 The basic equation for electromagnetic waves
-when there is loss in the medium is as follows
+when there is loss in the medium is as follows.
 
 \begin{equation}
   \mathrm{rot}(\frac{1}{\mu(\boldsymbol{r})}\mathrm{rot}\boldsymbol{E}) = -\mu_0 \mathrm{rot}(\frac{\partial H}{\partial t})
@@ -1140,7 +1137,7 @@ when there is loss in the medium is as follows
 \end{equation}
 
 
-We consider the characteristic value when there is loss in the medium.
+We consider the characteristic value when there is a loss in the medium.
 When we consider the incidence of the time-varying factor $exp(j\omega t)$,
 Maxwell's Equation can be written as follows.
 
@@ -1172,19 +1169,19 @@ Thus the electric flux density can be written as
 
 The parameter in Eq. \ref{eq:tangent_delta} is known as the loss tangent.
 At high frequencies, the contribution of the real part of $\epsilon$ becomes larger,
-while at low frequencies, the contribution of the imaginary part becomes larger.
+while at low frequencies the contribution of the imaginary part becomes larger.
 In other words, it can be said that when an AC electric field is applied to a dielectric,
 a part of its energy is the ratio that becomes heat.
 
 \section{Skin effect}
 
-Skin effect is the tendency of an alternating current to flow mostly near
+The skin effect is the tendency of an alternating current to flow mostly near
 the outer surface of an electrical conductor, such as copper plates.
 In many of the experiments in this study, 
 millimeter waves are blocked by copper plates.
 The conductivity of the conductor $\sigma$ increases,
 and the amplitude damping constant $\alpha$ and the phase constant$\beta$
-can be estimated as below.
+can be estimated as follows.
 
 \begin{equation}
   \alpha \approx \beta \approx \sqrt[]{\frac{\omega\mu\mu_0\sigma}{2}}
@@ -1199,7 +1196,7 @@ at the surface is 1/e is called the skin depth, which can be expressed as below.
   \delta = \frac{1}{\alpha} = \sqrt[]{\frac{2}{\omega\mu\mu_0\sigma}}
 \end{equation}
 
-This indicates that the skin depth becomes shallower
+This indicates that the depth of the skin becomes shallower
 as the frequency of the electromagnetic wave increases and the conductivity increases.
 In this case, the current flows only near the surface of the copper plate,
 which is called the skin effect.
@@ -1220,7 +1217,7 @@ This law can be derived using Maxwell's equations and boundary conditions.
 
 The boundary plane of the medium is the x-y plane,
 and the medium is uniform in the y direction within each region.
-The relative permittivity and relative permeability are
+Relative permittivity and relative permeability are
 $\dot{\epsilon_1}$ and $\mu_1$ for the first medium, and
 $\dot{\epsilon_2}$ and $\mu_2$ for the second medium.
 Let the complex permittivity in the presence of loss be
@@ -1243,7 +1240,7 @@ $c$ is the speed of light in vacuum.
   k_i = \frac{\omega\sqrt[]{\dot{\epsilon_i}\mu_i}}{c}
 \end{equation}
 
-Here we derive Snell's law using the TE wave as an example.
+Here, we derive Snell's law using the TE wave as an example.
 For TE waves,
 the oscillation direction of the electric field is perpendicular to the surface,
 and there is no electric field component in the direction of propagation.
@@ -1258,13 +1255,13 @@ $A_{iS}$ is the electric field amplitude,
 $\boldsymbol{k}_i$is the wavenumber vector in the medium, and
 $\boldsymbol{r}$ is the position vector to an arbitrary point on the wavefront.
 The subscript $i$ has three states,
-where incident, transmitted, and reflected are denoted by i, t, and r, respectively.
+where incident, transmitted and reflected are denoted by i, t and r, respectively.
 
 \section{Total Reflection}
 
 When an electromagnetic wave is incident on a sparse medium from a dense medium,
 the refraction angle reaches 90 degrees before the incident angle
-as the incident angle is gradually increased.
+as the incident angle gradually increases.
 This phenomenon in which the incident electromagnetic wave
 returns to the incident side after being reflected
 at the boundary surface without being transmitted is called total reflection.
@@ -1311,28 +1308,28 @@ and all energy is also reflected.
 
 A Fresnel zone is one of a series of confocal prolate ellipsoidal regions
 of space between and around a transmitter and a receiver.
-The primary wave will travel in a relative straight line from the transmitter to the receiver.
+The primary wave will travel in a relatively straight line from the transmitter to the receiver.
 The concept of Fresnel zone clearance may be used to analyze
 interference by obstacles near the path of a radio beam.
 The first zone must be kept largely free from obstructions to
-avoid interfering with the radio reception.
+avoid interference with radio reception.
 For establishing Fresnel zones, first determine the RF line of sight
 (RF LoS), which in simple terms is a straight line
 between the transmitting and receiving antennas.
 Now the zone surrounding the RF LoS is said to be the Fresnel zone.
-The cross sectional radius of each Fresnel zone is the longest
+The cross-sectional radius of each Fresnel zone is the longest
 at the midpoint of the RF LoS,
 shrinking to a point at each vertex, behind the antennas.
 
 To formulate the Fresnel zone,
 we consider an arbitrary point P in the LoS, at a distance $d_1$ and $d_2$
 with respect to each of the two antennas.
-To obtain the radius $r_n$ of zone $n$,
+To obtain the radius $r_n$ of the zone $n$,
 note that the volume of the zone is delimited by all points
-for which the difference in distances,
+for which the difference in distances
 between the direct wave $D = d_1 + d_2$ and the reflected wave
 is the constant of $n\frac{\lambda}{2}$.
-This effectively defines an ellipsoid with the major axis along $\overline{AB}$
+This effectively defines an ellipsoid with the main axis along $\overline{AB}$
 and foci (points $A$ and $B$) at the antennas.
 
 \begin{equation}
@@ -1378,7 +1375,7 @@ A link budget is an accounting of all of the power gains and losses
 that a communication signal experiences in a telecommunication system;
 from a transmitter, through a communication medium such as radio waves,
 cable, waveguide, or optical fiber, to the receiver.
-Link budget is controlled by three factors, 
+The link budget is controlled by three factors, 
 which are communication distance, transmitted power, and antenna gain.
 
 To calculate the link budget,
@@ -1391,18 +1388,18 @@ which can be written as follows:
 \end{equation}
 
 EIRP and TP are short for received power and transmitted power, respectively.
-While EIRP and TP are in units of decibels-milliwatts,
-gain and loss are in units of decibels.
-TP is further determined by the cable loss and the transmissed power
+While EIRP and TP are expressed in units of decibels-milliwatts,
+gain and loss are expressed in units of decibels.
+TP is further determined by the loss of cable and the transmitted power
 of the device itself.
-Here we omit some variables such as miscellaneous losses,
+Here, we omit some variables such as miscellaneous losses,
 which include polarization mismatch and fading margin.
 
 For example, when the input power of the transmitter and the gain is -11 dBm and 5 dBi,
 respectively, the EIRP is -6 dBm.
 If the gain on the receiver antenna is 5dBi and
 the path loss is 49.3 dB,
-the received power on the receiver antenna can be calculated as:
+the received power on the receiver antenna can be calculated as
 
 \begin{equation}
   P_r = EIRP - L_{a} + G_r = -50.3 dBm
@@ -1441,7 +1438,7 @@ The table below summarizes the situation discussed above:
 \end{table}
 
 This indicates again the limitations of the millimeter wave in an open space.
-Millimeter waves with frequency of 28GHz have a loss of -49.3 dB
+Millimeter waves with a frequency of 28GHz have a loss of -49.3 dB
 just within 0.25 meters of communication distance.
 
 \section{Scattering parameters (S-parameters)}
@@ -1475,9 +1472,9 @@ and the reflected wave for each port is defined as
 \end{equation}
 
 Here $Z_i$ is the impedance for port i,
-$Z_{i}^{*}$ is the complex conjugate of $Z_{i}$,
-$V_{i}$ and $I_{i}$ are respectively the complex amplitudes
-of the voltage and current at port $i$,
+$Z_{i}^{*}$ is the conjugate of the complex of $Z_{i}$,
+$V_{i}$ and $I_{i}$ are, respectively, the complex amplitudes
+of voltage and current in port $i$,
 and
 
 \begin{equation}
@@ -1493,7 +1490,7 @@ can be expressed using the S-parameter matrix $S$:
   \textbf{b} = \textbf{S} \textbf{a}
 \end{equation}
 
-When using explicit components, the equation above can be rewritten to:
+When using explicit components, the equation above can be rewritten as follows.
 
 \begin{equation}
   \begin{pmatrix}
@@ -1504,7 +1501,7 @@ When using explicit components, the equation above can be rewritten to:
 \end{equation}
 
 Next, we consider two-port S-parameters.
-In this case the relationship between the reflected,
+In this case, the relationship between the reflected
 incident power waves and the S-parameter matrix is given by:
 
 \begin{equation}
@@ -1545,10 +1542,10 @@ The complex linear gain G is given by
 That is the linear ratio of the output reflected power wave
 divided by the input incident power wave,
 all values expressed as complex quantities.
-For lossy networks it is sub-unitary,
+For lossy networks, it is subunitary,
 for active networks $|G| > 1$.
-It will be equal with the voltage gain only when the
-device has equal input and output impedances.
+It will be equal to the voltage gain only when the
+device has the same input and output impedances.
 
 \subsection{Scalar linear gain}
 
@@ -1559,10 +1556,10 @@ The scalar linear gain (or linear gain magnitude) is given by
 \end{equation}
 
 This represents the gain magnitude (absolute value),
-the ratio of the output power-wave to the input power-wave,
-and it equals the square-root of the power gain.
+the ratio of the output power wave to the input power wave,
+and it equals the square root of the power gain.
 This is a real-value (or scalar) quantity,
-the phase information being dropped.
+with phase information being dropped.
 
 \subsection{Scalar logarithmic gain}
 
@@ -1572,7 +1569,7 @@ The scalar logarithmic (decibel or dB) expression for gain ($g$) is:
   g = 20 \log_{10}|S_{21}|
 \end{equation}
 
-This is more commonly used than scalar linear gain
+This is more commonly used than scalar linear gain,
 and a positive quantity is normally understood as simply a "gain",
 while a negative quantity is a "negative gain" (a "loss"),
 equivalent to its magnitude in dB.
@@ -1582,7 +1579,7 @@ equal to a loss of 1 dB.
 
 \subsection{Insertion loss}
 
-In case the two measurement ports use the same reference
+If the two measurement ports use the same reference
 impedance, the insertion loss ($IL$) is the reciprocal of the magnitude of the transmission coefficient |S21| expressed in decibels.
 It is thus given by
 
@@ -1595,10 +1592,10 @@ the device under test (DUT)
 between the 2 reference planes of the measurement.
 The extra loss may be due to intrinsic loss in the
 DUT and/or mismatch.
-In case of extra loss the insertion loss is defined to be
+In case of extra loss, the insertion loss is defined to be
 positive. The negative of insertion loss expressed in
 decibels is defined as insertion gain and is equal to the
-scalar logarithmic gain.
+logarithmic scalar gain.
 
 
 \section{Cutoff Frequency}
@@ -1607,7 +1604,7 @@ A cutoff frequency, corner frequency, or break frequency
 is a boundary in a system's frequency response at which
 energy flowing through the system begins to be reduced
 rather than passing through.
-This means that the signals with a frequency above the cut-off frequency
+This means that signals with a frequency above the cut-off frequency
 will travel through a waveguide and signals below this frequency
 will be attenuated.
 
@@ -1628,7 +1625,7 @@ by plugging them in we get:
 
 $k_z^2 > 0$ is the necessary condition for propagation to occur.
 If this is true, then $k_z$ is a real number,
-so that the field components will contain complex exponentials,
+so the field components will contain complex exponentials,
 which represent propagating waves.
 Otherwise when $k_z^2 < 0$,
 $k_z$ will be an imaginary number,
