@@ -887,7 +887,7 @@ Antenna Gain is sometimes discussed as a function of angle.
 In this case, we are essentially plotting the radiation pattern,
 where the units (or magnitude of the pattern) are measured in antenna gain.
 Manufacturers of antennas
-(be they wifi antennas, GPS antennas, or TV antennas) often specify the gain of the antenna.
+(whether they be wifi antennas, GPS antennas, or TV antennas) often specify the gain of the antenna.
 For instance, manufacturers of wifi antennas may market the wifi antenna as a "high gain antenna",
 which is more expensive than a similar low gain antenna.
 Here we discuss how different devices have different gain,
@@ -2211,11 +2211,11 @@ When properly configured,
 UART can work with many different types of serial protocol that
 involve transmitting and receiving serial data.
 In serial communication,
-data are transferred bit by bit using a single line or wire.
+data is transferred bit by bit using a single line or wire.
 In two-way communication,
 two wires are used for successful serial data transfer.
 Depending on the application and system requirements,
-serial communications requires fewer circuits and wires,
+serial communications require fewer circuits and wires,
 which reduces the cost of implementation.
 Here we explain the fundamental principles when using UART,
 with a focus on packet transmissionand standard frame protocol.
@@ -2264,7 +2264,7 @@ The point of synchronization is managed by having the same baud rate
 on both devices.
 Failure to do so may affect the timing of sending and receiving
 data, which can cause discrepancies during data handling.
-The allowable difference in baud rate is up to 10\%
+The allowable difference in the baud rate is up to 10\%
 before the timing of bits goes too far off.
 The image of the UART packet is shown in Figure \ref{fig:uart_packet}:
 
@@ -2278,7 +2278,7 @@ The image of the UART packet is shown in Figure \ref{fig:uart_packet}:
 
 \subsection{SPI}
 
-The serial peripheral interface (SPI)
+Serial peripheral interface (SPI)
 is one of the most widely used interfaces between
 microcontrollers and peripheral ICs such as
 sensors, ADCs, DACs, shift registers, SRAM, and others.
@@ -2325,7 +2325,7 @@ via the MOSI and MISO lines respectively.
 During SPI communication,
 the data is simultaneously transmitted
 (shifted out serially onto the MOSI/SDO bus)
-and received (the data on the bus (MISO/SDI) is sampled or read in).
+and received (the data on the bus (MISO/SDI) are sampled or read in).
 
 \begin{figure}
   \begin{center}
@@ -2453,9 +2453,9 @@ with the tip of the dielectric waveguide antenna at the center of the rotation.
 The results are shown in Figures
 \ref{fig:radiation_pattern_comparison_27_29_vertical}
 and \ref{img:radiation_pattern_comparison_27_29_horizontal}.
-The half-power beamwidth was at around 20 degrees for both
+The half-power beamwidth was around 20 degrees for both
 vertical and horizontal radiation patterns,
-and no significant difference was seen across all of the frequencies.
+and no significant differences were seen across all frequencies.
 There is a slight distortion in the data due to
 the PTFE rod antenna's slight change in its orientation
 while spinning.
@@ -2619,7 +2619,7 @@ with a step size of 1 GHz (Figure \ref{fig:hfss_driven_solution_setup}).
 \section{The 3D models of the dielectric waveguides}
 
 3D models of the dielectric waveguide antennas were
-created on the HFSS simulator software.
+created in the HFSS simulator software.
 They were all made with dielectric material with
 permittivity of 2.1 and surrounded by vacuum.
 For the wave port,
@@ -2629,7 +2629,7 @@ were visualized on the x-y plane.
 3 types of models were designed for the simulation as seen in
 Fig \ref{fig:3_hfss_simulation_models}:
 dome, cone, and normal.
-Inspiration of the dome model comes from the Luneburg lens.
+The inspiration for the dome model comes from the Luneburg lens.
 The models are all set to a length of 50 millimeters and diameter of
 10 millimeters,
 with each corresponding tip of optimized geometric shapes.
@@ -2644,11 +2644,11 @@ with each corresponding tip of optimized geometric shapes.
 
 \section{Simulation results}
 
-Directivity of the beam is the narrowest when using the dome shaped
+The directivity of the beam is the narrowest when using the dome-shaped
 dielectric waveguide antenna.
 Next comes the normal antenna, and the cone shaped antenna,
 as shown in Fig. \ref{fig:directivity_comparison_hfss}.
-The directivity of cone shaped antenna can be tuned by
+The directivity of the cone-shaped antenna can be adjusted by
 changing the length of the cone tip.
 
 \begin{figure}
@@ -2712,7 +2712,7 @@ as shown in Fig. \ref{fig:waveguide_28ghz_after_sim}.
 The S11 and S21 parameters were measured on the VNA.
 The signals were received using the mmAnt1
 and the number of points was set to 1001.
-The frequency sweep was set to the range of 18 GHz to 30 GHz,
+The frequency sweep was set to the range of 18 to 30 GHz
 and the IFBW is 1 kHz.
 The dielectric waveguide and the receiver antenna were placed
 in the same line with 0 degrees of insertion angle
@@ -2723,7 +2723,7 @@ Fig. \ref{fig:s11_comparison} and \ref{fig:s21_comparison}.
 For S11 parameters,
 there is only -6 dB which is smaller compared to the simulation results.
 Also, the loss was smaller in the 28 GHz range
-compared to when having no dielectric waveguide,
+compared to when there was no dielectric waveguide,
 which is around -15 dB.
 This shows that the PTFE dielectric waveguide
 is contributing to less insertion loss.
@@ -2750,13 +2750,13 @@ having the dielectric waveguide still resulted in less loss.
   \end{center}
 \end{figure}
 
-Having little to no gap between the inserted dielectric waveguide
-and the coax-waveguide adapter is critical to have
+The presence of little to no gap between the inserted dielectric waveguide
+and the coax-waveguide adapter is critical to having
 low reflective characteristics.
 Less air gap leads to higher efficiency of mode transformation
 and less reflective loss.
 The pencil-like shape of the dielectric waveguide
-on the inserted side also plays a big role to suppressing
+on the inserted side also plays a big role in suppressing
 reflective loss.
 This is also likely due to the pencil-like shape
 contributing to the efficiency of mode transformation.
@@ -2766,8 +2766,8 @@ contributing to the efficiency of mode transformation.
 This chapter describes in detail the simulation
 and fabrication of the dielectric waveguide antenna.
 We first simulate three models with different geometrical tips attached
-and calculate their S-parameters and half power beamwidth
-on the simulation software.
+and calculate their S-parameters and half-power beamwidth
+in the simulation software.
 Next, we fabricate the dielectric waveguide antenna using
 a PTFE stick and measure the actual S-parameters and half power
 beamwidth using a network vector analyzer.
@@ -2785,10 +2785,9 @@ description of the electromagnetic and antenna principles,
 we detail the design
 and fabrication processes of the dielectric waveguide antennas.
 The antenna tests show that
-using a dielectric waveguide with tips of different geometrical shapes
+the use of a dielectric waveguide with tips of different geometrical shapes
 can satisfy the coverage requirements to some extent.
-Moreover,
-the waveguide antennas show some advantages for antenna manufacturing and
+Moreover, waveguide antennas show some advantages for antenna manufacturing and
 network area construction.
 
 We can draw the following conclusions based on the
@@ -2816,7 +2815,7 @@ antenna design process, simulation results and testing results.
   affecting other networks in the environment.
   \item The accuracy of the sharpening process is essential
   for the production of the antenna.
-  As antennas were manually sharpened in this study,
+  As the antennas were manually sharpened in this study,
   there are miniscule errors in the structure of the dielectric waveguide.
   This alters the resolution and insertion loss of the antenna
   and requires recalibration of parameter measurements.
@@ -2837,38 +2836,37 @@ further optimized to have lower insertion loss without
 increasing its size.
 
 In addition,
-there is a need to further improve the accuracy and
-the time required of the
+further improvements are needed to improve the accuracy and
+time required for the
 dielectric waveguide sharpening process.
 Sharpening the dielectric waveguide is harder
 for thinner and longer dielectric waveguide antennas.
-Hasty designs and implementation can result in less stable structure.
+Hasty designs and implementation can result in a less stable structure.
 Improving the sharpening process can allow the simulation results to
 better reflect the performance,
-thus making the simulation optimized
+thus making the simulation-optimized
 dielectric waveguide antenna closer to the design requirements.
 
 At the same time,
 the process of creating the correct waveguide adapter
-for the metallic waveguide and dielectric waveguide is also tricky.
+for the metallic waveguide and the dielectric waveguide is also tricky.
 Our study did not create the adapter
 and resolved to sharpen the dielectric waveguide
-to have little to less gap in the aperture
+to have a little to less gap in the aperture
 between the metallic and dielectric waveguide.
 The correct dimensions of both
 the metallic and dielectric waveguides
-must be carefully planned out to minimize
-the insertion loss.
+must be carefully planned to minimize insertion loss.
 Therefore, this needs further research and exploration.
 
 Our paper mainly focused on the rod antennas created with dielectric materials.
-One of the structures we did not try in this paper was using a
+One of the structures that we did not try in this paper was using a
 dielectric sheet to create a mmWave network area.
-Using a two dimensional sheet can also provide a variety of usecases
+Using a two-dimensional sheet can also provide a variety of use cases
 and can have contributions in ways that a rod antenna cannot.
-There have been studies done on lower frequencies in the past \cite{4297420}.
+There have been studies on lower frequencies in the past \cite{4297420}.
 
-Finally, using 3D printing technology to create the geometrical shape
+Finally, the use of 3D printing technology to create the geometric shape
 of the rod antenna may also prove to be effective.
 The
 geometrical structure of the antenna tip can be increased in complexity accordingly,
