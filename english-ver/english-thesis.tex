@@ -96,7 +96,7 @@ Then we describe the basic theory of the antenna design
 and simulate them on a simulator.
 After the structure and order are determined first,
 we iterate the simulation until
-the S parameters and half-power beam width are optimized.
+the S-parameters and half-power beam width are optimized.
 After
 assembling the dielectric waveguide antenna,
 we observe the actual
@@ -461,7 +461,7 @@ unsuitable for mass production.
 
 For high-frequency radiation systems,
 Jin et al. have proposed a waveguide
-based on multilayer integrated vertical EBG structure
+based on the multilayer integrated vertical EBG structure
 that can be manufactured at less cost
 \cite{9538996}.
 A vertical EBG structure
@@ -498,7 +498,7 @@ Since the inflected part can be formed anywhere along the length of
 the waveguide, it is possible to expand the communication areas
 around the waveguide. 
 Antenna gain values of 3 to 5 dB are
-achieved in both H-plane and V-plane,
+achieved in both the H-plane and V-plane,
 and a narrow beam was created in the V-plane.
 
 \section{Contributions}
@@ -748,7 +748,7 @@ can be written as follows:
 $n$ here is a natural number here.
 This states that the only solutions for the function $Y(y)$ must be sinusoids
 and must have a wavenumber
-which consists of an integer number of multiples of a half-wavelength.
+consisting of an integer number of multiples of half-wavelength.
 Similarly, on the y-axis, the following can be derived:
 
 \begin{equation} \label{eq:wavenumber_x}
@@ -886,8 +886,8 @@ would receive 3 dB more power than a lossless isotropic antenna.
 Antenna Gain is sometimes discussed as a function of angle.
 In this case, we are essentially plotting the radiation pattern,
 where the units (or magnitude of the pattern) are measured in antenna gain.
-Often, manufacturers of antennas
-(be they wifi antennas, GPS antennas, or TV antennas) specify the antenna gain.
+Manufacturers of antennas
+(be they wifi antennas, GPS antennas, or TV antennas) often specify the gain of the antenna.
 For instance, manufacturers of wifi antennas may market the wifi antenna as a "high gain antenna",
 which is more expensive than a similar low gain antenna.
 Here we discuss how different devices have different gain,
@@ -1489,7 +1489,7 @@ can be expressed using the S-parameter matrix $S$:
   \textbf{b} = \textbf{S} \textbf{a}
 \end{equation}
 
-When using explicit components, the above equation can be rewritten as follows.
+When explicit components are used, the above equation can be rewritten as follows.
 
 \begin{equation}
   \begin{pmatrix}
@@ -1629,9 +1629,9 @@ Otherwise, when $k_z^2 < 0$,
 $k_z$ will be an imaginary number,
 in which case the complex exponential becomes a decaying real exponential.
 In this case, the fields will not propagate but instead quickly die out within the waveguide.
-Electromagnetic fields that die off instead of propagate are called evanescent waves.
+Electromagnetic fields that attenuate instead of propagating are called evanescent waves.
 
-By setting $k_z=0$,
+Setting $k_z=0$,
 the lowest frequency at which propagation occurs can be found.
 This is the transition between
 the cutoff region (evanescent) and the propagation region.
@@ -1652,7 +1652,7 @@ This gives the cutoff frequency for this waveguide:
 
 Generally, the cutoff frequency $f_c$ in a rectangular waveguide can be
 calculated as follows,
-where $a$ is the wall length, and $\mu$ and $\epsilon$ are
+where $a$ is the length of the wall, and $\mu$ and $\epsilon$ are
 the permeability and permittivity of the material
 that fills the waveguide, respectively.
 
@@ -1673,7 +1673,7 @@ When the outer boundary of a domain recedes to infinity,
 the domain is called unbounded or open.
 A condition must be specified at this outer boundary to obtain a unique solution
 for this problem.
-This condition is referred to as a radiation condition.
+This condition is referred to as the radiation condition.
 
 Assuming that all sources and objects are immersed in free space
 and located within a finite distance from the origin of a coordinate system,
@@ -1903,7 +1903,7 @@ the following derivatives are obtained:
 By setting these derivatives to zero,
 $c_3 = \frac{1}{2}$ and $c_4 = \frac{1}{6}$ can be computed.
 Here, the trial functions employed were capable of representing
-the exact function, but this usually is impossible.
+the exact function, but this is usually impossible.
 In most situations, only approximate solutions can be achieved.
 
 \section{Luneburg Lens} \label{section:Luneburg}
@@ -1914,7 +1914,7 @@ A Luneburg lens is a spherically symmetric gradient-index lens,
 shown in Figure \ref{fig:luneburg_lens}.
 A typical Luneburg lens's refractive index n decreases radially
 from the center to the outer surface.
-They can be made for use with electromagnetic radiation
+They can be used with electromagnetic radiation
 from visible light to radio waves.
 
 \begin{figure}
@@ -1944,7 +1944,7 @@ Within the lens, the paths of the rays are arcs of ellipses.
 
 \subsection{Uses in a microwave antenna}
 
-A Luneburg lens can be used as the basis of a high-gain radio antenna.
+A Luneburg lens can be used as a basis for a high-gain radio antenna.
 This antenna is comparable to a dish antenna,
 but uses the lens rather than a parabolic reflector as the main focusing element.
 As with the dish antenna,
@@ -1953,7 +1953,7 @@ the feed typically consisting of a horn antenna.
 The phase centre of the feed horn must coincide with the point of focus,
 but since the phase centre is invariably somewhat inside the mouth of the horn,
 it cannot be brought right up against the surface of the lens.
-Consequently it is necessary to use a variety of Luneburg lens
+Consequently it is necessary to use a variety of Luneburg lenses
 that focuses somewhat beyond its surface,
 rather than the classic lens with the focus lying on the surface.
 A variation on the Luneburg lens antenna is the hemispherical
@@ -1979,7 +1979,7 @@ Based on
 Maxwell's equations and the boundary conditions,
 the characteristics of the dielectric waveguide can be predicted.
 This can be simulated using the finite element method,
-where the basics stem out of the variational methods.
+where the basics stem from variational methods.
 The antenna can finally be tested,
 where the S-parameters play a big role in
 quantifying the performance.
@@ -2006,7 +2006,7 @@ The vector network analyzer differs from the scalar network analyzer
 in the fact that the
 vector network analyzer measures both amplitude and phase properties.
 
-A network analyzer, like most electronic instruments requires periodic calibration.
+A network analyzer, like most electronic instruments, requires periodic calibration.
 There are several different methods of calibration.
 
 \begin{itemize}
@@ -2035,23 +2035,23 @@ There are several different methods of calibration.
 
 \subsection{MZ-mmCon1}
 
-MZ-mmCon1, show in Figure \ref{fig:mz_mmcon1_loopback},
-enables converting baseband signals of the 5 MHZ to 6 GHZ range
+MZ-mmCon1, shown in Figure \ref{fig:mz_mmcon1_loopback},
+enables the conversion of baseband signals of the 5 MHZ to 6 GHZ range
 up to the 27 GHz to 43 GHz range, and vice versa.
 It contains a 32 bit STM32F microcontroller
-containing both 12 bit analog to digital, digital to analog converters.
+containing both 12 bit analog-to-digital, digital-to-analog converters.
 The microcontroller also employs
 a wave table of maximum 4096 words with 2 channels,
 which can create and send constant wave signals.
-the microcontroller can also create arbitrary wave signals from
+The microcontroller can also create arbitrary wave signals from
 data written in the flash memory.
 The device alone can produce constant wave and narrow band wave signals
 of under 100 kHz, and can modulate, demodulate, send, and receive
 millimeter wave signals.
 Upon receiving millimeter waves,
-the signal is demodulated and the baseband signal is converted to a digital signal,
+the signal is demodulated and the baseband signal is converted to a digital signal
 which can be analyzed on the computer by applying Fast Fourier Transformation (FFT).
-Figure \ref{fig:mz_mmcon1_fft_viz} shows the FFT result visualized on the installed software.
+Figure \ref{fig:mz_mmcon1_fft_viz} shows the FFT result visualized in the installed software.
 
 \begin{figure}
   \centering
@@ -2156,12 +2156,12 @@ Bit error rate can be calculated as follows:
 For the 28 GHz system,
 we used the WR-28 UG-599/U square cover flange to 2.92mm
 female waveguide to coax adapter, 
-which operates from 26.5 GHz to 40 GHz.
+which operates from 26.5 to 40 GHz.
 The product ID of this adapter is PEWCA1078.
 This adapter offers a WR-28 waveguide interface size
 coupled with a precision tolerance UG-599/U flange.
 The PEWCA1078 is
-constructed of copper and plated in gold to ensure
+constructed of copper and is plated in gold to ensure
 durability and repeatable RF performance.
 
 \subsection{Spectrum Analyzer}
@@ -2206,21 +2206,21 @@ the following adapters were used to convert it to a K connector port
 \subsection{UART}
 
 UART, or universal asynchronous receiver-transmitter,
-is one of the most used device-to-device communication protocols.
+is one of the most widely used device-to-device communication protocols.
 When properly configured,
-UART can work with many different types of serial protocols that
+UART can work with many different types of serial protocol that
 involve transmitting and receiving serial data.
 In serial communication,
-data is transferred bit by bit using a single line or wire.
+data are transferred bit by bit using a single line or wire.
 In two-way communication,
 two wires are used for successful serial data transfer.
 Depending on the application and system requirements,
-serial communications needs less circuitry and wires,
+serial communications requires fewer circuits and wires,
 which reduces the cost of implementation.
 Here we explain the fundamental principles when using UART,
 with a focus on packet transmissionand standard frame protocol.
 
-The image of the interface with data bus is shown in Figure \ref{fig:uart_interface_data_bus}.
+The image of the interface with the data bus is shown in Figure \ref{fig:uart_interface_data_bus}.
 
 The two signals of each UART device are named:
 
@@ -2240,8 +2240,7 @@ The two signals of each UART device are named:
 The transmitting UART is connected to a controlling data bus that
 sends data in a parallel form.
 From this,
-the data will now be transmitted on the transmission line (wire) serially,
-bit by bit, to the receiving UART.
+the data will now be transmitted serially on the transmission line (wire) bit by bit to the receiving UART.
 This, in turn,
 will convert the serial data into parallel for the receiving device.
 
@@ -2259,14 +2258,14 @@ synchronize the transmitter and receiver devices;
 it transmits data asynchronously.
 Instead of a clock signal,
 the transmitter generates a bitstream based on its clock signal
-while the receiver is using its internal clock signal
+while the receiver uses its internal clock signal
 to sample the incoming data.
 The point of synchronization is managed by having the same baud rate
 on both devices.
 Failure to do so may affect the timing of sending and receiving
-data that can cause discrepancies during data handling.
-The allowable difference of baud rate is up to 10\%
-before the timing of bits gets too far off.
+data, which can cause discrepancies during data handling.
+The allowable difference in baud rate is up to 10\%
+before the timing of bits goes too far off.
 The image of the UART packet is shown in Figure \ref{fig:uart_packet}:
 
 \begin{figure}
@@ -2279,14 +2278,14 @@ The image of the UART packet is shown in Figure \ref{fig:uart_packet}:
 
 \subsection{SPI}
 
-Serial peripheral interface (SPI)
+The serial peripheral interface (SPI)
 is one of the most widely used interfaces between
-microcontroller and peripheral ICs such as
+microcontrollers and peripheral ICs such as
 sensors, ADCs, DACs, shift registers, SRAM, and others.
 SPI is a synchronous, full duplex main-subnode-based interface.
 The data from the main or the subnode is synchronized on the
 rising or falling clock edge.
-Both main and subnode can transmit data at the same time.
+Both the main and the subnode can transmit data at the same time.
 The SPI interface can be either 3-wire or 4-wire.
 Here we focus on the popular 4-wire SPI interface.
 
@@ -2318,7 +2317,7 @@ from the subnode to the main.
 To begin SPI communication,
 the main must send the clock signal and select the subnode
 by enabling the CS signal.
-Usually chip select is an active low signal; hence,
+Usually the chip select is an active low signal; hence,
 the main must send a logic 0 on this signal to select the subnode.
 SPI is a full-duplex interface;
 both main and subnode can send data at the same time
@@ -2403,7 +2402,7 @@ The waveguide antenna is also placed on a platform made out
 of foamed styrol material,
 which has permittivity close to the one of air.
 A vector network analyzer was
-used both as the analyzer and the signal generator.
+used both as an analyzer and as a signal generator.
 After the constant wave of the specific frequency is created on the
 analyzer,
 the signal is sent via a coaxial cable to the dielectric waveguide antenna.
@@ -2428,7 +2427,7 @@ which transmits the signals back to the analyzer.
 \end{figure}
 
 The dielectric waveguide antenna was placed on a spinning platform,
-as shown in Figure \ref{fig:ptfe_rod_antenna_anechoic_chamber}
+as shown in Figures \ref{fig:ptfe_rod_antenna_anechoic_chamber}
 and \ref{img:horn_antenna_anechoic_chamber}.
 The dielectric waveguide antenna and the platform rotate in the anechoic chamber
 with the tip of the dielectric waveguide antenna at the center of the rotation.
@@ -2454,7 +2453,7 @@ with the tip of the dielectric waveguide antenna at the center of the rotation.
 The results are shown in Figures
 \ref{fig:radiation_pattern_comparison_27_29_vertical}
 and \ref{img:radiation_pattern_comparison_27_29_horizontal}.
-The half power beamwidth was at around 20 degrees for both
+The half-power beamwidth was at around 20 degrees for both
 vertical and horizontal radiation patterns,
 and no significant difference was seen across all of the frequencies.
 There is a slight distortion in the data due to
@@ -2499,7 +2498,7 @@ we explain the details of the simulation in the next chapter.
 Here we explained the actual experiment measuring
 the radiation pattern of the dielectric waveguide antenna.
 The radiation pattern showed that the dielectric waveguide antenna
-has the potential to create a high resolution beam,
+has the potential to create a high-resolution beam,
 but still requires improvements.
 In the next chapter,
 we simulate different types of dielectric waveguides
@@ -2524,7 +2523,7 @@ There is a need to simulate the performance
 of the dielectric waveguides in
 other frequency bands such as 60 GHz.
 We also must simulate with different shapes of the waveguides
-to see the geometrical effect on the beamwidth and reflective characteristics.
+to see the geometric effect on the beamwidth and reflective characteristics.
 
 \section{About the simulation conditions}
 
@@ -2572,8 +2571,8 @@ Two modes were designed for the wave port to excite the HFSS models.
 Both of them have integration lines defined,
 and modes are aligned analytically using the coordinate system.
 The two vectors representing the 
-integration lines span the diameter of the wave port,
-and are placed in perpendicular fashion (Figure \ref{fig:hfss_waveport_modes}).
+integration lines span the diameter of the wave port
+and are placed perpendicularly (Figure \ref{fig:hfss_waveport_modes}).
 The integration lines serves in calibrating wave ports
 to ensure consistent results.
 This calibration is required in order to determine the
@@ -2687,7 +2686,7 @@ where its broad coverage can be utilized
 \begin{figure}
   \begin{center}
     \includegraphics[clip, keepaspectratio, width=0.9\linewidth]{img/dome_s_params_across_different_radii.png}
-    \caption{S parameters of dome shaped antenna}
+    \caption{S-parameters of dome shaped antenna}
     \label{fig:dome_s_params_across_different_radii} 
   \end{center}
 \end{figure}
