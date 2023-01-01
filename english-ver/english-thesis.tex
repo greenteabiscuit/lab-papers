@@ -109,7 +109,7 @@ The proposed implementation
 method can effectively reduce the machining time in 1 day
 due to the simple principle and the procedural process.
 Furthermore, the high-resolution beam
-emitted from the tip of the antenna is narrow enough
+emitted from the tip of the antenna is narrow enough so
 that multiple network areas can be built without interfering with each other.
 
 These advantages will also enable Local 5G operators
@@ -185,7 +185,7 @@ me to become a higher-level thinker.
 Working with Professor Ping Du has been an enlightening and enriching
 experience. Whenever I needed advice, he was always friendly and patient. Moreover, he was always polite and willing to share his experiences
 and views on persuasive research.
-We thank the various senior students and staff in the lab. They
+I thank the various senior students and staff in the lab. They
 have helped and guided me in every way during the two years of my Master's
 degree.
 
@@ -379,7 +379,7 @@ advantages in the following aspects.
   an antenna that meets the conditions. The overall time
   required for implementing the antenna can be done within a few days,
   which can
-  save much more time for both manufacturer and customer.
+  save much more time for both the manufacturer and the customer.
 
   \item[] \textbf{Flexibility of infrastructure}
   Using the dielectric waveguides discussed in this paper,
@@ -461,7 +461,7 @@ unsuitable for mass production.
 
 For high-frequency radiation systems,
 Jin et al. have proposed a waveguide
-based on multilayer integrated vertical-EBG structure
+based on multilayer integrated vertical EBG structure
 that can be manufactured at less cost
 \cite{9538996}.
 A vertical EBG structure
@@ -495,9 +495,9 @@ dielectric waveguide radiates electromagnetic waves by
 inflection, and that the inflected part of the waveguide acts as
 an antenna.
 Since the inflected part can be formed anywhere along the length of
-the waveguide, it is possible to expand communication areas
+the waveguide, it is possible to expand the communication areas
 around the waveguide. 
-Antenna gain values of 3 dB to 5 dB are
+Antenna gain values of 3 to 5 dB are
 achieved in both H-plane and V-plane,
 and a narrow beam was created in the V-plane.
 
@@ -544,7 +544,7 @@ The thesis chapters are organized as follows.
 \begin{itemize}
   \item[] \textbf{Chapter 1:} We introduce the background of the communication \\
   system and dielectric waveguides. Then we elaborate the problem statement and thesis \\
-  statement. Finally, we describe the existing methods and their limitations \\
+  statement. Finally, we describe existing methods and their limitations \\
   and introduce the innovations and contributions of the paper.
   \item[] \textbf{Chapter 2:} The theory of electromagnetic waves is discussed to understand \\
   basis of waveguides and antennas. \\
@@ -652,7 +652,7 @@ Assuming that there is only one frequency, the time dependence can be written as
   e^{j\omega t} = e^{j 2\pi ft}
 \end{equation}
 
-Thus, the equation [\ref{eq:vector_wave_equation}] can be rewritten as follows:
+Thus, equation [\ref{eq:vector_wave_equation}] can be rewritten as follows:
 
 \begin{equation} \label{eq:simplified}
   \nabla ^ 2 F_z + k^2 F_z = 0
@@ -705,7 +705,7 @@ Solving the above equations, we get:
 \end{equation}
 
 The variable $c_5$ can be eliminated as $0$,
-since waves analyzed here are propagating in the +z direction.
+since the waves analyzed here are propagating in the +z direction.
 Plugging in the solutions above, $F_z$ can be written as
 
 \begin{equation}
@@ -745,11 +745,11 @@ can be written as follows:
   k_y = \frac{n\pi}{b}
 \end{equation}
 
-$n$ here is a natural number.
-This states that the only solutions for $Y(y)$ function must be sinusoids,
+$n$ here is a natural number here.
+This states that the only solutions for the function $Y(y)$ must be sinusoids
 and must have a wavenumber
-which consists an integer number of multiples of a half-wavelength.
-Simiarly in the y-axis, the following can be derived:
+which consists of an integer number of multiples of a half-wavelength.
+Similarly, on the y-axis, the following can be derived:
 
 \begin{equation} \label{eq:wavenumber_x}
   k_x = \frac{m\pi}{a}
@@ -776,15 +776,15 @@ the fields within the waveguide always have a specific "form" or "waveshape",
 which are known as modes.
 Assume the waveguide is oriented such that the energy is to be transmitted along the waveguide axis, the z-axis.
 The modes are classified as either TE
-('transverse electric' - which indicates that the E-field is orthogonal to the axis of the waveguide, so that Ez=0)
-or TM ('transverse magnetic' - which indicates that the H-field is orthogonal to the axis of the waveguide, so Hz = 0).
-The modes are further classified as $TE_ij$,
+(transverse electric, which indicates that the E-field is orthogonal to the axis of the waveguide, so that Ez=0)
+or TM (transverse magnetic), which indicates that the H-field is orthogonal to the axis of the waveguide, so $H_z$ = 0.
+The modes are further classified as $TE_{ij}$,
 where the $i$ and $j$ indicate the number of wave oscillations for a particular
 field direction in the long direction (dimension $a$ in Figure \ref{fig:metal_waveguide_geometry})
 and short direction (dimension $b$ in Figure \ref{fig:metal_waveguide_geometry}), respectively.
-Metal waveguides cannot support the TEM
-('transverse electric and magnetic' - when Ez and Hz are zero) mode.
-Their exists no solution to Maxwell's equations
+Metal waveguides cannot support the TEM mode
+(transverse electric and magnetic), when $E_z$ and $H_z$ are zero).
+There exists no solution to Maxwell's equations
 that also satisfy the required boundary conditions for this mode to occur.
 
 \begin{figure}
@@ -829,7 +829,7 @@ The magnitude of the E-field can be written as:
 \end{equation}
 
 This equation implies that the far-fields of the horn antenna
-is the Fourier Transform of the fields at the opening of the horn.
+is the Fourier transform of the fields at the opening of the horn.
 Modeling the electric field as the magnetic surface current $M_S$,
 it can be written as:
 
@@ -848,8 +848,8 @@ The electric fields $E$ and magnetic fields $H$ in the far field can be written 
   H = \hat{r} \times \frac{E}{\eta}
 \end{equation}
 
-Here, $\eta$ is the characteristic impedance of free space,
-which is about 377 Ohms. $\hat{r}$ is the direction of propagation for the plane wave.
+Here, $\eta$ is the characteristic impedance of the free space,
+which is about 377 Ohms. $\hat{r}$ is the direction of propagation of the plane wave.
 
 \begin{figure}
   \begin{center}
@@ -887,7 +887,7 @@ Antenna Gain is sometimes discussed as a function of angle.
 In this case, we are essentially plotting the radiation pattern,
 where the units (or magnitude of the pattern) are measured in antenna gain.
 Often, manufacturers of antennas
-(be they wifi antennas, GPS antennas, or tv antennas) specify the antenna gain.
+(be they wifi antennas, GPS antennas, or TV antennas) specify the antenna gain.
 For instance, manufacturers of wifi antennas may market the wifi antenna as a "high gain antenna",
 which is more expensive than a similar low gain antenna.
 Here we discuss how different devices have different gain,
@@ -922,7 +922,7 @@ then the current will have an amplitude of 1 / 50 = 0.02 amps.
 Since the impedance is a real number, the voltage is in phase with the current.
 
 Alternatively, when the impedance is given by a complex number,
-the phase will need to be considered additional to the amplitude.
+the phase will need to be considered as an additional to the amplitude.
 If the impedance $Z$ is written as $50 + j*50$, where $j$ is an imaginary number,
 then the impedance has a magnitude equal to
 
@@ -937,9 +937,8 @@ The phase can be calculated as:
 \end{equation}
 
 The real part of the antenna impedance represents the power that is either radiated away or absorbed within the antenna.
-The imaginary part of the impedance represents power
-that is stored in the near-field of the antenna.
-This is non-radiated power.
+The imaginary part of the impedance represents the power
+that is stored in the near-field of the antenna, which is non-radiated power.
 An antenna with a real input impedance (zero imaginary part)
 is said to be resonant.
 
@@ -973,7 +972,7 @@ If $Z_A$ is much smaller in magnitude than $Z_S$,
 then no power will be delivered to the antenna and
 it will not transmit or receive energy.
 The same can be said when $Z_A$ is much larger in magnitude than $Z_S$.
-The ideal value for antenna impedance when maximum power is transferred is given as
+The ideal value for the antenna impedance when maximum power is transferred is given as
 
 \begin{equation}
   Z_A = Z_S^*
@@ -1328,7 +1327,7 @@ To obtain the radius $r_n$ of the zone $n$,
 note that the volume of the zone is delimited by all points
 for which the difference in distances
 between the direct wave $D = d_1 + d_2$ and the reflected wave
-is the constant of $n\frac{\lambda}{2}$.
+is expressed as the constant $n\frac{\lambda}{2}$.
 This effectively defines an ellipsoid with the main axis along $\overline{AB}$
 and foci (points $A$ and $B$) at the antennas.
 
@@ -1392,7 +1391,7 @@ While EIRP and TP are expressed in units of decibels-milliwatts,
 gain and loss are expressed in units of decibels.
 TP is further determined by the loss of cable and the transmitted power
 of the device itself.
-Here, we omit some variables such as miscellaneous losses,
+Here, we omit some variables, such as miscellaneous losses,
 which include polarization mismatch and fading margin.
 
 For example, when the input power of the transmitter and the gain is -11 dBm and 5 dBi,
@@ -1490,7 +1489,7 @@ can be expressed using the S-parameter matrix $S$:
   \textbf{b} = \textbf{S} \textbf{a}
 \end{equation}
 
-When using explicit components, the equation above can be rewritten as follows.
+When using explicit components, the above equation can be rewritten as follows.
 
 \begin{equation}
   \begin{pmatrix}
@@ -1501,8 +1500,7 @@ When using explicit components, the equation above can be rewritten as follows.
 \end{equation}
 
 Next, we consider two-port S-parameters.
-In this case, the relationship between the reflected
-incident power waves and the S-parameter matrix is given by:
+In this case, the relationship between the incident reflected power waves and the S-parameter matrix is given by:
 
 \begin{equation}
   \left(
@@ -1580,7 +1578,7 @@ equal to a loss of 1 dB.
 \subsection{Insertion loss}
 
 If the two measurement ports use the same reference
-impedance, the insertion loss ($IL$) is the reciprocal of the magnitude of the transmission coefficient |S21| expressed in decibels.
+impedance, the insertion loss ($IL$) is the reciprocal of the magnitude of the transmission coefficient $|S21|$ expressed in decibels.
 It is thus given by
 
 \begin{equation}
