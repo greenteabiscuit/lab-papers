@@ -58,113 +58,11 @@
 
 \chapter*{\centering Abstract}
 
-With the rapid development of communication technology, the demand
-for antennas and cables, essential components for signal processing,
-is growing by leaps and
-bounds.
-In addition,
-demand for mmWave antennas and cables is increasing as
-components for specific bands are necessary for individual
-merchants to build their own Local 5G base stations.
-
-However, components such as antennas and cables used
-currently need certain
-processing costs and processing time,
-increasing the complexity and spectral characteristics,
-and creating limitations in the design and implementation.
-Moreover, it takes
-more time and expense for specific antennas and cables
-due to their particular
-characteristics.
-Furthermore, infrastructure created by traditional components
-is often irreversible, and cannot be changed once
-the components are set in position.
-This is acceptable for a small number of network areas, but if the number
-of local networks is large and the architecture is complex,
-this leads to interference between wireless signals.
-For this reason, we propose to design and produce
-mmWave antennas using dielectric waveguides to reduce the cost,
-processing time
-and create a distributive local area network.
-
-This paper mainly designs three types of dielectric waveguide antennas
-and details the design process and the simulation process.
-First, we introduce the related background
-and how Maxwell's electromagnetic equations tie into the characteristics
-of dielectric waveguides.
-Then we describe the basic theory of the antenna design
-and simulate them on a simulator.
-After the structure and order are determined first,
-we iterate the simulation until
-the S-parameters and half-power beam width are optimized.
-After
-assembling the dielectric waveguide antenna,
-we observe the actual
-test results and demonstrate the feasibility
-using the scalar network analyzer and the vector network analyzer.
-
-The implemented antennas shows the antenna functions with less than 10dB
-insertion loss and around 20 degrees of half-power beamwidth.
-The proposed implementation
-method can effectively reduce the machining time in 1 day
-due to the simple principle and the procedural process.
-Furthermore, the high-resolution beam
-emitted from the tip of the antenna is narrow enough so
-that multiple network areas can be built without interfering with each other.
-
-These advantages will also enable Local 5G operators
-to fulfill the customers' requirements within a short period. In terms of
-processing materials,
-it can effectively reduce the cost of goods by at least
-80\%.
+High-frequency communications, which are expected to be widely used in 5G and Beyond5G, enable high-capacity communications by using a wide bandwidth. However, the linearity of radio wave propagation and rapid attenuation have made it difficult to utilize high-frequency communications. In this paper, we consider the use of millimeter waves and other high-frequency communications for high-spatial-resolution communications by taking advantage of their linearity and attenuation. Generally, it is possible to limit the range of radio propagation by beamforming using array antennas in millimeter-wave communications, but there is a problem of high cost. In this study, we propose to design and fabricate a millimeter-wave antenna using dielectric waveguides to narrow the beam at low cost, and demonstrate its usefulness through simulation evaluation.
 
 \chapter*{\centering 論文要旨}
 
-通信技術の急速な発展に伴い、
-信号処理に不可欠な部品であるアンテナやケーブルの需要は飛躍的に伸びている。
-独自にミリ波対応のローカル5G基地局を構築するためには
-特定帯域用の部品が必要であり
-ミリ波対応アンテナやケーブルの需要が高まっている。
-
-しかし、現在使用されているアンテナやケーブルなどの部品は、
-一定の加工費と加工時間が必要で、
-設計や実装に制約が生じる。
-特定の周波数や損失に対応したアンテナやケーブルについては、
-その特性上、より多くの時間と費用を要する。
-さらに、従来の部品で作られたインフラは
-一度部品を配置すると変更することができない、不可逆なものとなっている。
-これは、ネットワークエリアが少ない場合は許容範囲だが、
-ローカルネットワークの数が多く、アーキテクチャが複雑になると、
-ネットワーク同士の干渉につながってしまう。
-このため、よりコストと処理時間の少ない
-誘電体導波路を用いたミリ波アンテナを設計・製作し、
-分散型ローカルエリアネットワークを構築することを提案する。
-
-本論文では、
-主に3種類の誘電体導波路アンテナを設計し、
-その設計過程、シミュレーションの詳細、そして製作物
-に対する評価について述べる。
-まず、関連する背景を紹介し、
-マクスウェルの電磁方程式と境界条件
-が誘電体導波路の特性とどのように結びついているかを紹介する。
-そして、アンテナの設計の基本理論を説明し、
-Sパラメータと半値幅が最適化されるような
-パラメータでシミュレーションを行う。
-最後に誘電体導波路アンテナを製作し、
-実際の試験結果を観察し、
-スカラーネットワークアナライザやベクトルネットワークアナライザを
-用いて性能を実証する。
-
-実際に製作したアンテナは、
-10dB以下の挿入損失と20度前後の半値幅を実現した。
-提案した実装方法は、簡単な原理と手順により、
-加工時間を1日以内に効率よく短縮することができる。
-さらに、アンテナ先端から放射される高分解能ビームは十分に細く、
-複数のネットワークエリアを相互に干渉させることなく構築することが可能となる。
-
-以上により、
-5G事業者は短期間でネットワークエリアの仕様を満たすことができるようになる上、
-加工材料の面では、既存の材料を使うときに比べ80\%以上のコスト削減が可能となる。
+5G・Beyond5Gで普及が期待されている高周波数の通信では、帯域を広く利用することで大容量の通信が可能となる一方、電波伝播の直進性や急激な減衰から利活用の困難さが指摘されている。我々は、ミリ波などの高周波数を利用する通信において、直進性や減衰性を逆に利用し、高空間分解能の通信に利活用することを考えている。一般に、ミリ波ではアレイアンテナを利用するビームフォーミングにより電波伝播の範囲を限定することが可能であるが、コストが高いなどの課題がある。本研究では、低コストでビームを絞るための誘電体導波路を用いたミリ波アンテナを設計・製作することを提案し、シミュレーション評価によりその有用性を示す。
 
 \newpage
 
@@ -267,12 +165,9 @@ to provide a reliable and flexible infrastructure to users.
 
 \section{Problem Statement}
 
-Millimeter wave 5G technology can provide massive capacity
-and even lower latency than previous technologies such as 4G.
-This requires a 5G antenna with low latency,
-low path loss, and a steady radiation pattern.
-However, millimeter waves also have problems and limitations
-that need to be addressed.
+High-frequency communications, which are expected to be widely used in 5G and Beyond5G, enable high-capacity communications by using wider channel bandwidth.
+\textbf{However, the linearity of radio wave propagation and rapid attenuation have made it difficult to utilize high-frequency communications.}
+This results in the following problems:
 
 \begin{itemize}
   \item[] \textbf{High cost of mmWave area construction}
@@ -351,12 +246,9 @@ actually implemented in some 5G base station equipment
 
 \section{Thesis Statement}
 
-In order to efficiently solve the problems mentioned above,
-we propose to design a high resolution antenna
-using dielectric materials.
-We fabricate the antenna by processing a PTFE structure into a rod antenna.
-In this paper,
-we use the proposed processing methods to simulate,
+\textbf{In this paper, we consider the use of millimeter waves and other high-frequency communications for high-spatial-resolution communications by taking advantage of their linearity and attenuation.}
+Generally, it is possible to limit the range of radio propagation by beamforming using array antennas in millimeter-wave communications, but there is the problem of high cost. In this study, we propose to design and fabricate a millimeter-wave antenna using dielectric waveguides to narrow the beam at low cost, and demonstrate its usefulness through simulation evaluation.
+We use the proposed processing methods to simulate,
 produce and test three different structures of dielectric antennas.
 The implemented antennas can achieve a resolution of
 20 degrees half-power beamwidth and less than 10 dB of
@@ -408,10 +300,6 @@ advantages in the following aspects.
   devices are densely populated,
   such as in factories and farmlands.
 \end{itemize}
-
-Due to the advantages stated above,
-\textbf{we will be able to provide
-enhanced maintainability and security in 5G communication systems}.
 
 % きめ細やかなエリア構築によってより運用保守とセキュリティに貢献する
 
